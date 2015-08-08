@@ -1,0 +1,719 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+  <meta name="google-site-verification" content="8NsJqx9W2GAo1k0yBy5hndr7oM2NJYxxMliRdo3333k" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+
+
+  <meta name="keywords" content="php," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="Php系列的笔记以这篇概述作开始。我的学习方式主要是视频教程（比如lamp兄弟连的视频），加书籍参考，再加上网上资源的查阅。自学是本人非常推崇的一种态度，整合各种资源会起到事半功倍的效果。
+&amp;lt;!--more Read more...--&amp;gt;
+Php是一种可以与各种前台语言（html,javascript等）默契合作的解释型语言。Php的规范标签是&amp;lt;?php  ?&amp;gt;      ，这是php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="                          php概述">
+<meta property="og:url" content="http://www.vat58.com/phpgaishu/index.html">
+<meta property="og:site_name" content="VAT58">
+<meta property="og:description" content="Php系列的笔记以这篇概述作开始。我的学习方式主要是视频教程（比如lamp兄弟连的视频），加书籍参考，再加上网上资源的查阅。自学是本人非常推崇的一种态度，整合各种资源会起到事半功倍的效果。
+&amp;lt;!--more Read more...--&amp;gt;
+Php是一种可以与各种前台语言（html,javascript等）默契合作的解释型语言。Php的规范标签是&amp;lt;?php  ?&amp;gt;      ，这是php">
+<meta property="og:image" content="http://www.vat58.com/blog/wp-content/uploads/2012/03/phpdemo.png">
+<meta property="og:updated_time" content="2015-08-07T10:37:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="                          php概述">
+<meta name="twitter:description" content="Php系列的笔记以这篇概述作开始。我的学习方式主要是视频教程（比如lamp兄弟连的视频），加书籍参考，再加上网上资源的查阅。自学是本人非常推崇的一种态度，整合各种资源会起到事半功倍的效果。
+&amp;lt;!--more Read more...--&amp;gt;
+Php是一种可以与各种前台语言（html,javascript等）默契合作的解释型语言。Php的规范标签是&amp;lt;?php  ?&amp;gt;      ，这是php">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title>                           php概述 // VAT58 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '30055046', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">VAT58</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+                                        php概述
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2012-03-18T20:27:38+08:00" content="2012-03-18">
+            2012-03-18
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/phpgaishu/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="phpgaishu/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><strong>Php</strong>系列的笔记以这篇概述作开始。我的学习方式主要是视频教程（比如lamp兄弟连的视频），加书籍参考，再加上网上资源的查阅。自学是本人非常推崇的一种态度，整合各种资源会起到事半功倍的效果。</p>
+<!--more Read more...-->
+<p>Php是一种可以与各种前台语言（html,javascript等）默契合作的解释型语言。Php的规范标签是&lt;?php  ?&gt;      ，这是php的官方指定规范特征。其他的简易风格跟变形标签不做介绍，这跟讨论茴香豆的“茴”字有几种写法一样没有意义。在服务器端，php解释器会将&lt;?php和?&gt;的代码进行解释，而不会干扰html跟javascript  。解释完后将整个页面返回给浏览器，在客户端显示出来。</p>
+<p>看例子：</p>
+<p>Demo.php:</p>
+<p><span style="color: #339966;">&lt;html&gt;</span></p>
+<p><span style="color: #339966;">&lt;title&gt;<span style="color: #993366;">&lt;?php echo”PHP demo”;?&gt;</span>&lt;/title&gt;</span></p>
+<p><span style="color: #339966;">&lt;body&gt;</span></p>
+<p><span style="color: #339966;">&lt;script&gt;</span></p>
+<p><span style="color: #339966;">       alert(new Date());</span></p>
+<p><span style="color: #339966;">&lt;/script&gt;</span></p>
+<p><span style="color: #993366;">&lt;?php echo”&lt;center&gt;”;?&gt;</span></p>
+<p><span style="color: #339966;">       &lt;h1&gt;<span style="color: #993366;">&lt;?php echo”vat58,成长无限”;?&gt;</span>&lt;/h1&gt;</span></p>
+<p><span style="color: #339966;">       &lt;p&gt;</span></p>
+<p><span style="color: #339966;">       Vat58给你的或许就是一个成长，完善自我的动力！</span></p>
+<p><span style="color: #339966;">       &lt;/p&gt;</span></p>
+<p><span style="color: #993366;">       &lt;?php</span></p>
+<p><span style="color: #993366;">       For ($i=0;$i&lt;3;$i++) {</span></p>
+<p><span style="color: #993366;">              echo”yes,I can. &lt;br&gt;”;</span></p>
+<p><span style="color: #993366;">       }</span></p>
+<p><span style="color: #993366;">?&gt;</span></p>
+<p><span style="color: #339966;">&lt;/center&gt;</span></p>
+<p><span style="color: #339966;">&lt;/body&gt;</span></p>
+<p><span style="color: #339966;">&lt;/html&gt;</span></p>
+<p>上例看出，<strong>php</strong>真的是“无孔不入”，title标签里，     body里，你想要的任何地方都可以。阅读的代码的时候不要被带晕了就好，呵呵。如果你已经迫不及待想学习php的语法，请先行一步学习。上述代码执行的结果如下图:</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/phpdemo.png" alt="phpdemo" title="phpdemo"></p>
+<p>在浏览器中可以查看网页的源代码，也就是经php解释器解释完成的代码：</p>
+<p><table border="0" cellpadding="0"></table></p>
+<p><tbody></tbody></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;html&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;title&gt;PHP demo&lt;/title&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;body&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;script&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>alert(new Date());</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;/script&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;center&gt; &lt;h1&gt;vat58,成长无限&lt;/h1&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;p&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>Vat58给你的或许就是一个成长，完善自我的动力！</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;/p&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>yes,I can. &lt;br&gt;yes,I can. &lt;br&gt;yes,I can. &lt;br&gt;&lt;/center&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;/body&gt;</p>
+<p></p></td><br><p></p>
+<p><tr></tr></p>
+<td>
+
+<p>&lt;/html&gt;</p>
+<p></p></td><br><br><br><br>对照一下，应该会找到规律。<p></p>
+<p>读者可自行将第一段代码拷贝到一个文件里，命名为<em>*</em>.php,执行并加深理解。</p>
+<p>如何执行？环境怎么搭建？</p>
+<p>好吧，如果你还没开始php的学习，我再多说几句。你需要一个<strong>lamp</strong>，wamp,测试环境。比较简单的就是appserv以及其他的集成程序，安装后就可以得到linux/windows+apache+mysql+php测试环境，其他问题请Google自知，或给我留言。</p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/php/" rel="tag">#php</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/vat58yizhou/" rel="prev">Vat58一周记</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/snagit/" rel="next">                爱上Snagit-顶级屏幕捕获软件</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="phpgaishu/"
+                       data-title="                          php概述" data-url="http://www.vat58.com/phpgaishu/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">vatcom_dong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">143</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">40</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">121</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank">twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">google</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp;  2012 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vat-58"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>

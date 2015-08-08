@@ -1,0 +1,646 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+  <meta name="google-site-verification" content="8NsJqx9W2GAo1k0yBy5hndr7oM2NJYxxMliRdo3333k" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+
+
+  <meta name="keywords" content="oracle,图文," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="详细的图文流水教程可以下载文章后面的文档，本文介绍下配置过程中需要注意的问题。
+①在安装oracle 10g时，在先行条件检测时会出现“正在检查网络配置需求……“。检查完成后此次检查的总体结果为：未执行。解决方案：
+xp：控制面板-&amp;gt;添加硬件，在向导中选择“是，已经连接了此硬件”→添加新硬件设备→安装我手动列表选择硬件(高级)→网络适配器→厂商：Microsoft 网卡：Microsoft">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle 10g 客户端服务端配置全教程">
+<meta property="og:url" content="http://www.vat58.com/oracle-10g/index.html">
+<meta property="og:site_name" content="VAT58">
+<meta property="og:description" content="详细的图文流水教程可以下载文章后面的文档，本文介绍下配置过程中需要注意的问题。
+①在安装oracle 10g时，在先行条件检测时会出现“正在检查网络配置需求……“。检查完成后此次检查的总体结果为：未执行。解决方案：
+xp：控制面板-&amp;gt;添加硬件，在向导中选择“是，已经连接了此硬件”→添加新硬件设备→安装我手动列表选择硬件(高级)→网络适配器→厂商：Microsoft 网卡：Microsoft">
+<meta property="og:image" content="http://www.vat58.com/blog/wp-content/uploads/2012/09/hdwwiz.jpg">
+<meta property="og:updated_time" content="2015-08-07T10:37:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oracle 10g 客户端服务端配置全教程">
+<meta name="twitter:description" content="详细的图文流水教程可以下载文章后面的文档，本文介绍下配置过程中需要注意的问题。
+①在安装oracle 10g时，在先行条件检测时会出现“正在检查网络配置需求……“。检查完成后此次检查的总体结果为：未执行。解决方案：
+xp：控制面板-&amp;gt;添加硬件，在向导中选择“是，已经连接了此硬件”→添加新硬件设备→安装我手动列表选择硬件(高级)→网络适配器→厂商：Microsoft 网卡：Microsoft">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> oracle 10g 客户端服务端配置全教程 // VAT58 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '30055046', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">VAT58</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              oracle 10g 客户端服务端配置全教程
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2012-09-16T10:35:27+08:00" content="2012-09-16">
+            2012-09-16
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/oracle-10g/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="oracle-10g/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>详细的图文流水教程可以下载文章后面的文档，本文介绍下配置过程中需要注意的问题。</p>
+<h3 id="①在安装oracle_10g时，在先行条件检测时会出现“正在检查网络配置需求……“。检查完成后此次检查的总体结果为：未执行。">①在安装oracle 10g时，在先行条件检测时会出现“正在检查网络配置需求……“。检查完成后此次检查的总体结果为：未执行。</h3><p>解决方案：</p>
+<p>xp：控制面板-&gt;添加硬件，在向导中选择“是，已经连接了此硬件”→添加新硬件设备→安装我手动列表选择硬件(高级)→网络适配器→厂商：Microsoft 网卡：Microsoft Loopback Adapter，添加完成后，就可以配置下这个虚拟本地连接。</p>
+<p>windows7：添加新硬件向导可能不太好找，直接运行命令：hdwwiz。打开向导后，接下来你就熟悉了。<br><a id="more"></a><br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/09/hdwwiz.jpg" alt="添加硬件" title="hdwwiz"></p>
+<p>我们的目的达到了，通过oracle的先决条件检查，避免一些未知的错误。</p>
+<h3 id="②手动创建数据库时，可以选择数据库模板，四个模板都是什么意思呢？">②手动创建数据库时，可以选择数据库模板，四个模板都是什么意思呢？</h3><p><strong><span style="color: #333333;">一般用途</span></strong>：创建的数据库可以适合作为事务处理应用，也可以作为数据仓库应用，两种应用兼而有之，这是数据库安装时的默认选项。</p>
+<p><strong>事务处理</strong>：侧重于日常业务应用；从物理上讲，数据块小，uid和pid都小，侧重读写速度，冗余度小；适合联机事务处理（OLTP）数据库应用，比如各银行的储蓄业务系统、电信局的电话计费系统就是典型的OLTP的例子。</p>
+<p><strong>定制数据库</strong>：自己定制所需要的模板。呵呵，以后再学习定制吧。</p>
+<p><strong>数据仓库</strong>：侧重于数据分析统计；从物理上讲，数据块大，uid和pid都大，侧重分析研究，冗余度大；适合数据仓库及联机分析处理（OLAP）应用，比如银行的管理层要制订业务发展计划时，决策人员就可以从数据仓库中提取有利于决策的数据。</p>
+<p>似懂非懂的理解下先。</p>
+<h3 id="③sqlplus命令行中常见的错误举例：RA-12560:_TNS:_协议适配器错误">③sqlplus命令行中常见的错误举例：RA-12560: TNS: 协议适配器错误</h3><p>可能的原因有：<br>1.监听服务没有启动。没有启动，还是服务列表里压根就没有这个服务？两个命令帮助你：<br><span style="color: #ff0000;">lsnrctl status</span>  查看监听器状态<br><span style="color: #ff0000;">lsnrctl start</span>    启动监听器</p>
+<p>2.oracle的数据库实例没有启动。在服务列表里检查启动oracleserviceXXXX（XXXX为SID）</p>
+<h3 id="④安装完oracle后，net_manager_中的配置是非常重要的一步。">④安装完oracle后，net manager 中的配置是非常重要的一步。</h3><p>&nbsp;</p>
+<p>服务端中，配置 【服务命名】和【监听程序】，在orale主目录\NETWORK\ADMIN里会分别产生tnsnames.ora ，Listener.ora 两个文件。</p>
+<p>客户端中，只需要配置【服务命名】。这是客户端连接服务端的关键。</p>
+<h3 id="⑤创建表空间和用户。">⑤创建表空间和用户。</h3><p>创建数据库完毕后登陆测试，以及创建表空间和用户：</p>
+<p><pre>C:\Documents and Settings\Administrator&gt;sqlplus /nolog<br> SQL*Plus: Release 10.2.0.4.0 - Production on 星期四 2月 23 07:48:08 2012<br> Copyright (c) 1982, 2007, Oracle.  All Rights Reserved.<br> SQL&gt; conn / as sysdba<br> 已连接。</pre><br>创建表空间</p>
+<p><pre>SQL&gt; create tablespace test datafile &#039;E:\ORACLE\PRODUCT\10.2.0\ORADATA\TEST\test.dbf&#039; size 30000M;<br>表空间已创建。</pre><br>创建临时表空间</p>
+<p><pre>SQL&gt; create temporary tablespace test_temp tempfile &#039;E:\ORACLE\PRODUCT\10.2.0\ORADATA\TEST\test_temp_01.dbf&#039; size 5000M;<br>表空间已创建。</pre><br>创建用户：</p>
+<p><pre>SQL&gt; create user vat58 default tablespace test temporary tablespace test_temp<br>identified by 123;<br>用户已创建。</pre><br>给用户赋权：</p>
+<p><pre>SQL&gt; grant dba to vat58;<br>授权成功。</pre><br>使用创建用户登陆：</p>
+<p><pre>SQL&gt; conn vat58/123<br>已连接。</pre><br><a href="http://vdisk.weibo.com/s/cxz_Z" title="oracle图文教程" target="_blank" rel="external">oracle 10g 数据库安装图文手册下载</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oracle/" rel="tag">#oracle</a>
+          
+            <a href="/tags/图文/" rel="tag">#图文</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/thelistoflife/" rel="prev">辛德勒的名单</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/qingci/" rel="next">《青瓷》-- 品味经典</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="oracle-10g/"
+                       data-title="oracle 10g 客户端服务端配置全教程" data-url="http://www.vat58.com/oracle-10g/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">vatcom_dong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">143</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">40</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">121</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank">twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">google</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#①在安装oracle_10g时，在先行条件检测时会出现“正在检查网络配置需求……“。检查完成后此次检查的总体结果为：未执行。"><span class="nav-number">1.</span> <span class="nav-text">①在安装oracle 10g时，在先行条件检测时会出现“正在检查网络配置需求……“。检查完成后此次检查的总体结果为：未执行。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#②手动创建数据库时，可以选择数据库模板，四个模板都是什么意思呢？"><span class="nav-number">2.</span> <span class="nav-text">②手动创建数据库时，可以选择数据库模板，四个模板都是什么意思呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#③sqlplus命令行中常见的错误举例：RA-12560:_TNS:_协议适配器错误"><span class="nav-number">3.</span> <span class="nav-text">③sqlplus命令行中常见的错误举例：RA-12560: TNS: 协议适配器错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#④安装完oracle后，net_manager_中的配置是非常重要的一步。"><span class="nav-number">4.</span> <span class="nav-text">④安装完oracle后，net manager 中的配置是非常重要的一步。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#⑤创建表空间和用户。"><span class="nav-number">5.</span> <span class="nav-text">⑤创建表空间和用户。</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp;  2012 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vat-58"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>

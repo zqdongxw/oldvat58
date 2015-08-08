@@ -1,0 +1,750 @@
+<!doctype html>
+<html class="theme-next use-motion theme-next-mist">
+<head>
+    
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+  <meta name="google-site-verification" content="8NsJqx9W2GAo1k0yBy5hndr7oM2NJYxxMliRdo3333k" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.4"/>
+
+
+
+
+  <meta name="keywords" content="wordpress github hexo," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+<meta name="description" content="第一次在编辑器下尝试用markdown语法写博客，边写边熟悉相关语法，同时专门记录一篇《markdown小白使用记录》。本文记录wordpress博客vat58.com迁移至github和gitcafe的过程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记录wordpress迁移到git+hexo">
+<meta property="og:url" content="http://www.vat58.com/记录wordpress迁移到github-hexo/index.html">
+<meta property="og:site_name" content="VAT58">
+<meta property="og:description" content="第一次在编辑器下尝试用markdown语法写博客，边写边熟悉相关语法，同时专门记录一篇《markdown小白使用记录》。本文记录wordpress博客vat58.com迁移至github和gitcafe的过程。">
+<meta property="og:image" content="http://cnfeat.qiniudn.com/11.png">
+<meta property="og:updated_time" content="2015-08-07T10:37:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="记录wordpress迁移到git+hexo">
+<meta name="twitter:description" content="第一次在编辑器下尝试用markdown语法写博客，边写边熟悉相关语法，同时专门记录一篇《markdown小白使用记录》。本文记录wordpress博客vat58.com迁移至github和gitcafe的过程。">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: 'post'
+  };
+</script>
+
+    <title> 记录wordpress迁移到git+hexo // VAT58 </title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', '30055046', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+<div class="container one-column page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">VAT58</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="main-inner">
+            <div id="content" class="content">
+                
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              记录wordpress迁移到git+hexo
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-05-21T10:19:08+08:00" content="2015-05-21">
+            2015-05-21
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="/categories/wordpress-hexo/" itemprop="url" rel="index"><span itemprop="name">wordpress hexo</span></a></span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/记录wordpress迁移到github-hexo/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="记录wordpress迁移到github-hexo/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p>第一次在编辑器下尝试用markdown语法写博客，边写边熟悉相关语法，同时专门记录一篇《markdown小白使用记录》。<br>本文记录wordpress博客vat58.com迁移至github和gitcafe的过程。</p>
+<a id="more"></a>
+<p>#为什么要迁移至git</p>
+<hr>
+<p>github和gitcafe均提供了pages服务，用于介绍托管在上面的项目。由于空间免费，就有朋友想到了利用pages来搭建静态博客。我所见到的最早的对这方面的介绍应该是这篇<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="external">《搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门》</a>。本文采用的博客生成器不是Jekyll，而是Hexo。</p>
+<p>wordpress是一款火爆的CMS系统，近年来越来越多的人感受到了它的臃肿。由wordpress迁移至git pages 的好处主要是：</p>
+<ul>
+<li>用markdown语法在自己喜欢的编辑器上更加轻便的写博客</li>
+<li>抛弃付费型空间且不限流量</li>
+<li>享受git的版本管理功能，不用担心文章遗失</li>
+<li>折腾万岁（有一定的技术门槛和耐心）</li>
+</ul>
+<p>hexo是一个快速、简洁且高效的博客框架，优点如下：</p>
+<ul>
+<li>node.js 所带来的超快生成速度，让几百个页面在几秒内瞬间完成渲染</li>
+<li>支持markdown</li>
+<li>一键部署到github或者gitcafe等网站</li>
+<li>丰富的插件</li>
+</ul>
+<p>github由于GFW的存在，容易被墙或者访问速度收到影响，所以可以用国内的gitcafe代替或者备份。如果你要参照本文进行操作，请提前准备好github或gitcafe账号。</p>
+<p>#本地环境搭建</p>
+<hr>
+<p>依次安装</p>
+<ul>
+<li>node </li>
+<li>git </li>
+<li>hexo</li>
+</ul>
+<p>在gitbash里安装hexo:</p>
+<pre><code>npm install -g hexo   <span class="list">(<span class="keyword">npm</span><span class="keyword">:node</span>包管理器)</span> 
+</code></pre><p>#连接至github或gitcafe</p>
+<hr>
+<p>##配置ssh key</p>
+<p>gitbash里输入ssh-keygen -t rsa -C “邮件地址@youremail.com” </p>
+<pre><code>$ ssh-keygen -t rsa -C <span class="string">"邮件地址@youremail.com"</span>
+Generating <span class="keyword">public</span>/<span class="keyword">private</span> rsa <span class="keyword">key</span> pair.
+Enter file <span class="keyword">in</span> which <span class="keyword">to</span> save the <span class="keyword">key</span> (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;
+</code></pre><p>注意1，此处的邮箱地址，你可以输入自己的邮箱地址；注意2，此处的「-C」的是大写的「C」<br>然后系统会要你输入密码，这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。出现下图，说明配置成功。</p>
+<p><img src="http://cnfeat.qiniudn.com/11.png" alt="ssh"></p>
+<p>##添加ssh key到github和gitcafe</p>
+<ol>
+<li>打开本地C:\Documents and Settings\Administrator.ssh\id_rsa.pub文件,此文件的内容为刚才生成的密钥，准确复制。</li>
+<li>在github和gitcafe对应的设置里添加拷贝的ssh key。</li>
+</ol>
+<p>##创建用户信息</p>
+<p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。</p>
+<pre><code>$ git config --global user<span class="class">.name</span> <span class="string">"xxx"</span><span class="comment">//用户名</span>
+$ git config --global user<span class="class">.email</span>  <span class="string">"xxx@gmail.com"</span><span class="comment">//填写自己的邮箱</span>
+</code></pre><p>##在gitcafe和github里创建仓库</p>
+<p>这一步不在过多介绍，可以参照一篇非常详细的<a href="http://www.pchou.info/web-build/2013/01/05/build-github-blog-page-02.html" target="_blank" rel="external">文章</a></p>
+<p>#wordpress迁移及hexo相关配置</p>
+<hr>
+<p>1.在wordpress后台导出全部内容的XML文件备用</p>
+<p>2.部署Hexo</p>
+<p>在我的电脑中建立一个名字叫「Hexo」的文件夹，然后在此文件夹中右键打开Git Bash。</p>
+<pre><code><span class="variable">$ </span>hexo init
+</code></pre><p>Hexo随后会自动在目标文件夹建立网站所需要的所有文件。</p>
+<p>现在我们已经搭建起本地的hexo博客了，执行以下命令(在H:\hexo)，然后到浏览器输入localhost:4000看看。</p>
+<pre><code><span class="variable">$ </span>hexo g
+<span class="variable">$ </span>hexo s
+</code></pre><p>附hexo常用命令：</p>
+<pre><code>hexo <span class="keyword">new</span> <span class="string">"postName"</span> <span class="preprocessor">#新建文章</span>
+hexo <span class="keyword">new</span> page <span class="string">"pageName"</span> <span class="preprocessor">#新建页面</span>
+hexo clean 
+hexo generate <span class="preprocessor">#生成静态页面至public目录</span>
+hexo <span class="keyword">server</span> <span class="preprocessor">#开启预览访问端口（默认端口4000，'ctrl + c'关闭server）</span>
+hexo deploy <span class="preprocessor">#将.deploy目录部署到Git</span>
+</code></pre><p>3.安装导入工具并将wordpress导入到hexo</p>
+<p>命令如下：</p>
+<pre><code>$ npm <span class="operator"><span class="keyword">install</span> hexo-migrator-wordpress <span class="comment">--save</span>
+$ hexo migrate wordpress <span class="keyword">source</span>  </span>
+</code></pre><p>source处为备用的wordpress xml 文件的路径。</p>
+<p>4.为hexo更换主题</p>
+<p>我选择的主题是NEXT</p>
+<pre><code>$ <span class="keyword">cd</span> your-hexo-site
+$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span>
+</code></pre><p>接下来更改站点 _config.yml 中的 theme 字段设置为 next ，即可让主题生效。</p>
+<p>主题更新：</p>
+<pre><code><span class="keyword">cd</span> themes/<span class="keyword">next</span>
+git pull
+</code></pre><p>#详细配置站点的_config.yml文件</p>
+<hr>
+<p>在next主题的github页面，有该主题目前支持的所有配置项，如下举例：</p>
+<ul>
+<li>使用多说</li>
+</ul>
+<p>站点_config.yml,添加duoshuo_shortname字段，设置如下：</p>
+<pre><code><span class="attribute">duoshuo_shortname</span>: <span class="string">shortname</span>
+</code></pre><p>严重提示，此处的shortname非多说的用户名，请到多说后台管理设置里查找多说的二级域名。</p>
+<ul>
+<li>创建标签云</li>
+</ul>
+<p>新建一个页面，命名为 tags 。命令如下：</p>
+<pre><code>hexo <span class="keyword">new</span> page <span class="string">"tags"</span>
+</code></pre><p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。</p>
+<ul>
+<li>创建分类页面：</li>
+</ul>
+<p>新建一个页面，命名为 categories 。命令如下：</p>
+<pre><code>hexo <span class="keyword">new</span> page categories
+</code></pre><p>编辑刚新建的页面，将页面的类型设置为 categories ，主题将自动为这个页面显示所有分类。</p>
+<ul>
+<li>添加 Google 百度 统计</li>
+</ul>
+<p>编辑站点的 _config.yml ，新增字段 google_analytics 或者 baidu_analytics（取决于使用的统计系统）</p>
+<pre><code><span class="attribute">google_analytics</span>: <span class="string">your-analytics-id</span>
+
+<span class="http"><span class="attribute">baidu_analytics</span>: <span class="string">your-analytics-id</span></span>
+</code></pre><ul>
+<li>同时托管到gitcafe和github</li>
+</ul>
+<pre><code><span class="attribute">deploy</span>:
+- <span class="attribute">type</span>: github
+  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:zqdongxw/vat58.git
+  <span class="attribute">branch</span>: master
+
+- <span class="attribute">type</span>: gitcafe
+  <span class="attribute">repository</span>: git<span class="variable">@gitcafe</span>.<span class="attribute">com</span>:zqdongxw/zqdongxw.git
+  <span class="attribute">branch</span>: gitcafe-pages
+</code></pre><p>把上面的repository换成自己账户对应的即可。</p>
+<p>用下面一条命令就可以将本地的博客部署到github和gitcafe上：</p>
+<pre><code><span class="variable">$ </span>hexo d
+</code></pre><p>#绑定独立域名进行域名解析</p>
+<hr>
+<p>以gitcafe为例。</p>
+<ul>
+<li>在page项目管理页面，设置自定义域名</li>
+<li>到域名注册商管理页面，将DNS服务器更换为DNSpod的NameServers</li>
+<li>DNSpod中完成域名解析</li>
+</ul>
+<p>总之，整个过程的信息量相当之大，组织这篇文章也费了好大的精力。希望你也有耐心完成这项任务。</p>
+<hr>
+<p>2015/6/13 更新</p>
+<p>最近笔记本的硬盘被自己作坏了，hexo的环境搭建要重新来过喽。或许很多人也会因为各种各样的原因需要在第二台机器上开启你的hexo之旅，搭建一个绿色的hexo博客环境方便不同机器间同步，就可以自由自在地写作啦。请看姊妹篇<a href="/%E6%89%93%E9%80%A0%E7%BB%BF%E8%89%B2%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E7%8E%AF%E5%A2%83/">《打造绿色的hexo博客环境》</a></p>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/wordpress-github-hexo/" rel="tag">#wordpress github hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/markdown小白使用记录/" rel="prev">markdown小白使用记录</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/dead-means-leave/" rel="next">一次萌萌的生死离别</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+            </div>
+
+            
+
+            
+              <div class="comments" id="comments">
+                
+                  <div class="ds-thread" data-thread-key="记录wordpress迁移到github-hexo/"
+                       data-title="记录wordpress迁移到git+hexo" data-url="http://www.vat58.com/记录wordpress迁移到github-hexo/">
+                  </div>
+                
+              </div>
+            
+        </div>
+
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">vatcom_dong</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description"></p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">143</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">40</span>
+              <span class="site-state-item-name">分类</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">121</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank">twitter</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">google</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+            <p class="site-author-name">友情链接</p>
+            
+              <span class="links-of-author-item">
+              <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
+              </span>
+            
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="copyright" >
+  
+  &copy; &nbsp;  2012 - 
+  <span itemprop="copyrightYear">2015</span>
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+        </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+</div>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"vat-58"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+  	<script src="/js/ua-parser.min.js"></script>
+  	<script src="/js/hook-duoshuo.js"></script>
+  
+
+    
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.4"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.4"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.4" id="motion.global"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.4" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+  <script type="text/javascript" id="sidebar.nav">
+    $(document).ready(function () {
+      var html = $('html');
+
+      $('.sidebar-nav li').on('click', function () {
+        var item = $(this);
+        var activeTabClassName = 'sidebar-nav-active';
+        var activePanelClassName = 'sidebar-panel-active';
+        if (item.hasClass(activeTabClassName)) {
+          return;
+        }
+
+        var currentTarget = $('.' + activePanelClassName);
+        var target = $('.' + item.data('target'));
+
+        currentTarget.velocity('transition.slideUpOut', 200, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', 200)
+            .addClass(activePanelClassName);
+        });
+
+        item.siblings().removeClass(activeTabClassName);
+        item.addClass(activeTabClassName);
+      });
+
+      $('.post-toc a').on('click', function (e) {
+        e.preventDefault();
+        var offset = $(escapeSelector(this.getAttribute('href'))).offset().top;
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        });
+      });
+
+      // Expand sidebar on post detail page by default, when post has a toc.
+      var $tocContent = $('.post-toc-content');
+      if (isDesktop() && CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    });
+  </script>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (CONFIG.sidebar === 'always') {
+            displaySidebar();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+<!-- lazyload -->
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery("#posts img").lazyload({
+            placeholder: "/images/loading.gif",
+            effect: "fadeIn"
+        });
+    });
+</script>
+</body>
+</html>
