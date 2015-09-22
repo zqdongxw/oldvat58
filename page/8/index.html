@@ -186,6 +186,101 @@
           
           
             
+              <a class="post-title-link" href="/ubuntu12-10display/" itemprop="url">
+                ubuntu12.10安装显卡驱动
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2013-06-05T17:14:10+08:00" content="2013-06-05">
+            2013-06-05
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/ubuntu/" itemprop="url" rel="index">
+                  <span itemprop="name">ubuntu</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/ubuntu12-10display/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="ubuntu12-10display/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+            ubuntu附加驱动里推荐了几个专有显卡驱动，听网友反映不太靠谱，出现了不少诸如花屏、死机、系统崩溃的情况。本文记录了自己手动安装NVIDIA显卡驱动的过程，希望能帮到你。
+[caption id=”attachment_725” align=”aligncenter” width=”300”] ubuntu[/caption]
+1.  找到并下载合适的驱动。用sudo lshw查看硬件中的显卡信息。
+description: VGA compatible controllerproduct: 
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/ubuntu12-10display/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/calm-silent/" itemprop="url">
                 袖手无言味最长
               </a>
@@ -1006,104 +1101,6 @@ chrome
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/fcitx/" itemprop="url">
-                Ubuntu14.04 力荐Fcitx输入法
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2012-06-04T13:34:48+08:00" content="2012-06-04">
-            2012-06-04
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/ubuntu/" itemprop="url" rel="index">
-                  <span itemprop="name">ubuntu</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/fcitx/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="fcitx/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>在之前的博文中介绍了IBUS中的谷歌和日语输入法，详见《<a href="http://www.vat58.com/ubuntu-input/" title="ubuntu12.04 谷歌+日文输入法">ubuntu12.04 谷歌+日文输入法</a>》。这次着重推荐小企鹅输入法Fcitx及它的云拼音支持。已笔者之见，Fcitx用户体验更好，输入更智能流畅。</p>
-<p>Fcitx 4.2.0版较老版有了很大的改进，内置了GOOGLE拼音。</p>
-<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/06/fcitx.png" alt="fcitx" title="fcitx"></p>
-<pre>删除ibus输入法：<span style="font-size: medium;">sudo apt-get remove ibus</span></pre>
-安装FCITX：
-<pre><span style="font-size: medium;">sudo apt-get install fcitx fcitx-pinyin fcitx-sunpinyin  fcitx-table
-
-需要重启。
-</span></pre>
-
-<h3 id="为Fcitx增加云拼音的支持">为Fcitx增加云拼音的支持</h3><p><pre> sudo aptitude install fcitx-module-cloudpinyin #云拼音模块支持     //现在好像不能用了。</pre><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/fcitx/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1142,7 +1139,7 @@ chrome
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">148</span>
+              <span class="site-state-item-count">149</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
