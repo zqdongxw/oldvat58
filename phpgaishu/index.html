@@ -18,12 +18,20 @@
 
 
 
+
+
   <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
+  
+    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
 
 
 
@@ -34,7 +42,7 @@
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
 
 
 <meta name="description" content="Php系列的笔记以这篇概述作开始。我的学习方式主要是视频教程（比如lamp兄弟连的视频），加书籍参考，再加上网上资源的查阅。自学是本人非常推崇的一种态度，整合各种资源会起到事半功倍的效果。
@@ -63,6 +71,8 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   };
 </script>
 
+
+
   <title>                           php概述 | VAT58 </title>
 </head>
 
@@ -78,6 +88,8 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   </div>
 <![endif]-->
   
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -90,20 +102,23 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
 
 
 
+
   <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand" rel="start">
-      <span class="logo">
-        <i class="icon-next-logo"></i>
-      </span>
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
       <span class="site-title">VAT58</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
+</div>
 
 <div class="site-nav-toggle">
   <button>
@@ -122,7 +137,9 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
             首页
           </a>
         </li>
@@ -130,7 +147,9 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
             归档
           </a>
         </li>
@@ -138,7 +157,9 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
             标签
           </a>
         </li>
@@ -183,58 +204,68 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   <div id="posts" class="posts-expand">
     
 
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-                                        php概述
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2012-03-18T20:27:38+08:00" content="2012-03-18">
-            2012-03-18
-          </time>
-        </span>
+    
+      <header class="post-header">
 
         
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
+        
+          <h1 class="post-title" itemprop="name headline">
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/PHP/" itemprop="url" rel="index">
-                  <span itemprop="name">PHP</span>
-                </a>
-              </span>
-
-              
-              
-
             
+              
+                                          php概述
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2012-03-18T20:27:38+08:00" content="2012-03-18">
+              2012-03-18
+            </time>
           </span>
-        
 
-        
           
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/phpgaishu/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="phpgaishu/" itemprop="commentsCount"></span>
-              </a>
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
             </span>
           
-        
-      </div>
-    </header>
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/phpgaishu/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="phpgaishu/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
 
     <div class="post-body">
 
@@ -354,15 +385,19 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
 
       
         <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
+          <div class="post-nav-next post-nav-item">
             
-              <a href="/vat58yizhou/" rel="prev">Vat58一周记</a>
+              <a href="/snagit/" rel="next" title="                爱上Snagit-顶级屏幕捕获软件">
+                <i class="fa fa-chevron-left"></i>                 爱上Snagit-顶级屏幕捕获软件
+              </a>
             
           </div>
 
-          <div class="post-nav-next post-nav-item">
+          <div class="post-nav-prev post-nav-item">
             
-              <a href="/snagit/" rel="next">                爱上Snagit-顶级屏幕捕获软件</a>
+              <a href="/vat58yizhou/" rel="prev" title="Vat58一周记">
+                Vat58一周记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -396,6 +431,7 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
       </div>
 
       
+        
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -409,6 +445,8 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
     <div class="sidebar-inner">
 
       
+
+      
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             文章目录
@@ -419,7 +457,7 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
         </ul>
       
 
-      <section class="site-overview">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
@@ -455,11 +493,15 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
           
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/Vinny_Dong" target="_blank">twitter</a>
+                <a href="https://twitter.com/Vinny_Dong" target="_blank">
+                  <i class="fa fa-twitter fa-fw"></i> twitter
+                </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">google</a>
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
+                  <i class="fa fa-google fa-fw"></i> google
+                </a>
               </span>
             
           
@@ -473,7 +515,7 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
             <p class="site-author-name">友情链接</p>
             
               <span class="links-of-author-item">
-              <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
+                <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
               </span>
             
           
@@ -482,7 +524,7 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
       </section>
 
       
-        <section class="post-toc-wrap sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
             
@@ -498,15 +540,16 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   </aside>
 
 
+      
     </main>
 
     <footer id="footer" class="footer">
       <div class="footer-inner"> <div class="copyright" >
   
-  &copy; &nbsp;  2012 - 
+  &copy;  2012 - 
   <span itemprop="copyrightYear">2015</span>
   <span class="with-love">
-    <i class="icon-next-heart"></i>
+    <i class="icon-next-heart fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
@@ -545,6 +588,7 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
       ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
       ds.charset = 'UTF-8';
       (document.getElementsByTagName('head')[0]
@@ -553,34 +597,32 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   </script>
     
      
-  	<script src="/js/ua-parser.min.js"></script>
-  	<script src="/js/hook-duoshuo.js"></script>
-  
+
 
     
   
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
   
 
   <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
   <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
 
 
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
   
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
 
 
 <script type="text/javascript" id="sidebar.toc.highlight">
@@ -728,12 +770,14 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
     });
 
     // Expand sidebar on post detail page by default, when post has a toc.
-    var $tocContent = $('.post-toc-content');
-    if (isDesktop() && CONFIG.sidebar === 'post') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        displaySidebar();
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
       }
-    }
+    };
   });
 </script>
 
@@ -741,15 +785,23 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
 
   <script type="text/javascript">
     $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-      if (isMobile()) {
-        FastClick.attach(document.body);
-      }
+
+      isMobile() && FastClick.attach(document.body);
+
+      // Define Motion Sequence.
+      motionIntegrator
+        .add(motionMiddleWares.logo)
+        .add(motionMiddleWares.menu)
+        .add(motionMiddleWares.backToTop)
+        .add(motionMiddleWares.postList)
+        .add(motionMiddleWares.sidebar);
+
+      // Bootstrap Motion.
+      motionIntegrator.bootstrap();
     });
   </script>
 
+  
   
 
   
