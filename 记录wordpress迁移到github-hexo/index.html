@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="theme-next use-motion theme-next-mist">
+<html class="theme-next   use-motion ">
 <head>
-  
-
-<meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
+
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
 
 
   <meta name="google-site-verification" content="8NsJqx9W2GAo1k0yBy5hndr7oM2NJYxxMliRdo3333k" />
@@ -20,20 +20,21 @@
 
 
 
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 
 
 
-  
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
 
 
-<link rel="stylesheet" type="text/css" href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" />
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.2"/>
 
 
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="wordpress github hexo," />
@@ -42,7 +43,14 @@
 
 
 
+
+
+
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
 
 
 <meta name="description" content="第一次在编辑器下尝试用markdown语法写博客，边写边熟悉相关语法，同时专门记录一篇《markdown小白使用记录》。本文记录wordpress博客vat58.com迁移至github和gitcafe的过程。">
@@ -52,20 +60,20 @@
 <meta property="og:site_name" content="VAT58">
 <meta property="og:description" content="第一次在编辑器下尝试用markdown语法写博客，边写边熟悉相关语法，同时专门记录一篇《markdown小白使用记录》。本文记录wordpress博客vat58.com迁移至github和gitcafe的过程。">
 <meta property="og:image" content="http://cnfeat.qiniudn.com/11.png">
-<meta property="og:updated_time" content="2015-08-07T10:37:54.000Z">
+<meta property="og:updated_time" content="2015-11-27T08:44:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记录wordpress迁移到git+hexo">
 <meta name="twitter:description" content="第一次在编辑器下尝试用markdown语法写博客，边写边熟悉相关语法，同时专门记录一篇《markdown小白使用记录》。本文记录wordpress博客vat58.com迁移至github和gitcafe的过程。">
 
 
+
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post'
+    sidebar: 'post',
+    motion: true
   };
 </script>
-
-
 
   <title> 记录wordpress迁移到git+hexo | VAT58 </title>
 </head>
@@ -193,11 +201,16 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content"> 
+        <div id="content" class="content">
+          
 
   <div id="posts" class="posts-expand">
     
 
+  
+  
+
+  
   
   
 
@@ -347,6 +360,11 @@ $ git clone http<span class="variable">s:</span>//github.<span class="keyword">c
 <p>主题更新：</p>
 <pre><code><span class="keyword">cd</span> themes/<span class="keyword">next</span>
 git pull
+</code></pre><p>如果碰到git更新冲突的情况，学会使用stash：</p>
+<pre><code>git stash       <span class="comment">//备份当前的工作区的内容，从最近的一次提交中读取相关内容，让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保存到Git栈中。</span>
+git pull
+git stash <span class="keyword">pop</span>
+<span class="comment">//从Git栈中读取最近一次保存的内容，恢复工作区的相关内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从最近的一个stash中读取内容并恢复。</span>
 </code></pre><p>#详细配置站点的_config.yml文件</p>
 <hr>
 <p>在next主题的github页面，有该主题目前支持的所有配置项，如下举例：</p>
@@ -446,19 +464,22 @@ git pull
     </div>
   </div>
 
- </div>
+
+        </div>
 
         
 
+
         
-          <div class="comments" id="comments">
-            
-              <div class="ds-thread" data-thread-key="记录wordpress迁移到github-hexo/"
-                   data-title="记录wordpress迁移到git+hexo" data-url="http://www.vat58.com/记录wordpress迁移到github-hexo/">
-              </div>
-            
-          </div>
-        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="记录wordpress迁移到github-hexo/"
+           data-title="记录wordpress迁移到git+hexo" data-url="http://www.vat58.com/记录wordpress迁移到github-hexo/">
+      </div>
+    
+  </div>
+
+
       </div>
 
       
@@ -525,13 +546,17 @@ git pull
             
               <span class="links-of-author-item">
                 <a href="https://twitter.com/Vinny_Dong" target="_blank">
-                  <i class="fa fa-twitter fa-fw"></i> twitter
+                  
+                    <i class="fa fa-globe"></i> twitter
+                  
                 </a>
               </span>
             
               <span class="links-of-author-item">
                 <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
-                  <i class="fa fa-google fa-fw"></i> google
+                  
+                    <i class="fa fa-globe"></i> google
+                  
                 </a>
               </span>
             
@@ -556,14 +581,20 @@ git pull
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
           <div class="post-toc">
+            
+              
             
             
               <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
         </section>
       
 
@@ -575,7 +606,8 @@ git pull
     </main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner">
+        <div class="copyright" >
   
   &copy;  2012 - 
   <span itemprop="copyrightYear">2015</span>
@@ -597,7 +629,8 @@ git pull
 </div>
 
 
- </div>
+
+      </div>
     </footer>
 
     <div class="back-to-top"></div>
@@ -607,6 +640,7 @@ git pull
 
   
   
+
   
     
 
@@ -632,24 +666,21 @@ git pull
 
     
   
+
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
   <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  
-
   <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
-  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.2" id="motion.global"></script>
-
-
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.2"></script>
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
   
@@ -734,7 +765,7 @@ git pull
 
     function tocOverflowIndicator (indicator, action) {
       var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
+      var opacity = action === 'show' ? 1 : 0;
       $indicator.velocity ?
         $indicator.velocity('stop').velocity({
           opacity: opacity
@@ -814,23 +845,7 @@ git pull
 
 
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-
-      isMobile() && FastClick.attach(document.body);
-
-      // Define Motion Sequence.
-      motionIntegrator
-        .add(motionMiddleWares.logo)
-        .add(motionMiddleWares.menu)
-        .add(motionMiddleWares.backToTop)
-        .add(motionMiddleWares.postList)
-        .add(motionMiddleWares.sidebar);
-
-      // Bootstrap Motion.
-      motionIntegrator.bootstrap();
-    });
-  </script>
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
 
   
   
@@ -838,15 +853,5 @@ git pull
   
   
 
-  
-  <script type="text/javascript" src="/js/lazyload.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      $("#posts").find('img').lazyload({
-        placeholder: "/images/loading.gif",
-        effect: "fadeIn"
-      });
-    });
-  </script>
 </body>
 </html>
