@@ -232,6 +232,121 @@
             
               
                 
+                <a class="post-title-link" href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/" itemprop="url">
+                  mac下vim中文乱码及ssh远程中文乱码的解决方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-11T15:44:55+08:00" content="2015-12-11">
+              2015-12-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/mac/" itemprop="url" rel="index">
+                    <span itemprop="name">mac</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="mac下vim中文乱码及ssh远程中文乱码的解决方法/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+            mac终端本地文件的中文显示和输入都没问题，但是在使用vim和ssh远程的时候碰到了中文乱码，解决方法如下：
+问题一：vim乱码解决方法：
+vi ~/.vimrc
+在文件中添加
+let &amp;termencoding=&amp;encoding
+set fileencodings=utf-8,gbk,utf-16,big5
+问题二：ssh远程乱码在/etc/ssh_config~orig 文件中有这么一句：
+SendEnv LANG LC_*
+也就是说ssh命令会发送本地语言环境到目标机器。
+            ...
+          </span>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/vi命令学习笔记/" itemprop="url">
                   vi命令学习笔记
                 </a>
@@ -422,12 +537,11 @@ D
             
             checkoutsvn checkout svn://localhost/mycode --username=yhm --password=123 /Users/dong/Documents/code
 将服务器中mycode仓库的内容下载到/Users/dong/Documents/code目录中
-commitcd/Users/dong/Documents/code
+commitcd /Users/dong/Documents/code
 svn commit -m "注释"
-updatecd/Users/dong/Documents/code
-svn update
-
-            
+updatecd /Users/dong/Documents/code
+svn updat
+            ...
           </span>
           <div class="post-more-link text-center">
             <a class="btn" href="/mac下svn使用笔记/#more" rel="contents">
@@ -1213,119 +1327,6 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/晚晴集/" itemprop="url">
-                  晚晴集
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-09-02T15:45:27+08:00" content="2015-09-02">
-              2015-09-02
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/缠中学禅/" itemprop="url" rel="index">
-                    <span itemprop="name">缠中学禅</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/晚晴集/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="晚晴集/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            1.若失本心，即当忏悔，忏悔之法，是为清凉。 （金刚三昧经）
-2.菩萨若能随顺众生，则为随顺供养诸佛。若于众生尊重承事，则为尊重承事如来。若令众生欢喜者，则令一切如来欢喜。（华严经普贤行愿品）
-3.应代一切众生受加毁辱，恶事向自己，好事与他人。（梵网经）
-4.离贪嫉者能净心中贪欲云翳，犹如夜月，众星围绕。（理趣六波罗蜜多经）
-5.世间色声香味触，常能诳惑一切凡夫，令生爱着。（智者大师）
-6.嗔是失佛法之根本，坠恶道之因缘，法乐之冤家，善心之大贼，种种恶口之府藏。（智者大师）
-7.处众处独，宜韬宜
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/晚晴集/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
@@ -1372,7 +1373,7 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">156</span>
+              <span class="site-state-item-count">157</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
