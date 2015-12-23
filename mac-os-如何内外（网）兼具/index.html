@@ -66,7 +66,7 @@ rout">
 windows下的简单操作打开cmd，输入命令即可。
 rout">
 <meta property="og:image" content="http://7kttw7.com1.z0.glb.clouddn.com/mac网络优先设置">
-<meta property="og:updated_time" content="2015-12-22T02:23:31.000Z">
+<meta property="og:updated_time" content="2015-12-23T01:14:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac os 如何内外（网）兼具">
 <meta name="twitter:description" content="工作中会有各种各样的内网存在，比如公安内网，银行内网等等，互联网我们则称为外网。由于经常碰到即需要内网环境又需要通过外网查询资料的情形，如果不加配置，只能繁琐地手动切换。本篇通过添加路由的方法来解决这个问题，与大家共享。
@@ -303,7 +303,7 @@ rout">
 <pre><code>sudo su     <span class="comment">//获得root身份</span>
 route -n add <span class="number">36.0</span><span class="number">.0</span><span class="number">.0</span>/<span class="number">4</span> <span class="number">36.45</span><span class="number">.98</span><span class="number">.254</span>  <span class="comment">//类似于windows的命令</span>
 </code></pre><p>3.如何设置为永久添加</p>
-<p>相比windows下和mac os下的命令，大家会发现mac下没有参数p来设定路由永久生效。这样一来，重启过后，设置就失效了，虽然mac用户一般不关机。<br>可以通过将指令添加到启动项的方式解决这个问题。前面的操作完成后已经可以内外兼具了，这一步不需要的可以跳过去。</p>
+<p>相比windows下和mac os下的命令，大家会发现mac下没有参数p来设定路由永久生效。这样一来，重启过后（后来实践，好像长时间休眠也失效了），设置就失效了，虽然mac用户一般不关机。<br>可以通过将指令添加到启动项的方式解决这个问题。前面的操作完成后已经可以内外兼具了，这一步不需要的可以跳过去。</p>
 <pre><code>cd /System/Library/StartupItems/
 
 sudo mkdir AddRoutes; cd AddRoutes
@@ -365,6 +365,10 @@ sudo chmod <span class="number">755</span> *
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/什么是有为法，什么是无为法？/" rel="prev" title="什么是有为法，什么是无为法？">
+                什么是有为法，什么是无为法？ <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -436,21 +440,21 @@ sudo chmod <span class="number">755</span> *
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">159</span>
+              <span class="site-state-item-count">160</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             
-              <span class="site-state-item-count">46</span>
+              <span class="site-state-item-count">47</span>
               <span class="site-state-item-name">分类</span>
               
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">124</span>
+              <span class="site-state-item-count">125</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
