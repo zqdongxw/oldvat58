@@ -232,6 +232,112 @@
             
               
                 
+                <a class="post-title-link" href="/mysql-note/" itemprop="url">
+                  Mysql小记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2012-05-24T00:18:11+08:00" content="2012-05-24">
+              2012-05-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/mysql-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="mysql-note/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>说到mysql数据库，中小型够用，开源，比oracle轻量，得到不少人的青睐。在此记录一下mysql的常用操作。</p>
+<h3 id="Java中连接mysql数据库（jdbc）">Java中连接mysql数据库（jdbc）</h3><p><a href="http://www.mysql.com/downloads/connector/j/">官方获取mysql驱动程序包</a><br><span style="background-color: #bbe915;">Class.forName(“com.mysql.jdbc.Driver”);</span> //加载驱动程序，”org.gjt.mm.mysql.Driver”的写法兼容但不建议使用。<br><span style="background-color: #bbe915;">Connection conn = </span><br><span style="background-color: #bbe915;">DriverManager.getConnection(“jdbc.mysql://host/DBname”,”用户名”,”密码”);</span></p>
+<p><span style="color: #666699;">String sql = “select * from users where count=? and name=?”;</span><br><span style="color: #666699;">PreparedStatement ps = conn.preparedStatement(sql);</span>//据说用PreparedStatement档次高点<br><span style="color: #666699;">ps.setInt(1,int1); </span><br><span style="color: #666699;">ps.setString(2,var2); </span><br><span style="color: #666699;">ResultSet rs = ps.executequery ();<br>….. </span></p>
+<h3 id="<!-more->Mysql常用指令">
+          <div class="post-more-link text-center">
+            <a class="btn" href="/mysql-note/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/waystogo/" itemprop="url">
                   IT民工出路何在
                 </a>
@@ -1174,121 +1280,12 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/ecryptfs-recover-private/" itemprop="url">
-                  重装ubuntu后如何恢复数据
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2012-05-07T15:54:49+08:00" content="2012-05-07">
-              2012-05-07
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ubuntu/" itemprop="url" rel="index">
-                    <span itemprop="name">ubuntu</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/ecryptfs-recover-private/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="ecryptfs-recover-private/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-            主题：重装ubuntu后如何恢复数据实验环境：ubuntu 12.04感言： 说是“实验环境”，不如说是今中午本人的悲惨经历。各种抓心挠肝，各种抓狂！救命稻草： sudo ecryptfs-recover-private
-剧情回顾：今中午相当的作孽，在windows下的误操作动了ubuntu的“龙体”。什么误操作？我是不会告诉你的，否则你就会知道我当时有多“2”，总之就是到了重装ubuntu的时候了。天啊？我刚刚弄好的Android环境，这几天来的所有配置，统统付诸东流？太伤感情了。
-重装时有个
-            ...
-          </span>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/ecryptfs-recover-private/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
 
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1329,7 +1326,7 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">160</span>
+              <span class="site-state-item-count">161</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1404,7 +1401,7 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
         <div class="copyright" >
   
   &copy;  2012 - 
-  <span itemprop="copyrightYear">2015</span>
+  <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="icon-next-heart fa fa-heart"></i>
   </span>
