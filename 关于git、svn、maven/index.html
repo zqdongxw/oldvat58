@@ -61,7 +61,7 @@
 <meta property="og:site_name" content="VAT58">
 <meta property="og:description" content="git和maven的必要性，远远超过很多没用过的人的想象。
 很多人应该用过svn、cvs之类的代码版本管理工具，git也是其中之一。svn和git最大的几个区别要点，svn必须要有服务端，网络能连上服务端才能提交和更新，git不需要，每一台装了git的电脑都是服务端，各台电脑之间可以相互同步和推送，而提交不需要网络就可以提交到本地的git库里。这样的好处就是，如果要分享代码，不需要打个压缩包传来传">
-<meta property="og:updated_time" content="2016-01-08T02:57:12.000Z">
+<meta property="og:updated_time" content="2016-01-08T07:49:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于git、svn、maven">
 <meta name="twitter:description" content="git和maven的必要性，远远超过很多没用过的人的想象。
@@ -285,7 +285,7 @@
         <span itemprop="articleBody"><p>git和maven的必要性，远远超过很多没用过的人的想象。</p>
 <p>很多人应该用过svn、cvs之类的代码版本管理工具，git也是其中之一。<br>svn和git最大的几个区别要点，svn必须要有服务端，网络能连上服务端才能提交和更新，git不需要，每一台装了git的电脑都是服务端，各台电脑之间可以相互同步和推送，而提交不需要网络就可以提交到本地的git库里。这样的好处就是，如果要分享代码，不需要打个压缩包传来传去，也不需要找个服务器搭个svn来共享，现在oschina，csdn等网站都提供了免费的git服务器，大家注册个帐号，提交下去，把地址发给别人就可以了，而免费的svn服务器，几乎是不存在的。而且svn因为服务端是单一的，一旦服务器坏了，整个版本库的历史记录就没有了，也没法再回滚，git每台电脑都是服务端，只要两台电脑做过同步，任何一台坏了，另一台还保有着所有的历史记录，仍然可以提交更新回滚，不怕代码历史丢失。此外，git还有许多强大之处，比如git的分支就比svn的强太多，这些就留给大家摸索吧。</p>
 <p>再说说maven，我们每做一个项目，都要往lib目录扔很多jar包，spring的啊hibernate的啊apache的啊等等，这样就会导致很多包不知从哪个角落下载回来的，名称千奇百怪，版本也不明，项目多了以后还得自己复制来复制去，容易有多种不同版本的包混杂。maven最基本最重要的功能就是管理这些项目间的依赖关系，用一个xml来维护。如果你的工程要用spring，你就在maven的pom.xml里配一下spring的项目名称和版本号，要用其他的也一样。<br>得益于maven已经成为java世界的主流工具，绝大部分知名的项目都在maven中央仓库有标准名称，有各种不同的版本存在，你只要配下名称，配下版本号，maven就会自动从网上为你下载jar包并让你的工程依赖上，你的本地硬盘的仓库目录能看到井井有条的你用过的所有第三方项目的jar包和源代码，再也不用去下载那些来路不明的jar包再扔到工程里了，也不用担心写同一个项目的两个人一个用了3.0版的spring，一个用了2. 5版的spring，以至搞出莫名其妙的问题。</p>
-<p>有了maven，我们不再需要往git或svn提交jar包，项目库的体积大大减小，下载项目变得快多了。而且只要提交一个pom.xml文件和你的代码，其他人自然也能下载到和你本地一模一样的第三方jar包，下过一次某个jar包以后，其他项目再用同一个jar包时，maven自然会使用本地仓库文件夹里存在的jar包，不需要再次下载，也不会出现很多个拷贝。<br>另一个好处是maven的pom.xml任何一个主流ide工具都认识，都可以导入项目，你不用再操心你提交的.project和.settings文件因为别人的eclipse版本和你不同而导不进去，也不用再担心有人用的是别的ide认不得你的eclipse项目元文件，你不需要提交这些和开发工具有关的文件到服务器上了</p>
+<p>有了maven，我们不再需要往git或svn提交jar包，项目库的体积大大减小，下载项目变得快多了。而且只要提交一个pom.xml文件和你的代码，其他人自然也能下载到和你本地一模一样的第三方jar包，下过一次某个jar包以后，其他项目再用同一个jar包时，maven自然会使用本地仓库文件夹里存在的jar包，不需要再次下载，也不会出现很多个拷贝。<br>另一个好处是maven的pom.xml任何一个主流ide工具都认识，都可以导入项目，你不用再操心你提交的.project和.settings文件因为别人的eclipse版本和你不同而导不进去，也不用再担心有人用的是别的ide认不得你的eclipse项目元文件，你不需要提交这些和开发工具有关的文件到服务器上了.</p>
 </span>
       
     </div>
@@ -310,6 +310,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/密行百事/" rel="prev" title="密行百事">
+                密行百事 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -381,7 +385,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">161</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
