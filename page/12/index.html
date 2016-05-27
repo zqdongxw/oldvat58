@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -23,18 +29,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -66,10 +99,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -78,15 +117,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -103,9 +133,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -134,13 +173,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -150,7 +189,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -160,7 +199,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -168,6 +207,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -175,11 +224,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -201,15 +248,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-
     
       
 
@@ -242,7 +284,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-11T00:25:41+08:00" content="2012-05-11">
               2012-05-11
             </time>
@@ -250,7 +295,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
@@ -278,30 +327,41 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            下午我坐在软件园的长椅上，静静观察着周围的一切。夏日火辣的阳光渐渐温顺下来，不再那么咄咄逼人。不时有几丝轻风飘过，荡漾了园内的柳条，轻盈而不张扬。
+          
+          下午我坐在软件园的长椅上，静静观察着周围的一切。夏日火辣的阳光渐渐温顺下来，不再那么咄咄逼人。不时有几丝轻风飘过，荡漾了园内的柳条，轻盈而不张扬。
 湖的旁边有有几个颇具创意的设施，水风车等。虽然叫不上名字，都能与湖中的水完成很好的互动，所以这儿经常聚集不少嬉戏的小孩。一个小女孩扎着可爱的马角辫，爬上爬下，玩的不亦乐乎，制造着园内独特的“噪音”。虽然阳光不是很强，可毕竟是春末夏初，小女孩不时擦汗，一会儿蹬，一会儿转，沉浸在自己的世界丝毫没有罢手的意思。大人们躲在阴凉处笑嘻嘻的看着，她的妈妈又气又爱
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/yesterday-once-more/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -350,7 +410,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-08T21:56:05+08:00" content="2012-05-08">
               2012-05-08
             </time>
@@ -358,7 +421,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
@@ -386,35 +453,46 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            Activity的生命周期
+          
+          Activity的生命周期
 android世界中，Activity有四种基本状态：
 
 activity running 一个Activity启动后，它活跃在屏幕 的最前端，处于可见并可交互的状态
 paused 当activity被另一个acvitity透明覆盖时的状态。虽然失去焦点，不可交互，仍然与窗口保持连接、可见，故系统仍然在维持它
 stoped  当activity被另一个acvitity覆盖，失去焦点不可见时的状态
 killed  当activity被杀死回收或未启动时的状态上图acvi
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/android-02/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -463,7 +541,10 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-07T15:54:49+08:00" content="2012-05-07">
               2012-05-07
             </time>
@@ -471,7 +552,11 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/ubuntu/" itemprop="url" rel="index">
@@ -499,31 +584,42 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            主题：重装ubuntu后如何恢复数据实验环境：ubuntu 12.04感言： 说是“实验环境”，不如说是今中午本人的悲惨经历。各种抓心挠肝，各种抓狂！救命稻草： sudo ecryptfs-recover-private
+          
+          主题：重装ubuntu后如何恢复数据实验环境：ubuntu 12.04感言： 说是“实验环境”，不如说是今中午本人的悲惨经历。各种抓心挠肝，各种抓狂！救命稻草： sudo ecryptfs-recover-private
 剧情回顾：今中午相当的作孽，在windows下的误操作动了ubuntu的“龙体”。什么误操作？我是不会告诉你的，否则你就会知道我当时有多“2”，总之就是到了重装ubuntu的时候了。天啊？我刚刚弄好的Android环境，这几天来的所有配置，统统付诸东流？太伤感情了。
 重装时有个
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/ecryptfs-recover-private/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -572,7 +668,10 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-07T08:16:24+08:00" content="2012-05-07">
               2012-05-07
             </time>
@@ -580,7 +679,11 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
@@ -608,35 +711,46 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            这篇笔记，我们来认识一下Android项目的目录结构以及基本文件的释义。
+          
+          这篇笔记，我们来认识一下Android项目的目录结构以及基本文件的释义。
 左图为一个简单的helloworld项目目录，不多说，麻雀虽小，五脏俱全。
 src:存放代码文件，左图中只有一个activity类
 res: resource文件夹，存放需要的资源
 drawable: 多个drawable文件夹，对应不同分辨率的图片资源，以适应不同手机环境的需要
 layout: 存放xml布局文件，一般一个activity对应一个xml文件，也可以多个activity对应一个xml文件
 values: x
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/android-01/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -685,7 +799,10 @@ values: x
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-05T13:44:59+08:00" content="2012-05-05">
               2012-05-05
             </time>
@@ -693,7 +810,11 @@ values: x
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
@@ -721,31 +842,42 @@ values: x
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            来看一款Android手机软件：Androidify
+          
+          来看一款Android手机软件：Androidify
  Androidify是由Google谷歌官方开发的Android平台的虚拟形象软件，你可以在android手机上安装Androidify，自定义安卓机器人的肤色、发色、衣服、裤子、鞋子、饰品等方面，还可变更身体的比例，把Android机器人的头部、身体、四肢进行随意的变换，拉长或者缩短，甚至可以加上一款时尚的Android手机，做成与真人相似的卡通机器人，在手机上创造属于自己的Android形象。
 如果你已经在自己的手机上摆弄起来，那就不打
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/androidify-you/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -794,7 +926,10 @@ values: x
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-03T22:05:34+08:00" content="2012-05-03">
               2012-05-03
             </time>
@@ -802,7 +937,11 @@ values: x
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/ubuntu/" itemprop="url" rel="index">
@@ -830,31 +969,42 @@ values: x
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            一：翻墙
+          
+          一：翻墙
 ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞啊。真正要做到畅行，呵呵，还得翻。windows下的教程详见《不会翻墙？GoAgent带你畅游博客中的博客》ubuntu下的方法大同小异。
 配置：local目录：修改proxy.ini 中appid为你的IDserver目录：python uploader.zip （终端命令），按提示输入appid，邮箱，密码等。运行： local目录：python proxy.py（终端命令）,接下来配合chrome sw
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/ubuntu-settings/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -903,7 +1053,10 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-03T08:30:56+08:00" content="2012-05-03">
               2012-05-03
             </time>
@@ -911,7 +1064,11 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/ubuntu/" itemprop="url" rel="index">
@@ -939,30 +1096,41 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            这是第一次发布linux相关的文章，因为对于linux一直以来都是浅尝辄止，停留在一个肤浅的程度上。会装系统，会几个命令，仅此而已。每到ubuntu发布新的版本前，各种linux迷ubuntu迷已是蠢蠢欲动，满网络上都是小白鼠在“竞速”，当然也不乏类似与我的“伪ubuntu迷”。ubuntu12.04发布，我忍住激动：一ubuntu12.04又不是我的产品，二对linux没有真正理解并应用，还激动个毛啊？说归说，到底还是屁颠屁颠地装上了。
+          
+          这是第一次发布linux相关的文章，因为对于linux一直以来都是浅尝辄止，停留在一个肤浅的程度上。会装系统，会几个命令，仅此而已。每到ubuntu发布新的版本前，各种linux迷ubuntu迷已是蠢蠢欲动，满网络上都是小白鼠在“竞速”，当然也不乏类似与我的“伪ubuntu迷”。ubuntu12.04发布，我忍住激动：一ubuntu12.04又不是我的产品，二对linux没有真正理解并应用，还激动个毛啊？说归说，到底还是屁颠屁颠地装上了。
 从笔记本上把ubuntu11.10升级12.04，出现了
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/ubuntu12-04/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1011,7 +1179,10 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-05-01T22:31:00+08:00" content="2012-05-01">
               2012-05-01
             </time>
@@ -1019,7 +1190,11 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/爱上V软/" itemprop="url" rel="index">
@@ -1047,33 +1222,44 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            在周金根老师的博客里，第一次接触了敏捷个人。敏捷个人是一个指导框架，旨在认识自我，管理自我，找到快乐、高效、平衡的生活！在自我管理中，时间管理显得尤为重要，希望周老师推荐的这款manic time能帮到我们。在这里分享算是在我的博客里mark一下。
+          
+          在周金根老师的博客里，第一次接触了敏捷个人。敏捷个人是一个指导框架，旨在认识自我，管理自我，找到快乐、高效、平衡的生活！在自我管理中，时间管理显得尤为重要，希望周老师推荐的这款manic time能帮到我们。在这里分享算是在我的博客里mark一下。
 ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何使用计算机的数据，包括使用时间和空闲时间，使用了哪些程序以及这些程序的使用时长。下载安装后它会自动在后台工作 。
 
 
 自动收集计算机的使用资料。 您可以进行计算机活动而不自知Mani
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/manictime/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1122,7 +1308,10 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-29T09:52:25+08:00" content="2012-04-29">
               2012-04-29
             </time>
@@ -1130,7 +1319,11 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/google/" itemprop="url" rel="index">
@@ -1158,21 +1351,24 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            Google drive 不得不爱的几大理由：
+          
+          Google drive 不得不爱的几大理由：
 
 
 同步不同设备间所有文件：Google Drive 的本地客户端覆盖了 Android、OSX、iOS（尚未发布） 和 Windows 平台，你的文件将始终在你的手边；即使没有安装客户端，你也可以方便的在网页端操作文件。
@@ -1185,14 +1381,22 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
 
 与他人分享文件、协
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/google-drive/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1241,7 +1445,10 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-27T20:35:32+08:00" content="2012-04-27">
               2012-04-27
             </time>
@@ -1249,7 +1456,11 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
@@ -1277,32 +1488,43 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            人物周刊：拿到剧本，认领了角色，通常你会做哪些准备？
+          
+          人物周刊：拿到剧本，认领了角色，通常你会做哪些准备？
 王志文：我现在的生活，除了演戏，基本上两点一线：儿子，球场。我跟孩子玩，脑子里会琢磨；到球场打球，不用跟人说话，也在慢慢进入。首先是理解角色，接收他，剔掉个人偏好、习惯地接收，同时让那部分变得丰富、生动起来。心里要有——你得满满当当才能表达，否则只能是敷衍。但现在拍戏大多是每天得拍掉多少页，这个景拍完了，马上换下一个，都游击队了，这事儿就比较麻烦了。同行说你太使劲儿了，可我觉得还不够。我的方式还是原来的，准备得充分一点。
 
 人物周刊：《南行记
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/digest-precise/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1320,7 +1542,6 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
 
     
-
   </section>
 
   
@@ -1330,17 +1551,15 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1359,10 +1578,12 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="http://vat58.qiniudn.com/avatar.jpg"
+               alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1371,19 +1592,23 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">47</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">126</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">126</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1393,18 +1618,20 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
           
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/Vinny_Dong" target="_blank">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank" title="twitter">
                   
-                    <i class="fa fa-globe"></i> twitter
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank" title="google">
                   
-                    <i class="fa fa-globe"></i> google
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  google
                 </a>
               </span>
             
@@ -1414,16 +1641,22 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
@@ -1433,7 +1666,8 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1443,7 +1677,7 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
   &copy;  2012 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
@@ -1459,21 +1693,94 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
   </a>
 </div>
 
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1491,36 +1798,22 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
 
   
+
   
 
 </body>

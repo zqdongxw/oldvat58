@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -23,18 +29,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -68,10 +101,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -80,15 +119,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -105,7 +135,16 @@
 
 
 
-  <div class="container one-column page-post-detail">
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -134,13 +173,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -150,7 +189,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -160,7 +199,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -168,6 +207,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -175,11 +224,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -201,8 +248,9 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
 
   <div id="posts" class="posts-expand">
     
@@ -233,7 +281,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2013-12-18T17:15:01+08:00" content="2013-12-18">
               2013-12-18
             </time>
@@ -241,7 +292,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
@@ -281,20 +336,42 @@
 
           
 
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <span itemprop="articleBody"><div>如果有天你看到我疯了，其实就是你疯了。</div><br><div>摘要《天才在左，疯子在右》中我比较感兴趣的观点，算是对此书一个导读吧。</div><br><div></div><br>1. 生命的尽头<br><div> 其实蚂蚁只是一种生命的细胞，蚁后就是大脑，兵蚁就是身体的防卫组织，工蚁都是细胞，也是嘴，也是手，用来找食物，用来传递，用来让大脑维持。蚁后作为大脑，还得兼顾生殖系统。工蚁聚在一起运输的时候，其实就是血液在输送养分，工蚁兼顾好多种功能，还得培育新生的细胞，就是幼蚁。所以整个蚁群才是完整的生命，松散生命。</div><br><div>石头也有生命，它们看不到我们的存在，因为我们生老病死太快，在它们面前我们就如同白驹过隙，转瞬即逝。石头的生命尽头在哪里？</div><br><div></div><br>2.女人的星球<br><br><div>从染色体xx/xy来看，女性拥有比男性丰富得多的基因，因此女性生来就拥有某些优势。所传闻的弗洛伊德的临终遗言很有意思，“女人啊，你究竟想要什么？”</div><br><div>传言，星球将被女人统治。O(∩_∩)O</div><br><div></div><br>3.苹果的味道<br><br><div>切断与外界的所有联系，闭关一定时间后所感受到的东西，就连苹果的味道都是那么真切：</div><br><div>用牙齿割开果皮的时候，那股原本淡淡的清新味道冲破一个临界点开始逐步在嘴里扩散开，味道逐渐变得浓郁。随着慢慢的嚼碎，果汁放肆的在舌尖上溅开，绝对野蛮又狂暴的掠过干枯的味蕾……果肉中的每一个细小颗粒都在争先恐后的开裂，释放出更多更多的苹果的味道。</div><br><div></div><br>4. 永远永远<br><br><div>与已经去世的丈夫一起生活的老太太，始终感觉丈夫与自己在一起，从衣食住行到语言的交流。</div><br><div>让我们用一首诗歌颂这种爱情吧：</div><br><div> 指间的戒指不再闪亮，婚纱在衣柜早就尘封</div><br><div>我们的容颜都已慢慢地苍老，但那份心情却依旧没有改变<br>感谢你带给我的每一天，正是因为你<br>我才有勇气说，“永远，永远”</div><br><div></div><br>5.真正的世界<br><br><div>你想没想过你看到的世界也许本身不是这个样子的？</div><br><div>最开始我先是慢慢观察别人的细节，然后记住那些细节的特征，再然后开始试着模仿别人，体会对方为什么这么做，说白了就是变成你模仿的那个人。模仿的时间久了，会了解被模仿者的心态，进一步，就学会用对方的眼睛去看事物了，如果掌握得好，甚至可以知道对方在想什么。”当你开始用别人的眼光看的时候，你会看得更本质，你也就会更接近这个世界的本质所在。</div><br><div></div><br><div>想看到真正的世界，就要用天的眼睛去看天，用云的眼睛去看云，用风的眼睛去看风，用花草树木的眼睛去看花草树木，用石头的眼睛去看石头，用大海的眼睛去看大海，用动物的眼睛去看动物，用人的眼睛去看人。</div><br><div></div><br><div>我们用眼睛看到的这个世界或许并不是这个样子…</div><br><div></div><br><div><img src="http://www.vat58.com/blog/wp-content/uploads/2013/12/weizhi.jpg" alt="未知"></div><br><div></div><br>6. 时间的尽头之镇院之宝<br><br><div>仙人级镇院之宝所描述的时间的尽头：</div><br><div>时间的尽头存在于重力扭曲造成的平衡之中。时间的尽头是超出想象的，那个地方因为没有时间，很难理解。例如说，你向前走一步，同时你也就是向所有的方向走了一步。同样，你可以同时看到所有的角度，自己的正面或者侧面。还有更夸张的，只要你想走出那步，实际上你已经走出去了。没有时间的约束，就脱离了因果关系。</div><br><div></div><br>7.永生<br><br><div>患者可以不断重生，还带着前世的记忆。</div><br><div>比如描述某一次杀头的感觉：先觉得脖子很凉，一下子好像就变轻了，然后脖子是火杀一样的感觉，疼得想喊，但是嘴确动不了。头落下的时候我能看到我没头的身体猛的向后一仰，血从脖子里喷出来，身体也随着一下一下的逐渐向前倾倒。那时候听到的，看到的，都开始模糊了，嘴里有淡淡血的味道。之后越来越黑，直到什么都看不见听不见，没有了感觉…</div><br><div></div><br><div>经历过几世之后，患者的感悟：几世前我就明白了，想做一个影响到历史的人，需要太多因素，要比所有人更坚定，比所有人更残忍，比所有人更冷静，比所与人更无悔，比所有人运气更好，比所有人更疯狂…太多了。长生不老真的很好吗？看着自己的亲人和朋友都不在了，自己依旧存在，一代又一代的独自活着。看着身边的人都是陌生人，没有真正的同伴，没人理解…我不感觉这样很好。不管身处在什么时代，沉稳也好，战乱也好，浮夸世风也好，只要做到四个字：隐忍、低调。</div><br><div></div><br><div>一个孤独的存在，该是怎样的凄凉。这趟旅行没有终点，带着几世的记忆和沉淀，这一遭又该追寻点什么？</div><br><div></div><br>8. 超级进化论<br><br><div>胎儿是什么？就是寄生体！吸取母体营养，寄生在母体内。既然是寄生物，母体会排斥，淋巴系统肯定会起作用，要杀死胎儿这个巨大的寄生体。但是胎儿会释放 一种化学物质，叫什么我忘了，你可以自己去查 目的是存活在母体内，继续自己的高速进化。那种化学反应的冲突，直接表现出来就是刚怀孕的妈妈会厌食啊，会呕吐啊，会脾气不好啊。其实你发现没？越是健康 的女人，怀孕的时候反应越大，因为自己身体好啊，排斥寄生物的能力就强，胎儿也就比较累了。不过几个月之后，没事了。因为胎儿释放的那些化学物质导致免疫 系统认为胎儿是个器官，所以开始源源不断地输送养分，那个小东西胜利了。</div><br><div></div>
+        <div>如果有天你看到我疯了，其实就是你疯了。</div><br><div>摘要《天才在左，疯子在右》中我比较感兴趣的观点，算是对此书一个导读吧。</div><br><div></div><br>1. 生命的尽头<br><div> 其实蚂蚁只是一种生命的细胞，蚁后就是大脑，兵蚁就是身体的防卫组织，工蚁都是细胞，也是嘴，也是手，用来找食物，用来传递，用来让大脑维持。蚁后作为大脑，还得兼顾生殖系统。工蚁聚在一起运输的时候，其实就是血液在输送养分，工蚁兼顾好多种功能，还得培育新生的细胞，就是幼蚁。所以整个蚁群才是完整的生命，松散生命。</div><br><div>石头也有生命，它们看不到我们的存在，因为我们生老病死太快，在它们面前我们就如同白驹过隙，转瞬即逝。石头的生命尽头在哪里？</div><br><div></div><br>2.女人的星球<br><br><div>从染色体xx/xy来看，女性拥有比男性丰富得多的基因，因此女性生来就拥有某些优势。所传闻的弗洛伊德的临终遗言很有意思，“女人啊，你究竟想要什么？”</div><br><div>传言，星球将被女人统治。O(∩_∩)O</div><br><div></div><br>3.苹果的味道<br><br><div>切断与外界的所有联系，闭关一定时间后所感受到的东西，就连苹果的味道都是那么真切：</div><br><div>用牙齿割开果皮的时候，那股原本淡淡的清新味道冲破一个临界点开始逐步在嘴里扩散开，味道逐渐变得浓郁。随着慢慢的嚼碎，果汁放肆的在舌尖上溅开，绝对野蛮又狂暴的掠过干枯的味蕾……果肉中的每一个细小颗粒都在争先恐后的开裂，释放出更多更多的苹果的味道。</div><br><div></div><br>4. 永远永远<br><br><div>与已经去世的丈夫一起生活的老太太，始终感觉丈夫与自己在一起，从衣食住行到语言的交流。</div><br><div>让我们用一首诗歌颂这种爱情吧：</div><br><div> 指间的戒指不再闪亮，婚纱在衣柜早就尘封</div><br><div>我们的容颜都已慢慢地苍老，但那份心情却依旧没有改变<br>感谢你带给我的每一天，正是因为你<br>我才有勇气说，“永远，永远”</div><br><div></div><br>5.真正的世界<br><br><div>你想没想过你看到的世界也许本身不是这个样子的？</div><br><div>最开始我先是慢慢观察别人的细节，然后记住那些细节的特征，再然后开始试着模仿别人，体会对方为什么这么做，说白了就是变成你模仿的那个人。模仿的时间久了，会了解被模仿者的心态，进一步，就学会用对方的眼睛去看事物了，如果掌握得好，甚至可以知道对方在想什么。”当你开始用别人的眼光看的时候，你会看得更本质，你也就会更接近这个世界的本质所在。</div><br><div></div><br><div>想看到真正的世界，就要用天的眼睛去看天，用云的眼睛去看云，用风的眼睛去看风，用花草树木的眼睛去看花草树木，用石头的眼睛去看石头，用大海的眼睛去看大海，用动物的眼睛去看动物，用人的眼睛去看人。</div><br><div></div><br><div>我们用眼睛看到的这个世界或许并不是这个样子…</div><br><div></div><br><div><img src="http://www.vat58.com/blog/wp-content/uploads/2013/12/weizhi.jpg" alt="未知"></div><br><div></div><br>6. 时间的尽头之镇院之宝<br><br><div>仙人级镇院之宝所描述的时间的尽头：</div><br><div>时间的尽头存在于重力扭曲造成的平衡之中。时间的尽头是超出想象的，那个地方因为没有时间，很难理解。例如说，你向前走一步，同时你也就是向所有的方向走了一步。同样，你可以同时看到所有的角度，自己的正面或者侧面。还有更夸张的，只要你想走出那步，实际上你已经走出去了。没有时间的约束，就脱离了因果关系。</div><br><div></div><br>7.永生<br><br><div>患者可以不断重生，还带着前世的记忆。</div><br><div>比如描述某一次杀头的感觉：先觉得脖子很凉，一下子好像就变轻了，然后脖子是火杀一样的感觉，疼得想喊，但是嘴确动不了。头落下的时候我能看到我没头的身体猛的向后一仰，血从脖子里喷出来，身体也随着一下一下的逐渐向前倾倒。那时候听到的，看到的，都开始模糊了，嘴里有淡淡血的味道。之后越来越黑，直到什么都看不见听不见，没有了感觉…</div><br><div></div><br><div>经历过几世之后，患者的感悟：几世前我就明白了，想做一个影响到历史的人，需要太多因素，要比所有人更坚定，比所有人更残忍，比所有人更冷静，比所与人更无悔，比所有人运气更好，比所有人更疯狂…太多了。长生不老真的很好吗？看着自己的亲人和朋友都不在了，自己依旧存在，一代又一代的独自活着。看着身边的人都是陌生人，没有真正的同伴，没人理解…我不感觉这样很好。不管身处在什么时代，沉稳也好，战乱也好，浮夸世风也好，只要做到四个字：隐忍、低调。</div><br><div></div><br><div>一个孤独的存在，该是怎样的凄凉。这趟旅行没有终点，带着几世的记忆和沉淀，这一遭又该追寻点什么？</div><br><div></div><br>8. 超级进化论<br><br><div>胎儿是什么？就是寄生体！吸取母体营养，寄生在母体内。既然是寄生物，母体会排斥，淋巴系统肯定会起作用，要杀死胎儿这个巨大的寄生体。但是胎儿会释放 一种化学物质，叫什么我忘了，你可以自己去查 目的是存活在母体内，继续自己的高速进化。那种化学反应的冲突，直接表现出来就是刚怀孕的妈妈会厌食啊，会呕吐啊，会脾气不好啊。其实你发现没？越是健康 的女人，怀孕的时候反应越大，因为自己身体好啊，排斥寄生物的能力就强，胎儿也就比较累了。不过几个月之后，没事了。因为胎儿释放的那些化学物质导致免疫 系统认为胎儿是个器官，所以开始源源不断地输送养分，那个小东西胜利了。</div><br><div></div>
 
-<div><span style="color: #008000;"><strong>V评：确实被这本书中“疯子”们的世界观震撼到了，能看到四维虫子的天才物理少年、能到达时间尽头的仙级镇院之宝、能够偷取时间的人、来自另一个地球的迷失旅行者….他们有的学识渊博，有的执着于探索，所表达的观点逻辑思维缜密，不可思议又令人无力反驳。我一直以为分享一些不同的观点、视角、世界观是一件很有意思的事情，不一定被某种观点同化，只是有一点可以得到强化：这个世界有太多未知的东西，有太多可能性和超乎我们想象的事物。从这一点上再去理解“人上有人，天外有天”就应该不困难了。对于“异己”的东西，我们需要质疑，在质疑过程中同时也是一个认知的过程。很多牛人都有自己一套完整的思想体系，那应该是在认知过程中不断推翻重建的结果。对啊，这个世界，谁知道到底谁有病。</strong></span></div><br><div></div><br><div></div></span>
+<div><span style="color: #008000;"><strong>V评：确实被这本书中“疯子”们的世界观震撼到了，能看到四维虫子的天才物理少年、能到达时间尽头的仙级镇院之宝、能够偷取时间的人、来自另一个地球的迷失旅行者….他们有的学识渊博，有的执着于探索，所表达的观点逻辑思维缜密，不可思议又令人无力反驳。我一直以为分享一些不同的观点、视角、世界观是一件很有意思的事情，不一定被某种观点同化，只是有一点可以得到强化：这个世界有太多未知的东西，有太多可能性和超乎我们想象的事物。从这一点上再去理解“人上有人，天外有天”就应该不困难了。对于“异己”的东西，我们需要质疑，在质疑过程中同时也是一个认知的过程。很多牛人都有自己一套完整的思想体系，那应该是在认知过程中不断推翻重建的结果。对啊，这个世界，谁知道到底谁有病。</strong></span></div><br><div></div><br><div></div>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
       
     </div>
 
@@ -334,12 +411,11 @@
   </div>
 
 
-        </div>
+          </div>
+          
 
-        
 
-
-        
+          
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="unknown/"
@@ -349,10 +425,9 @@
   </div>
 
 
-      </div>
-
-      
+        </div>
         
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -380,10 +455,12 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="http://vat58.qiniudn.com/avatar.jpg"
+               alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -392,19 +469,23 @@
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">47</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">126</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">126</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -414,18 +495,20 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/Vinny_Dong" target="_blank">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank" title="twitter">
                   
-                    <i class="fa fa-globe"></i> twitter
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank" title="google">
                   
-                    <i class="fa fa-globe"></i> google
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  google
                 </a>
               </span>
             
@@ -435,24 +518,27 @@
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             
               
@@ -461,9 +547,6 @@
               <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
         </section>
       
 
@@ -471,7 +554,8 @@
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -481,7 +565,7 @@
   &copy;  2012 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
@@ -497,21 +581,98 @@
   </a>
 </div>
 
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -529,197 +690,22 @@
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
-
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
-
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
-
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
-</script>
-
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
-      }
-    };
-  });
-</script>
-
-
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
 
   
+
   
 
 </body>

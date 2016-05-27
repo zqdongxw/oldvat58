@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -23,18 +29,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -66,10 +99,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -78,15 +117,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -103,9 +133,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -134,13 +173,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -150,7 +189,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -160,7 +199,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -168,6 +207,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -175,11 +224,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -201,15 +248,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-
     
       
 
@@ -242,7 +284,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-29T22:58:46+08:00" content="2012-03-29">
               2012-03-29
             </time>
@@ -250,7 +295,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
@@ -278,21 +327,24 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            有些东西能记得住
+          
+          有些东西能记得住
  而有些东西却忘不掉
  应该记住的
  却在艾宾浩斯老人家的指示下离开我们
@@ -310,14 +362,22 @@
 后者俘虏了人类,吞噬着他们的心,人却无力反抗
 2007/11/30  by vinny
 
-            
-          </span>
+          
+
           <div class="post-more-link text-center">
             <a class="btn" href="/memory/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -366,7 +426,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-27T21:56:18+08:00" content="2012-03-27">
               2012-03-27
             </time>
@@ -374,7 +437,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
@@ -402,33 +469,44 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            php运算符同其他语言的运算符大同小异。
+          
+          php运算符同其他语言的运算符大同小异。
 算数运算符：+     -    *    /    %    ++    –  等。%取模运算符一般用来确定一个范围，比如对50求模，那结果肯定在50之内。
 比较运算符：==    ===    !=或&lt;&gt;    !==   &lt;    &gt;    &lt;=    &gt;=     ?    :        ===为全等运算符，比较的对象需要是值跟数据类型均相同才为真。对于!==不全等，只要值跟数据类型有一个不同就为真。
 
 逻
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/php-yunsuanfu/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -477,7 +555,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-26T23:26:11+08:00" content="2012-03-26">
               2012-03-26
             </time>
@@ -485,7 +566,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
@@ -513,33 +598,44 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            每天一点PHP，这次我们练习一下php的表单，认识几个外部变量：$_GET ，           $_POST ,还有$_REQUEST。
+          
+          每天一点PHP，这次我们练习一下php的表单，认识几个外部变量：$_GET ，           $_POST ,还有$_REQUEST。
 在本地目录建两个文件：welcome.html      welcome.php   我们在html文件中创建简单的表单，然后在welcome.php中接受html传递的信息。
 
 welcome.html
 &lt;html&gt;&lt;center&gt; &lt;h1&gt;welcome to VAT58!&lt;/h1&gt; &lt;form a
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/php-biaodan/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -588,7 +684,10 @@ welcome.html
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-25T21:58:04+08:00" content="2012-03-25">
               2012-03-25
             </time>
@@ -596,7 +695,11 @@ welcome.html
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/V音乐/" itemprop="url" rel="index">
@@ -624,34 +727,45 @@ welcome.html
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            ##### 
+          
+          ##### 
 滴答铃答铃答铃达,时针它不停在转动滴答铃答铃答铃达,小雨它拍打着水花滴答铃答铃答铃达,是不是还会牵挂她滴答铃答铃答铃达,有几滴眼泪已落下
 滴答铃答铃答铃达,寂寞的夜和谁说话滴答铃答铃答铃达,伤心的泪儿谁来擦 滴答铃答铃答铃达,整理好心情再出发滴答铃答铃答铃达,还会有人把您牵挂滴答铃答铃答铃达,寂寞的夜和谁说话 滴答铃答铃答铃达,伤心的泪儿谁来擦 滴答铃答铃答铃达,整理好心情再出发滴答铃答铃答铃达,还会有人把你牵挂
 
 
 情感的上空飘荡着一个空灵的声音，她像一个导演，导演着你内心的独白
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/didadi/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -700,7 +814,10 @@ welcome.html
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-25T13:33:34+08:00" content="2012-03-25">
               2012-03-25
             </time>
@@ -708,7 +825,11 @@ welcome.html
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
@@ -736,33 +857,44 @@ welcome.html
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            Wordpress是一款强大的个人博客系统，如果你已经在写一个wp的博客，那么恭喜你：你己经站在了巨人的肩膀上。我们有理由把它完善地更好，更符合个人的要求和特色，所以有时候我们需要自己DIY。可你 有没有想过，你的“定制”和修改会随着下一次的升级付之东流，我确实担心过。
+          
+          Wordpress是一款强大的个人博客系统，如果你已经在写一个wp的博客，那么恭喜你：你己经站在了巨人的肩膀上。我们有理由把它完善地更好，更符合个人的要求和特色，所以有时候我们需要自己DIY。可你 有没有想过，你的“定制”和修改会随着下一次的升级付之东流，我确实担心过。
 创建wordpress的子主题，会让这个问题迎刃而解。
 
 WordPress子主题也是一个主题，它继承了另一个主题——父主题——的功能，并允许你对父主题的功能进行修改，或者添加新功能。
 style.css是一个子主题唯一必须的文
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/wordpress-childthemes/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -811,7 +943,10 @@ style.css是一个子主题唯一必须的文
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-23T22:50:42+08:00" content="2012-03-23">
               2012-03-23
             </time>
@@ -819,7 +954,11 @@ style.css是一个子主题唯一必须的文
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
@@ -847,34 +986,45 @@ style.css是一个子主题唯一必须的文
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            每门语言的前几章都是比较类似的基础知识，一个helloworld,讲讲数据类型，讲讲语法。什么时候才能抓住核心部分啊？不要急，step by step.这一步我们学习（回顾）php的数据类型。
+          
+          每门语言的前几章都是比较类似的基础知识，一个helloworld,讲讲数据类型，讲讲语法。什么时候才能抓住核心部分啊？不要急，step by step.这一步我们学习（回顾）php的数据类型。
 
 在php概述一文中，我们提到，php是一种松散型的语言。也就是说，它比较“怂”。向来是“逆来顺受”，赋给它什么样的值，它都老老实实地接着，不知道反抗。
 1.主要的数据类型有：
 整型（int）：十进制，二进制，八进制，十六进制。怎么相互转换？忘了的自觉翻课本。
 浮点数（float）:写到这里，我想到了计算
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/php-datatype/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -923,7 +1073,10 @@ style.css是一个子主题唯一必须的文
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-22T22:38:23+08:00" content="2012-03-22">
               2012-03-22
             </time>
@@ -931,7 +1084,11 @@ style.css是一个子主题唯一必须的文
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
@@ -959,35 +1116,46 @@ style.css是一个子主题唯一必须的文
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            &nbsp;
+          
+          &nbsp;
 
 
 因为自己性格的关系，对产品经理这个职位或者这类人有很大的兴趣。于是找了本苏杰的《人人都是产品经理》拜读，起初都是前两章的不完整版，现在跟大家分享下完整版及我的学习笔记。
 [坎坷的项目一生]这一章让我对未来的产品工作有了一个清晰的蓝图。我将来的团队，战友，一起要走的岁月，要分享的成功，想到这里真是欢欣鼓舞。我需要深化的能力：沟通表达的能力，流畅度；披荆斩棘的编程能力作技术支撑；到最后，俯瞰整体的大局观，管理中的方法学。就让我一口吃个胖子吧。
 
 卖包子的故事让我对创意营销产生了浓厚
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/evereyone-is-pm/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1036,7 +1204,10 @@ style.css是一个子主题唯一必须的文
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-20T23:15:45+08:00" content="2012-03-20">
               2012-03-20
             </time>
@@ -1044,7 +1215,11 @@ style.css是一个子主题唯一必须的文
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
@@ -1072,31 +1247,42 @@ style.css是一个子主题唯一必须的文
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            当你为了一个bug调试半天，缓过神来你才发现，竟是一个大小写的问题。也许你像我一样刚刚接触编程，亦或是对某种语言放下的时间太久，用到的时候总会出现一些鸡毛蒜皮的小事，却足以让人抓心挠肝。那么请接着往下看。
+          
+          当你为了一个bug调试半天，缓过神来你才发现，竟是一个大小写的问题。也许你像我一样刚刚接触编程，亦或是对某种语言放下的时间太久，用到的时候总会出现一些鸡毛蒜皮的小事，却足以让人抓心挠肝。那么请接着往下看。
 
 大小写敏感性：我接触的大部分语言都是大小写敏感的，像某些高级语言如Java，C++；php，jsp，javascript也都是大小写敏感的(php中只有变量对大小写敏感)。而像html,sql,vb则是比较迟钝的，呵呵。如果你不想理会这些，不妨都当作大小写敏感，规范编程，保险上上策。命名规则
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/jimaosuanpi/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1145,7 +1331,10 @@ style.css是一个子主题唯一必须的文
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-19T23:38:27+08:00" content="2012-03-19">
               2012-03-19
             </time>
@@ -1153,7 +1342,11 @@ style.css是一个子主题唯一必须的文
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/天驴行空/" itemprop="url" rel="index">
@@ -1181,32 +1374,43 @@ style.css是一个子主题唯一必须的文
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            Google一直在陆续收录文章，百度还是只收录了首页。
+          
+          Google一直在陆续收录文章，百度还是只收录了首页。
 每次都急急忙忙的把原创文章尽早发上去，生怕辱没了信息的及时性，殊不知几天以来一直是门前冷落。好酒也怕巷子深，再说互联网就是个无底洞，找不着规律拿什么都填不平。Vat58跟我一样委屈，或者说是寂寞。我想哪天如果我发布一条爆炸性新闻或国家机密，都鲜为人知吧。
 
 或许不该如此的“急功近利”，再说又有何功又有何利？vat58只不过是取代了日记本的功能而已，应该像之前写微博一样自写自知，不计较粉丝多少。一直想通过微博找到一个学习的入口，进到一个知识的
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/vat58yizhou/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1255,7 +1459,10 @@ style.css是一个子主题唯一必须的文
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-03-18T20:27:38+08:00" content="2012-03-18">
               2012-03-18
             </time>
@@ -1263,7 +1470,11 @@ style.css是一个子主题唯一必须的文
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
@@ -1291,31 +1502,42 @@ style.css是一个子主题唯一必须的文
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            Php系列的笔记以这篇概述作开始。我的学习方式主要是视频教程（比如lamp兄弟连的视频），加书籍参考，再加上网上资源的查阅。自学是本人非常推崇的一种态度，整合各种资源会起到事半功倍的效果。
+          
+          Php系列的笔记以这篇概述作开始。我的学习方式主要是视频教程（比如lamp兄弟连的视频），加书籍参考，再加上网上资源的查阅。自学是本人非常推崇的一种态度，整合各种资源会起到事半功倍的效果。
 
 Php是一种可以与各种前台语言（html,javascript等）默契合作的解释型语言。Php的规范标签是&lt;?php  ?&gt;      ，这是php的官方指定规范特征。其他的简易风格跟变形标签不做介绍，这跟讨论茴香豆的“茴”字有几种写法一样没有意义。在服务器端，php解释器会将&lt;?php和
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/phpgaishu/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1333,7 +1555,6 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
 
 
     
-
   </section>
 
   
@@ -1343,17 +1564,15 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1372,10 +1591,12 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="http://vat58.qiniudn.com/avatar.jpg"
+               alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1384,19 +1605,23 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">47</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">126</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">126</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1406,18 +1631,20 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
           
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/Vinny_Dong" target="_blank">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank" title="twitter">
                   
-                    <i class="fa fa-globe"></i> twitter
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank" title="google">
                   
-                    <i class="fa fa-globe"></i> google
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  google
                 </a>
               </span>
             
@@ -1427,16 +1654,22 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
@@ -1446,7 +1679,8 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1456,7 +1690,7 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   &copy;  2012 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
@@ -1472,21 +1706,94 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
   </a>
 </div>
 
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1504,36 +1811,22 @@ Php是一种可以与各种前台语言（html,javascript等）默契合作的�
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
 
   
+
   
 
 </body>

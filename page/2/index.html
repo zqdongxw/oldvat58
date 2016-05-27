@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -23,18 +29,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -66,10 +99,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -78,15 +117,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -103,9 +133,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -134,13 +173,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -150,7 +189,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -160,7 +199,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -168,6 +207,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -175,11 +224,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -201,15 +248,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-
     
       
 
@@ -242,7 +284,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-10T21:07:28+08:00" content="2015-11-10">
               2015-11-10
             </time>
@@ -250,7 +295,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/书摘/" itemprop="url" rel="index">
@@ -278,32 +327,43 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            蒋勋说文学，从《诗经》到陶渊明。书摘。
+          
+          蒋勋说文学，从《诗经》到陶渊明。书摘。
 最好的文学并不是拿来做教科书的，也不是拿来来做考试范本的，而是使人觉得活着有意义，让人感觉活着是幸福的。《诗经》直到现在都是人们最喜欢的文学，就因为它产生于民间，而且从来都没有中断过。
 诗是非常通达的，在诗中可以体会生命的各个面向，你可以忽然苍老，忽然年轻，忽然喜悦，忽然忧伤，忽然是男性，忽然是女性，忽然主动，忽然被动，所有的角色都可以转化。
 随着工商业社会的来临，人在土地里那种深厚的经验，那种悠远、朴素的情感，正在慢慢丧失，但农业社会的文明却已经变成了一
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/说文学－读书笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -352,7 +412,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-10-29T15:30:45+08:00" content="2015-10-29">
               2015-10-29
             </time>
@@ -360,7 +423,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/书摘/" itemprop="url" rel="index">
@@ -388,32 +455,43 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            早年，我读过《查拉图斯特拉如是说》，想近距离了解下尼采哲学，但是文章艰深晦涩，看得似懂非懂。本书白话文章简短精炼，却发人深省。不同于其他的“鸡汤”，味淡而不乏新鲜元素，总有一篇让你耳目一新。
+          
+          早年，我读过《查拉图斯特拉如是说》，想近距离了解下尼采哲学，但是文章艰深晦涩，看得似懂非懂。本书白话文章简短精炼，却发人深省。不同于其他的“鸡汤”，味淡而不乏新鲜元素，总有一篇让你耳目一新。
 
 a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什么？是什么填满自己的心灵，让心中充满愉悦？自己究竟为什么东西入迷过？只要回答这些问题，便能探明自己的本质。
 b 大家都想办法让自己引人注目，打错了如意算盘。因为他们觉得只有自己是舞台上的演员，而其他人只是看客。每个人的想法都是如此，于是便演成了一幕无
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/尼采的心灵咒语/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -462,7 +540,10 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-10-29T13:58:11+08:00" content="2015-10-29">
               2015-10-29
             </time>
@@ -470,7 +551,11 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/转发/" itemprop="url" rel="index">
@@ -498,30 +583,41 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            编者记：如果中华民族走向没落，一定是因为中国人太聪明的缘故。细想一下，我们上学，我们求职，我们步入社会，读到过多少小聪明秀情商的小段子。有人喜欢写段子，有人喜欢读段子并且吸收作为自己的处事技巧，期望有一天可以有四两拨千斤的效果。殊不知，这些所谓的段子害人不浅，已经是南辕北辙，舍本求末。看下面的故事：
+          
+          编者记：如果中华民族走向没落，一定是因为中国人太聪明的缘故。细想一下，我们上学，我们求职，我们步入社会，读到过多少小聪明秀情商的小段子。有人喜欢写段子，有人喜欢读段子并且吸收作为自己的处事技巧，期望有一天可以有四两拨千斤的效果。殊不知，这些所谓的段子害人不浅，已经是南辕北辙，舍本求末。看下面的故事：
 单位招聘，我是主考官之一。面试当天一大早赶去，休息区已经有几个应聘者先到了。刚巧办公室没水了，我去休息区的饮水机接热水，过去后，发现饮水机关着，我前前后后按了好几个键，居然打不开。这时，一个来应聘的
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/决定成败的，绝对不是细节/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -570,7 +666,10 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-10-18T16:40:06+08:00" content="2015-10-18">
               2015-10-18
             </time>
@@ -578,7 +677,11 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/书摘/" itemprop="url" rel="index">
@@ -606,30 +709,41 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            《乌合之众》是一本心理学著作，几年前我就将其列入我的书单。研究的对象是群体，本书教我们认识群体，如何驯服群体这头庞大的猛兽。适合领袖、不同规模的领导者、政治家、演讲者、营销人员等一些需要群体基础的人士阅读。它揭示了心理操纵的真相，是开启民智的经典之作。李嘉诚不是最近刚刚说过吗，愚昧是人类之敌。😄
+          
+          《乌合之众》是一本心理学著作，几年前我就将其列入我的书单。研究的对象是群体，本书教我们认识群体，如何驯服群体这头庞大的猛兽。适合领袖、不同规模的领导者、政治家、演讲者、营销人员等一些需要群体基础的人士阅读。它揭示了心理操纵的真相，是开启民智的经典之作。李嘉诚不是最近刚刚说过吗，愚昧是人类之敌。😄
 古老的人类的心智模式如果说，我们的意识是浮在海面上可见的冰山的话，那么潜意识才是沉陷于暗黑海洋之中的巨大冰体，或许永远也不会有人能够在有生之年一窥潜意识的暗黑世界的真相。积淤于这个深层次结构之中的是生
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/乌合之众/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -678,7 +792,10 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-09-22T09:52:10+08:00" content="2015-09-22">
               2015-09-22
             </time>
@@ -686,7 +803,11 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/转发/" itemprop="url" rel="index">
@@ -714,31 +835,42 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            墙、感染、信任和欺骗
+          
+          墙、感染、信任和欺骗
 最近XcodeGhost导致的严重安全问题，相信大家已经从各个渠道知道了。简单概括一下，有人在中国网盘和论坛上传播了一个修改过的Xcode，这个版本的Xcode会在编译出来的App上面加一些可以被远程控制的代码，并且发送数据到某个服务器上。这是iOS出现以来，未越狱系统遭遇的最大安全威胁，在此之前苹果的Sandbox模式几乎没遇到过挑战，iPhone用户甚至大量iOS开发者都认为系统固若金汤，不可能遇到问题。
 在XcodeGhost开始被媒体报道的时，很多人大大低估了它的风
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/基于xcode事件的思考/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -787,7 +919,10 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-09-14T20:30:23+08:00" content="2015-09-14">
               2015-09-14
             </time>
@@ -795,7 +930,11 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/finance/" itemprop="url" rel="index">
@@ -823,29 +962,40 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            一、金融对国家对比我国历代的发展和美国的兴起，你会发现：国库钱越多、朝廷银库越满，国王皇帝肯定能专制，而且会更专制；越是朝廷欠债累累的国家，其国王、政府就必然要依赖老百姓交税、有求于百姓，这最终能制约国王的权利，促进民主与规则的发展。金融不只是能不帮助一个国家平摊一时的压力，还能促进制度的良性发展。民间富有是自由、民主、法治的基础。但政府太富有，会挑战民间的空间，挑战民主宪政和法治。政府穷民间富催生民主和法治。公民投票是民主制度的重要形式，但投票无法天天进行，而证券市场对国家的监督、评估、定价却
-            ...
-          </span>
+          
+          一、金融对国家对比我国历代的发展和美国的兴起，你会发现：国库钱越多、朝廷银库越满，国王皇帝肯定能专制，而且会更专制；越是朝廷欠债累累的国家，其国王、政府就必然要依赖老百姓交税、有求于百姓，这最终能制约国王的权利，促进民主与规则的发展。金融不只是能不帮助一个国家平摊一时的压力，还能促进制度的良性发展。民间富有是自由、民主、法治的基础。但政府太富有，会挑战民间的空间，挑战民主宪政和法治。政府穷民间富催生民主和法治。公民投票是民主制度的重要形式，但投票无法天天进行，而证券市场对国家的监督、评估、定价却
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/金融的逻辑之家国政治/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -894,7 +1044,10 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-09-02T15:45:27+08:00" content="2015-09-02">
               2015-09-02
             </time>
@@ -902,7 +1055,11 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/缠中学禅/" itemprop="url" rel="index">
@@ -930,35 +1087,46 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            1.若失本心，即当忏悔，忏悔之法，是为清凉。 （金刚三昧经）
+          
+          1.若失本心，即当忏悔，忏悔之法，是为清凉。 （金刚三昧经）
 2.菩萨若能随顺众生，则为随顺供养诸佛。若于众生尊重承事，则为尊重承事如来。若令众生欢喜者，则令一切如来欢喜。（华严经普贤行愿品）
 3.应代一切众生受加毁辱，恶事向自己，好事与他人。（梵网经）
 4.离贪嫉者能净心中贪欲云翳，犹如夜月，众星围绕。（理趣六波罗蜜多经）
 5.世间色声香味触，常能诳惑一切凡夫，令生爱着。（智者大师）
 6.嗔是失佛法之根本，坠恶道之因缘，法乐之冤家，善心之大贼，种种恶口之府藏。（智者大师）
 7.处众处独，宜韬宜
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/晚晴集/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1007,7 +1175,10 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-08-16T08:04:52+08:00" content="2015-08-16">
               2015-08-16
             </time>
@@ -1015,7 +1186,11 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/缠中学禅/" itemprop="url" rel="index">
@@ -1043,34 +1218,45 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            
+          
+          
 
 一切有为法         如梦幻泡影
 
 如露亦如电         应作如是观
 
-            
-          </span>
+          
+
           <div class="post-more-link text-center">
             <a class="btn" href="/金刚经/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1119,7 +1305,10 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-08-12T10:09:03+08:00" content="2015-08-12">
               2015-08-12
             </time>
@@ -1127,7 +1316,11 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/mac/" itemprop="url" rel="index">
@@ -1155,34 +1348,45 @@ b 大家都想办法让自己引人注目，打错了如意算盘。因为他们
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            1.command
+          
+          1.command
 复制： command+c黏贴： command+v剪切： 复制之后，option+command+v (command+x 只能剪切文本)home和end: command+方向键关闭最前面的窗口和标签页：command+w
 2.pagedown和pageup
 fn+方向键
 3.space
 在osx中，几乎所有的文件都可以通过space键快速查看预览，比如视频、图片、音乐、页面、文档等。拿图片举例，在文件夹选择某个图片，按space即可预览，方向键切换预览其他图片，而不用每
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/mac使用笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1231,7 +1435,10 @@ fn+方向键
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-08-11T08:32:48+08:00" content="2015-08-11">
               2015-08-11
             </time>
@@ -1239,7 +1446,11 @@ fn+方向键
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/mac/" itemprop="url" rel="index">
@@ -1267,32 +1478,43 @@ fn+方向键
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            入手 mac air 几天，作为一个从未接触过 os x 的小白，现在还在不断试验这个新鲜的系统。在mac自带的邮件管理应用mail中绑定QQ邮箱账户就废了不少力气，以下为记录说明。
+          
+          入手 mac air 几天，作为一个从未接触过 os x 的小白，现在还在不断试验这个新鲜的系统。在mac自带的邮件管理应用mail中绑定QQ邮箱账户就废了不少力气，以下为记录说明。
 在mail菜单栏选择添加账户选择添加账户会弹出常用的账户列表，经过尝试，直接用给出的“QQ邮箱”，其默认设置无法连接到QQ邮箱。所以选择“添加其他邮箱账户”。
 
 填写基本账户信息输入QQ邮箱的地址和密码创建后，如果还是匹配QQ的默认设置，这样也是不行。更改一个错误的域名，比如8888888@mac.com,一定要进
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/mac-mail下连接QQ邮箱账户/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1310,7 +1532,6 @@ fn+方向键
 
 
     
-
   </section>
 
   
@@ -1320,17 +1541,15 @@ fn+方向键
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1349,10 +1568,12 @@ fn+方向键
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="http://vat58.qiniudn.com/avatar.jpg"
+               alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1361,19 +1582,23 @@ fn+方向键
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">47</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">126</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">126</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1383,18 +1608,20 @@ fn+方向键
           
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/Vinny_Dong" target="_blank">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank" title="twitter">
                   
-                    <i class="fa fa-globe"></i> twitter
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank" title="google">
                   
-                    <i class="fa fa-globe"></i> google
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  google
                 </a>
               </span>
             
@@ -1404,16 +1631,22 @@ fn+方向键
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
@@ -1423,7 +1656,8 @@ fn+方向键
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1433,7 +1667,7 @@ fn+方向键
   &copy;  2012 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
@@ -1449,21 +1683,94 @@ fn+方向键
   </a>
 </div>
 
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1481,36 +1788,22 @@ fn+方向键
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
 
   
+
   
 
 </body>

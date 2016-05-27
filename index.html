@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -23,18 +29,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -66,10 +99,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -78,15 +117,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -103,9 +133,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -134,13 +173,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -150,7 +189,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -160,7 +199,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -168,6 +207,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -175,11 +224,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -201,15 +248,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-
     
       
 
@@ -242,7 +284,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-05-27T12:58:07+08:00" content="2016-05-27">
               2016-05-27
             </time>
@@ -250,7 +295,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/书摘/" itemprop="url" rel="index">
@@ -278,35 +327,46 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            很久没有读到像rework（重塑工作）如此富含营养的书籍了，希望它也能够开拓你的视野，在你枯燥的工作生涯里注入一股清泉。以下为《rework》书摘：
+          
+          很久没有读到像rework（重塑工作）如此富含营养的书籍了，希望它也能够开拓你的视野，在你枯燥的工作生涯里注入一股清泉。以下为《rework》书摘：
 小、简单、基础的需求是恒久的
 1.真实的世界不是一个地方，而是你一个借口，是为毫无尝试而辩护。
 所以如果某人说，你这个想法在真实世界里是行不通的，先别急着泄气，好好盘算一下，试试就知道了。
 2.决定你这个星期该做的，而不是几年。弄清下一件重要事情，然后去做。在你做某事之前找出正确的方向，而不要过于超前。
 我一直头疼于五年计划之流。
 3.每个人都应该
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/rework/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -355,7 +415,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-13T11:27:18+08:00" content="2016-01-13">
               2016-01-13
             </time>
@@ -363,7 +426,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/蚂蚁学禅/" itemprop="url" rel="index">
@@ -391,29 +458,40 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            密行是密而不宣的善行义举，以中国俗语来说，就是积阴德。譬如佛陀的三千威仪、八万细行；每日托钵乞食、洗足敷坐、行化说法，令众生入佛知见等，就是密行；又如罗砼罗忏悔改过，坚持清净戒行等，是为佛弟子中密行第一；大迦叶住兰若处，寂静少欲，灵山会上妙契真如法性，亦是密行；须菩提观空迎佛，也是密行。　　古人分粥赈饥、筑桥铺路、凿井造水、点灯奉茶、施棺义葬、急难救助等情义之举，皆是培植福德的密行。所谓「怜蛾不点灯，为鼠常留饭」，即是慈悲遍及一切有情含识的最佳写照。　　密行是增进品行，圆满道德的不二法门。以下列
-            ...
-          </span>
+          
+          密行是密而不宣的善行义举，以中国俗语来说，就是积阴德。譬如佛陀的三千威仪、八万细行；每日托钵乞食、洗足敷坐、行化说法，令众生入佛知见等，就是密行；又如罗砼罗忏悔改过，坚持清净戒行等，是为佛弟子中密行第一；大迦叶住兰若处，寂静少欲，灵山会上妙契真如法性，亦是密行；须菩提观空迎佛，也是密行。　　古人分粥赈饥、筑桥铺路、凿井造水、点灯奉茶、施棺义葬、急难救助等情义之举，皆是培植福德的密行。所谓「怜蛾不点灯，为鼠常留饭」，即是慈悲遍及一切有情含识的最佳写照。　　密行是增进品行，圆满道德的不二法门。以下列
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/密行百事/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -462,7 +540,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-01-08T10:53:58+08:00" content="2016-01-08">
               2016-01-08
             </time>
@@ -470,7 +551,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/IT/" itemprop="url" rel="index">
@@ -498,30 +583,41 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            git和maven的必要性，远远超过很多没用过的人的想象。
+          
+          git和maven的必要性，远远超过很多没用过的人的想象。
 很多人应该用过svn、cvs之类的代码版本管理工具，git也是其中之一。svn和git最大的几个区别要点，svn必须要有服务端，网络能连上服务端才能提交和更新，git不需要，每一台装了git的电脑都是服务端，各台电脑之间可以相互同步和推送，而提交不需要网络就可以提交到本地的git库里。这样的好处就是，如果要分享代码，不需要打个压缩包传来传去，也不需要找个服务器搭个svn来共享，现在oschina，csdn等网站都提供了免费的git服务器
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/关于git、svn、maven/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -570,7 +666,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-23T11:35:57+08:00" content="2015-12-23">
               2015-12-23
             </time>
@@ -578,7 +677,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/蚂蚁学禅/" itemprop="url" rel="index">
@@ -606,21 +709,24 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            问题：什么是有为法？什么是无为法？
+          
+          问题：什么是有为法？什么是无为法？
 慧祥法师：
 一切法，有很多种分类方式。
 其中一类的分法，就是依需不需要因缘才能存在来分的。
@@ -632,14 +738,22 @@
 无因缘造作的现象，名无为法。
 现举例说明，同一物中，实同时具有有为法及无为法的。
 以纸，为例。我们现在来观察“纸”，有哪些现象是有为
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/什么是有为法，什么是无为法？/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -688,7 +802,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-22T09:34:33+08:00" content="2015-12-22">
               2015-12-22
             </time>
@@ -696,7 +813,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/mac/" itemprop="url" rel="index">
@@ -724,33 +845,44 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            工作中会有各种各样的内网存在，比如公安内网，银行内网等等，互联网我们则称为外网。由于经常碰到即需要内网环境又需要通过外网查询资料的情形，如果不加配置，只能繁琐地手动切换。本篇通过添加路由的方法来解决这个问题，与大家共享。
+          
+          工作中会有各种各样的内网存在，比如公安内网，银行内网等等，互联网我们则称为外网。由于经常碰到即需要内网环境又需要通过外网查询资料的情形，如果不加配置，只能繁琐地手动切换。本篇通过添加路由的方法来解决这个问题，与大家共享。
 内网环境示例假定所有的内网ip以36开头，内网网关假设为36.45.98.254。无线连接为外网，有线连接为内网。
 windows下的简单操作打开cmd，输入命令即可。
 route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
 在路由中
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/mac-os-如何内外（网）兼具/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -799,7 +931,10 @@ route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-21T14:14:05+08:00" content="2015-12-21">
               2015-12-21
             </time>
@@ -807,7 +942,11 @@ route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/IT/" itemprop="url" rel="index">
@@ -835,30 +974,41 @@ route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            SSL证书是数字证书的一种，类似于驾驶证、护照和营业执照的电子副本。因为配置在服务器上，也称为SSL服务器证书。SSL 证书遵守 SSL协议，由受信任的数字证书颁发机构在验证服务器身份后颁发，具有服务器身份验证和数据传输加密功能。
+          
+          SSL证书是数字证书的一种，类似于驾驶证、护照和营业执照的电子副本。因为配置在服务器上，也称为SSL服务器证书。SSL 证书遵守 SSL协议，由受信任的数字证书颁发机构在验证服务器身份后颁发，具有服务器身份验证和数据传输加密功能。
 认证原理安全套接字层(SSL) 技术通过加密信息和提供鉴权，保护您的网站安全。一份 SSL 证书包括一个公共密钥和一个私用密钥。公共密钥用于加密信息，私用密钥用于解译加密的信息。浏览器指向一个安全域时，SSL 同步确认服务器和客户端，并创建一种加密方式和一个唯一的会话
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/SSL证书是做什么的/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -907,7 +1057,10 @@ route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-11T15:44:55+08:00" content="2015-12-11">
               2015-12-11
             </time>
@@ -915,7 +1068,11 @@ route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/mac/" itemprop="url" rel="index">
@@ -943,21 +1100,24 @@ route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            mac终端本地文件的中文显示和输入都没问题，但是在使用vim和ssh远程的时候碰到了中文乱码，解决方法如下：
+          
+          mac终端本地文件的中文显示和输入都没问题，但是在使用vim和ssh远程的时候碰到了中文乱码，解决方法如下：
 问题一：vim乱码解决方法：
 vi ~/.vimrc
 在文件中添加
@@ -966,14 +1126,22 @@ set fileencodings=utf-8,gbk,utf-16,big5
 问题二：ssh远程乱码在/etc/ssh_config~orig 文件中有这么一句：
 SendEnv LANG LC_*
 也就是说ssh命令会发送本地语言环境到目标机器。
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1022,7 +1190,10 @@ SendEnv LANG LC_*
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-02T09:56:52+08:00" content="2015-12-02">
               2015-12-02
             </time>
@@ -1030,7 +1201,11 @@ SendEnv LANG LC_*
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/笔记/" itemprop="url" rel="index">
@@ -1058,21 +1233,24 @@ SendEnv LANG LC_*
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            vi命令是unix操作系统最通用的全屏幕纯文本编辑器。
+          
+          vi命令是unix操作系统最通用的全屏幕纯文本编辑器。
 命令模式默认情况下打开vi编辑器自动进入命令模式，可以完成对文件的操作命令。常见如下：
 ＊切换到编辑模式
 i  (当前字符前插入文本)
@@ -1094,14 +1272,22 @@ p
 *删除光标行内容
 D
 *
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/vi命令学习笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1150,7 +1336,10 @@ D
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-29T19:54:44+08:00" content="2015-11-29">
               2015-11-29
             </time>
@@ -1158,7 +1347,11 @@ D
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/mac/" itemprop="url" rel="index">
@@ -1186,34 +1379,45 @@ D
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            checkoutsvn checkout svn://localhost/mycode --username=yhm --password=123 /Users/dong/Documents/code
+          
+          checkoutsvn checkout svn://localhost/mycode --username=yhm --password=123 /Users/dong/Documents/code
 将服务器中mycode仓库的内容下载到/Users/dong/Documents/code目录中
 add向版本库中添加文件
 svn add test01.docx test02.txt test03.ppt
 svn add *.php
 commitcd /Users/dong/Documents/
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/mac下svn使用笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1262,7 +1466,10 @@ commitcd /Users/dong/Documents/
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-11-26T23:31:00+08:00" content="2015-11-26">
               2015-11-26
             </time>
@@ -1270,7 +1477,11 @@ commitcd /Users/dong/Documents/
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/随笔/" itemprop="url" rel="index">
@@ -1298,31 +1509,42 @@ commitcd /Users/dong/Documents/
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            我们的父母是世界上最棒的父母，我们的伴侣是世界上最合适的伴侣，我们的孩子是世界上最优秀的孩子…这一辈子接受他们和她们全部的优点和缺点，是的，一旦日久生情便无可替代，认真的人都这样。
+          
+          我们的父母是世界上最棒的父母，我们的伴侣是世界上最合适的伴侣，我们的孩子是世界上最优秀的孩子…这一辈子接受他们和她们全部的优点和缺点，是的，一旦日久生情便无可替代，认真的人都这样。
 我学会了快速地宁静，这种宁静是全身心的。躺在床上，只关注呼吸，没有任何的杂念，让躯体沉淀，让灵魂灵动自由。随机播放可以包容任何一种莽撞的音符和旋律，就这样，让这些可爱的小精灵们律动着流进我的身体，嗯，还不错，我在听它们，它们也在感受着我。
 接着，进来的是一段录音，是我跟妈妈的家常对话，嘈杂的音乐，屋子里桌椅的声响，还
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/“一旦日久生情便无可替代”/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1340,7 +1562,6 @@ commitcd /Users/dong/Documents/
 
 
     
-
   </section>
 
   
@@ -1350,17 +1571,15 @@ commitcd /Users/dong/Documents/
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1379,10 +1598,12 @@ commitcd /Users/dong/Documents/
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="http://vat58.qiniudn.com/avatar.jpg"
+               alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1391,19 +1612,23 @@ commitcd /Users/dong/Documents/
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">47</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">126</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">126</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1413,18 +1638,20 @@ commitcd /Users/dong/Documents/
           
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/Vinny_Dong" target="_blank">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank" title="twitter">
                   
-                    <i class="fa fa-globe"></i> twitter
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank" title="google">
                   
-                    <i class="fa fa-globe"></i> google
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  google
                 </a>
               </span>
             
@@ -1434,16 +1661,22 @@ commitcd /Users/dong/Documents/
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
@@ -1453,7 +1686,8 @@ commitcd /Users/dong/Documents/
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1463,7 +1697,7 @@ commitcd /Users/dong/Documents/
   &copy;  2012 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
@@ -1479,21 +1713,94 @@ commitcd /Users/dong/Documents/
   </a>
 </div>
 
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1511,36 +1818,22 @@ commitcd /Users/dong/Documents/
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
 
   
+
   
 
 </body>

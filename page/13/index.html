@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next   use-motion ">
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -23,18 +29,45 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -46,7 +79,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
 
 
 
@@ -66,10 +99,16 @@
 
 
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Mist',
-    sidebar: 'post',
-    motion: true
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
   };
 </script>
 
@@ -78,15 +117,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
   
 
 
@@ -103,9 +133,18 @@
 
 
 
-  <div class="container one-column 
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
    page-home 
-">
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -134,13 +173,13 @@
   
 
   
-    <ul id="menu" class="menu menu-left">
+    <ul id="menu" class="menu">
       
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -150,7 +189,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -160,7 +199,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -168,6 +207,16 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
@@ -175,11 +224,9 @@
   
     <div class="site-search">
       
-  
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-  </form>
-
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
 
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
@@ -201,15 +248,10 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
   <section id="posts" class="posts-expand">
-
-    
-
-    
-    
-
     
       
 
@@ -242,7 +284,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-26T23:35:03+08:00" content="2012-04-26">
               2012-04-26
             </time>
@@ -250,7 +295,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/HTML5/" itemprop="url" rel="index">
@@ -290,32 +339,43 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-                
+          
+              
 各位同学对HTML5应该早有耳闻，为了迎合HTML5，主流浏览器为了抢占先机一直没有放松研发的脚步。作为用户的我们，如果还在用较低级的浏览器，势必会错过互联网更多的精彩。HTML5版CS游戏，这或许是互联网革命的开端。
 提示：通过方向键控制进退和左右，空格键为跳。                        
                                                                                         
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/html5-cs/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -364,7 +424,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-25T20:56:02+08:00" content="2012-04-25">
               2012-04-25
             </time>
@@ -372,7 +435,11 @@
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
@@ -400,34 +467,45 @@
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            相识wordpress是在3.3.1版本，什么？我几岁了？嗯，我不狡辩，新手上路，多多包涵。更多口水请对准《wordpress到底火了多久？我落后了多久？》，呵呵。前几天迎来了wordpress 3.3.2的帅美升级，马上体验吧。
+          
+          相识wordpress是在3.3.1版本，什么？我几岁了？嗯，我不狡辩，新手上路，多多包涵。更多口水请对准《wordpress到底火了多久？我落后了多久？》，呵呵。前几天迎来了wordpress 3.3.2的帅美升级，马上体验吧。
 wordpress3.3.2是对以往版本的安全升级：
 
 Plupload（1.5.4 版本）  WordPress 用它来完成媒体文件的上传。
 SWFUpload   WordPress 原先使用的库，用于上传媒体文件，一些插件可能仍在使用它。
 SWFObject —
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/wpup-332/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -476,7 +554,10 @@ SWFObject —
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-23T20:20:04+08:00" content="2012-04-23">
               2012-04-23
             </time>
@@ -484,7 +565,11 @@ SWFObject —
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
@@ -512,33 +597,44 @@ SWFObject —
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            在《cpanel设置二级域名与WordPress Rss优化》中，兴冲冲地跟大家分享了rss的终极优化方案。我本人也在不断的学习体验中。接下来的这一星期，feedsky不能更新了，郁闷了一个“十一长假”的阵容。现在终于解决了，特来相告。
+          
+          在《cpanel设置二级域名与WordPress Rss优化》中，兴冲冲地跟大家分享了rss的终极优化方案。我本人也在不断的学习体验中。接下来的这一星期，feedsky不能更新了，郁闷了一个“十一长假”的阵容。现在终于解决了，特来相告。
 这段时间，feedsky中feed状态一直处于失败状态。最近的一条让人欣喜，正常。
 
 
 feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，其他一概不管。客服论坛里都是发贴者在自己的帖子里自言自语：怎么没人回答呢。可以上溯到2008年之前了。想要让
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/feedsky-upd/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -587,7 +683,10 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-22T00:44:18+08:00" content="2012-04-22">
               2012-04-22
             </time>
@@ -595,7 +694,11 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/HTML5/" itemprop="url" rel="index">
@@ -635,30 +738,41 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            尽管HTML5到目前为止仍然是下一代html的草案，它的相关教程已经是铺天盖地。话说HTML5前景一片光明， 给个人站点披上HTML5的外衣，逐步学习体验新的特性，既紧随了潮流，又不失为一个好的学习方法。还在等什么？本文讲一下wordpress中小试HTML5。
+          
+          尽管HTML5到目前为止仍然是下一代html的草案，它的相关教程已经是铺天盖地。话说HTML5前景一片光明， 给个人站点披上HTML5的外衣，逐步学习体验新的特性，既紧随了潮流，又不失为一个好的学习方法。还在等什么？本文讲一下wordpress中小试HTML5。
 几点说明：1. 本次示例的为wordpress 3.0 twentyten 主题，编辑的相关文件在“/wp-content/themes/twentyten/ ”目录。2. 下文中提到的行号为修改代码的大体位置，请根据自己的实际灵活操作
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/html5-1/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -707,7 +821,10 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-18T22:38:18+08:00" content="2012-04-18">
               2012-04-18
             </time>
@@ -715,7 +832,11 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
@@ -743,32 +864,43 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            php中有超过700个内置函数，这或许是php最给力的地方。
+          
+          php中有超过700个内置函数，这或许是php最给力的地方。
 如何创建自己的函数？关键字：functionfunction functionname () {/函数体/}
 
 php中没有函数重载的概念不像Java，c 等高级语言，可以使用相同的函数名称，以参数的类型、个数、位置区分来实现函数重载。这在php中是不可以的。在php中调用函数时可以有任意的参数。&lt;?phpfunction demo($a) {$args=func_get_args();echo($a);echo($args[1
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/php-function/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -817,7 +949,10 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-17T22:14:41+08:00" content="2012-04-17">
               2012-04-17
             </time>
@@ -825,7 +960,11 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
@@ -853,33 +992,44 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            在《WordPress RSS 初步优化》一文中，我们谈到了如何用feedsky第三方Feed工具优化wordpress原有feed，实现了feed更好的管理。可第三方feed提供商自身存在不稳定的因素，完全依赖feed提供商未必是理想的方法。
+          
+          在《WordPress RSS 初步优化》一文中，我们谈到了如何用feedsky第三方Feed工具优化wordpress原有feed，实现了feed更好的管理。可第三方feed提供商自身存在不稳定的因素，完全依赖feed提供商未必是理想的方法。
 还有什么高招呢？用子域名的方式feed.domain.com来发布feed，通过修改自己Feed子域名的DNS记录，来实现Feed托管服务和自己主机之间完美切换是目前最稳定的方案。
 
 如何绑定？
 FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/rss-to-subdomain/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -928,7 +1078,10 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-16T22:36:18+08:00" content="2012-04-16">
               2012-04-16
             </time>
@@ -936,7 +1089,11 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
@@ -964,34 +1121,45 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            第三方社交评论服务如今已成为独立博客不可缺少的枢纽，将不同的社区，不同的人群联系起来，增强了博客与用户之间的黏性。评论更自由，交流更简洁。本文将展示“多说”评论系统，使wordpress“广开言路”。
+          
+          第三方社交评论服务如今已成为独立博客不可缺少的枢纽，将不同的社区，不同的人群联系起来，增强了博客与用户之间的黏性。评论更自由，交流更简洁。本文将展示“多说”评论系统，使wordpress“广开言路”。
 在wordpress插件安装中，搜索“duoshuo”，找到多说社会化评论框插件安装启用，接下来按照你的喜好配置多说就可以了。
 在多说中，可以同步wordpress原有评论，精彩不流失，友情不间断。从此可以轻松管理你的博客评论。
 
 
 通过多说，你可以将多方帐号集结到你的麾下。你可以绑定多个多说帐号
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/duoshuo/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1040,7 +1208,10 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-15T22:50:05+08:00" content="2012-04-15">
               2012-04-15
             </time>
@@ -1048,7 +1219,11 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
@@ -1076,30 +1251,41 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            至今，vat58还是一个婴儿，将近一个月了。左看右看，依旧有很多不尽如人意的地方。比如，页面不是很美观（看到很多博客都有那种淡淡的模块边框，有板有眼），目前只有“首页”跟“about me”两个页面（新建的页面用什么内容填充还是不清楚），诸多困惑。
+          
+          至今，vat58还是一个婴儿，将近一个月了。左看右看，依旧有很多不尽如人意的地方。比如，页面不是很美观（看到很多博客都有那种淡淡的模块边框，有板有眼），目前只有“首页”跟“about me”两个页面（新建的页面用什么内容填充还是不清楚），诸多困惑。
 你看，上图中“发表于…由…”这种格式有没有很丑？posted on…by…这样还可以接受，中文版的wordpress内部的翻译机制没太搞明白，主题文件夹下的languages里面的zh_CN.mo和zh_CN.po文件是如何工作的？一时半会儿是搞不清
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/twentyten-posted-on/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1148,7 +1334,10 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-12T22:06:58+08:00" content="2012-04-12">
               2012-04-12
             </time>
@@ -1156,7 +1345,11 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/Java/" itemprop="url" rel="index">
@@ -1184,31 +1377,42 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            如果用package语句指明一个包，则包的层次结构必须与文件目录的层次相匹配。
+          
+          如果用package语句指明一个包，则包的层次结构必须与文件目录的层次相匹配。
 比如：
 F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层次相匹配public class Test {Test () {System.out.println(“test constructor”);}public static void main(String[] args) {Test x = new Test ();}}下面编译执行java（日文系统中”¥
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/classpath/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1257,7 +1461,10 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
 
         <div class="post-meta">
           <span class="post-time">
-            发表于
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2012-04-12T00:05:25+08:00" content="2012-04-12">
               2012-04-12
             </time>
@@ -1265,7 +1472,11 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
@@ -1293,32 +1504,43 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
 
           
 
+          
+          
+
+          
         </div>
       </header>
     
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       
       
 
       
         
-          <span itemprop="articleBody">
-            
-            认识RSS
+          
+          认识RSS
 RSS全称为Really Simple Syndication，称之为聚合内容。网站提供RSS输出有利于让用户获取网站内容的最新更新，这样读者就可以根据自己的需要订阅信息，在最短的时间内获取最有价值的信息。在博客时代，RSS已经成为不可缺少的工具。
 wordpress RSS 优化
 在《WordPress完善笔记》一文中提到，chrome下的wordpress原有的RSS订阅功能异常。不仅如此，wordpress自带的Rss功能较简陋，有诸多不便。于是用feedsky来管理我的fee
-            ...
-          </span>
+          ...
+
           <div class="post-more-link text-center">
             <a class="btn" href="/rssyouhua/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
         
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1336,7 +1558,6 @@ wordpress RSS 优化
 
 
     
-
   </section>
 
   
@@ -1346,17 +1567,15 @@ wordpress RSS 优化
 
 
 
+          </div>
+          
+
+
+          
+
         </div>
-
         
-
-
-        
-
-      </div>
-
-      
-        
+          
   
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
@@ -1375,10 +1594,12 @@ wordpress RSS 优化
 
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://vat58.qiniudn.com/avatar.jpg" alt="vatcom_dong" itemprop="image"/>
+          <img class="site-author-image" itemprop="image"
+               src="http://vat58.qiniudn.com/avatar.jpg"
+               alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
+          <p class="site-description motion-element" itemprop="description"></p>
         </div>
-        <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
@@ -1387,19 +1608,23 @@ wordpress RSS 优化
             </a>
           </div>
 
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">47</span>
-              <span class="site-state-item-name">分类</span>
+          
+            <div class="site-state-item site-state-categories">
               
-          </div>
+                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">126</span>
-              <span class="site-state-item-name">标签</span>
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">126</span>
+                <span class="site-state-item-name">标签</span>
               </a>
-          </div>
+            </div>
+          
 
         </nav>
 
@@ -1409,18 +1634,20 @@ wordpress RSS 优化
           
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/Vinny_Dong" target="_blank">
+                <a href="https://twitter.com/Vinny_Dong" target="_blank" title="twitter">
                   
-                    <i class="fa fa-globe"></i> twitter
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank">
+                <a href="https://plus.google.com/u/0/+vinnydong/posts" target="_blank" title="google">
                   
-                    <i class="fa fa-globe"></i> google
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  google
                 </a>
               </span>
             
@@ -1430,16 +1657,22 @@ wordpress RSS 优化
         
         
 
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">友情链接</p>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.yaoblog.info/" target="_blank">YAO大博客</a>
-              </span>
-            
-          
-        </div>
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                </li>
+              
+            </ul>
+          </div>
+        
 
       </section>
 
@@ -1449,7 +1682,8 @@ wordpress RSS 优化
   </aside>
 
 
-      
+        
+      </div>
     </main>
 
     <footer id="footer" class="footer">
@@ -1459,7 +1693,7 @@ wordpress RSS 优化
   &copy;  2012 - 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
@@ -1475,21 +1709,94 @@ wordpress RSS 优化
   </a>
 </div>
 
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
 
 
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
   <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
   
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
   
 
   
-    
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
 
   
     
@@ -1507,36 +1814,22 @@ wordpress RSS 优化
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-    
-     
 
-
+  
     
   
 
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
 
 
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
   
   
 
   
+
   
 
 </body>
