@@ -5,11 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
 
 
 
@@ -29,9 +35,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,21 +74,21 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="program, life" />
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -98,33 +107,47 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> VAT58 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="http://www.vat58.com/page/15/"/>
+
+
+
+
+
+  <title>VAT58</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-30055046-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -137,36 +160,46 @@
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">VAT58</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">VAT58</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
+      
   </div>
-  <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -187,7 +220,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -197,7 +230,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +242,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="#" class="st-search-show-outputs">
+            <a href="javascript:;" class="st-search-show-outputs">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -243,6 +276,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -256,13 +291,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/lingoes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -270,38 +315,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/lingoes/" itemprop="url">
-                  翻译专家——灵格斯
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/lingoes/" itemprop="url">翻译专家——灵格斯</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-01T00:30:36+08:00" content="2012-04-01">
-              2012-04-01
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-01T00:30:36+08:00">
+                2012-04-01
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/爱上V软/" itemprop="url" rel="index">
                     <span itemprop="name">爱上V软</span>
                   </a>
@@ -309,7 +358,6 @@
 
                 
                 
-
               
             </span>
           
@@ -317,24 +365,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/lingoes/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="lingoes/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="lingoes/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -344,26 +397,31 @@
       
         
           
-          Lingoes 是一款功能强大、简明易用的多语言词典和文本翻译软件，支持多达80种语言互查互译，这些语言包括 英、法、德、意、俄、中、日、韩、西、葡、阿拉伯语 及更多…是新一代的词典与文本翻译专家。
+            <p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/lingoes_120x60.png" alt="lingoes" title="lingoes">Lingoes 是一款功能强大、简明易用的多语言词典和文本翻译软件，支持多达80种语言互查互译，这些语言包括 英、法、德、意、俄、中、日、韩、西、葡、阿拉伯语 及更多…是新一代的词典与文本翻译专家。</p>
+<!--more Read more...-->
+<p><strong>lingoes功能简述</strong></p>
+<ul>
+<li>超过<span style="color: #ff9900;">80</span>种语言互查互译</li>
+<li>超过<span style="color: #339966;">42</span>种语言全文翻译</li>
+<li>创新的划词翻译技术，改变您沟通世界的方式</li>
+<li>支持真人语音的单词及文本朗读</li>
+<li><span style="color: #3366ff;">800万</span>例句搜索</li>
+<li><span style="color: #ff00ff;">开放式的词库管理</span></li>
+<li>联机词典运行流畅, 内容丰富, 更新实时</li>
+<li>可编程的附录系统，提供各种实用工具和资料<br>我不太推荐全文翻译，因为技术还没到让机器如此智能，翻译成符合人类习惯的语句。掌握好一门语言的语法，辅之以工具解决掉生词，就可以攻破语言的障碍。</li>
+</ul>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/l2.png" alt="翻译示意" title="翻译"></p>
+<p>一门新的语言对应一个新的窗口和视界，对应一种新的思维，语言的学习也算是自我提高的一种方式。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/l3.png" alt="日英翻译" title="日英翻译"></p>
+<p>在语言学习的道路上，lingoes会与你同行，GOOD LUCK，がんばっで（加油）。</p>
+<p>lingoes最新版（2.81版）+常用词典 <a href="http://www.rayfile.com/zh-cn/files/62224bf5-7b4e-11e1-810b-0015c55db73d/" target="_blank" rel="external"> 网盘下载</a></p>
 
-lingoes功能简述
-
-超过80种语言互查互译
-超过42种语言全文翻译
-创新的划词翻译技术，改变您沟通世界的方式
-支持真人语音的单词及文本朗读
-800万例句搜索
-开放式的词库管理
-联机词典运行流畅, 内容丰富, 更新实时
-可编程的附录系统，提供各种实用工具和资料我不太推荐全文翻译，因为技术还没到
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/lingoes/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -381,6 +439,8 @@ lingoes功能简述
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -392,13 +452,23 @@ lingoes功能简述
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/re01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -406,38 +476,42 @@ lingoes功能简述
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/re01/" itemprop="url">
-                  初识正则表达式
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/re01/" itemprop="url">初识正则表达式</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-30T22:42:08+08:00" content="2012-03-30">
-              2012-03-30
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-30T22:42:08+08:00">
+                2012-03-30
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
                     <span itemprop="name">移动互联网</span>
                   </a>
@@ -445,7 +519,6 @@ lingoes功能简述
 
                 
                 
-
               
             </span>
           
@@ -453,24 +526,29 @@ lingoes功能简述
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/re01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="re01/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="re01/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -480,22 +558,57 @@ lingoes功能简述
       
         
           
-          正则表达式（Regular Expression）: 是指一个用来描述或者匹配一系列符合某个句法规则的字符串的单个字符串。许多语言都支持正则表达式。它是一个超强的字符串处理的工具。
-下面对正则表达式进行了详细的总结，便于查阅。
-/   将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符
-^         匹配输入字符串的开始位置
-$         匹配输入字符串的结束位置
-
-*         匹配前面的子表达式零次或多次
-+         匹配前面的子表达
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/re01/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <p><span style="font-family: verdana, geneva; color: #0000ff;"><strong>正则表达式</strong></span>（Regular Expression）: 是指一个用来描述或者<span style="color: #008080;">匹配</span>一系列符合某个<span style="color: #008080;">句法规则</span>的字符串的单个字符串。许多语言都支持正则表达式。它是一个超强的字符串处理的工具。</p>
+<p>下面对正则表达式进行了详细的总结，便于查阅。</p>
+<p><span style="background-color: #cdc431;">/  </span> 将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符</p>
+<p><span style="background-color: #bc9a42;">^  </span>       匹配输入字符串的开始位置</p>
+<p><span style="background-color: #bc9a42;">$  </span>       匹配输入字符串的结束位置</p>
+<!--more Read more...-->
+<p><span style="background-color: #d8b827;">*  </span>       匹配前面的子表达式<span style="color: #008000;">零次或多次</span></p>
+<p><span style="background-color: #9ee01e; color: #008000;">+  </span>       匹配前面的子表达式<span style="color: #008000;">一次或多次</span></p>
+<p><span style="background-color: #21ddd6;">?  </span>       匹配前面的子表达式<span style="color: #008000;">零次或一次</span></p>
+<p><span style="background-color: #17ade8;">{n}</span>      n 是一个非负整数,匹配确定的<span style="color: #ff9900;">n次</span></p>
+<p><span style="background-color: #8d3ac4;">{n,}</span>      n 是一个非负整数,<span style="color: #ff9900;">至少</span>匹配n<span style="color: #ff9900;">次</span></p>
+<p><span style="background-color: #7b4fb0;">{n,m}</span>  最少匹配n次且最多匹配m次（n&lt;=m,均为非负整数）</p>
+<p><span style="background-color: #e3f00e;">.  </span>         匹配除“<code>\``n</code>”之外的任何单个字符</p>
+<p><span style="background-color: #9a6591;">x|y</span>      匹配x或y</p>
+<p><span style="background-color: #dda121;">[xyz]</span>   字符集合</p>
+<p><span style="background-color: #dda121;">[^xyz]</span> 负值字符集合</p>
+<p><span style="background-color: #f17f0d;">[a-z]  </span>  字符范围</p>
+<p><span style="background-color: #f17f0d;">[^a-z]</span>  负值字符范围</p>
+<p><span style="background-color: #6e9f60;">\b</span>         匹配一个单词边界，也就是指单词和空格间的位置</p>
+<p><span style="background-color: #659a7f;">\B</span>         匹配非单词边界</p>
+<p><span style="background-color: #7d45b9;">\d</span>         匹配一个数字字符，等价于[0-9]</p>
+<p><span style="background-color: #b539c6;">\D</span>         匹配一个非数字字符</p>
+<p><span style="background-color: #29acd5;">\s</span>          匹配任何空白字符，包括空格、制表符、换页符等。 等价于[ \f\n\r\t\v]</p>
+<p><span style="background-color: #20d3de;">\S</span>         等价于[^ \f\n\r\t\v]</p>
+<p>当 <span style="color: #ff9900;">?</span> 紧跟在任何一个其他限制符（ *,  + , ? ，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。</p>
+<p>简单示例：/<span style="background-color: #dbed11;">^[a-z]{3}\d{2}$</span> / 匹配<span style="background-color: #1ecde0;">vat58</span></p>
+<p>php验证</p>
+<p><pre>&lt;span style=&quot;color: #993300;&quot;&gt;&amp;lt;?php&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt; $str=&quot;vat58&quot;;&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt; if (preg_match(&quot;/^[a-z]{3}\d{2}$/&quot;,$str)) {&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt; echo &quot;验证成功&amp;lt;br&amp;gt;&quot;.&quot;vat58符合正则表达式&quot;;&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt; }&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt; else {&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt; echo &quot;验证失败&amp;lt;br&amp;gt;&quot;.&quot;请注意检查&quot;;&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt; }&lt;/span&gt;<br>&lt;span style=&quot;color: #993300;&quot;&gt;?&amp;gt;&lt;/span&gt;</pre><br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/0330.jpg" alt="正则式验证" title="正则式验证"></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-family: 'comic sans ms', sans-serif; font-size: 20px;">几个常用正则表达式</span></strong></p>
+<p><span style="font-size: 14px;">用户名</span></p>
+<p><span style="font-size: 14px;">/^[a-z0-9_-]{3,16}$/</span></p>
+<p><span style="font-size: 14px;">密码</span></p>
+<p><span style="font-size: 14px;">/^[a-z0-9_-]{6,18}$/</span></p>
+<p><span style="font-size: 14px;">电子邮箱</span></p>
+<p><span style="font-size: 14px;">/^([\w\d<em>.-]+)@([\w\d</em>-]+.)+\w{2,4}$/</span></p>
+<p><span style="font-size: 14px;">URL</span></p>
+<p><span style="font-size: 14px;">/^(https?:\/\/)?([\da-z.-]+).([a-z.]{2,6})([\/\w .-]<em>)</em>\/?$/</span></p>
+<p><span style="font-size: 14px;">IP 地址</span></p>
+<p><span style="font-size: 14px;">/((2[0-4]\d|25[0-5]|[01]?\d\d?).){3}(2[0-4]\d|25[0-5]|[01]?\d\d?)/</span></p>
+<p><span style="font-size: 14px;">HTML 标签</span></p>
+<p><span style="font-size: 14px;">/^&lt;([a-z]+)([^&lt;]+)<em>(?:&gt;(.</em>)&lt;\/\1&gt;|\s+\/&gt;)$/</span></p>
+<p>参考文章：</p>
+<p><a href="http://zh.wikipedia.org/wiki/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F" target="_blank" rel="external">http://zh.wikipedia.org/wiki/正则表达式</a></p>
+<h1 id="正则表达式30分钟入门教程"><span style="font-size: 14px;"><a href="http://deerchao.net/tutorials/regex/regex.htm#backreference" target="_blank" rel="external">正则表达式30分钟入门教程</a></span></h1>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -513,6 +626,8 @@ $         匹配输入字符串的结束位置
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -524,13 +639,23 @@ $         匹配输入字符串的结束位置
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/memory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -538,38 +663,42 @@ $         匹配输入字符串的结束位置
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/memory/" itemprop="url">
-                  记忆与忘记
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/memory/" itemprop="url">记忆与忘记</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-29T22:58:46+08:00" content="2012-03-29">
-              2012-03-29
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-29T22:58:46+08:00">
+                2012-03-29
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -577,7 +706,6 @@ $         匹配输入字符串的结束位置
 
                 
                 
-
               
             </span>
           
@@ -585,24 +713,29 @@ $         匹配输入字符串的结束位置
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/memory/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="memory/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="memory/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -612,32 +745,30 @@ $         匹配输入字符串的结束位置
       
         
           
-          有些东西能记得住
- 而有些东西却忘不掉
- 应该记住的
- 却在艾宾浩斯老人家的指示下离开我们
- 想忘记的
- 却不能遵从艾宾浩斯遗忘曲线的规律
- 这是一种悲哀……
-
-然而 忘记的我们可以重新找回
- 即使它已离开我们很远
- 想忘记的我们却束手无策
- 即使我们会很努力
-后来我明白了
- 有些东西可以随时间烟消云散
- 而有些东西却像底片一样经过时间的冲洗而更加清晰
-后者俘虏了人类,吞噬着他们的心,人却无力反抗
-2007/11/30  by vinny
+            <p><span style="color: #808000;">有些东西能记得住</span></p>
+<p><span style="color: #808000;"> 而有些东西却忘不掉<a href="http://www.vat58.com/blog/wp-content/uploads/2012/03/78a09a6ajw1dreq59xypnj.jpg"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/78a09a6ajw1dreq59xypnj-300x199.jpg" alt="记忆与忘记" title="记忆与忘记"></a></span></p>
+<p><span style="color: #808000;"> 应该记住的</span></p>
+<p><span style="color: #808000;"> 却在艾宾浩斯老人家的指示下离开我们</span></p>
+<p><span style="color: #808000;"> 想忘记的</span></p>
+<p><span style="color: #808000;"> 却不能遵从艾宾浩斯遗忘曲线的规律</span></p>
+<p><span style="color: #808000;"> 这是一种悲哀……</span></p>
+<!--more Read more...-->
+<p><span style="color: #808000;">然而 忘记的我们可以重新找回</span></p>
+<p><span style="color: #808000;"> 即使它已离开我们很远</span></p>
+<p><span style="color: #808000;"> 想忘记的我们却束手无策</span></p>
+<p><span style="color: #808000;"> 即使我们会很努力</span></p>
+<p><span style="color: #808000;">后来我明白了</span></p>
+<p><span style="color: #808000;"> 有些东西可以随时间烟消云散</span></p>
+<p><span style="color: #808000;"> 而有些东西却像底片一样经过时间的冲洗而更加清晰</span></p>
+<p><span style="color: #808000;">后者俘虏了人类,吞噬着他们的心,人却无力反抗</span></p>
+<p>2007/11/30  by vinny</p>
 
           
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/memory/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -655,6 +786,8 @@ $         匹配输入字符串的结束位置
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -666,13 +799,23 @@ $         匹配输入字符串的结束位置
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/php-yunsuanfu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -680,38 +823,42 @@ $         匹配输入字符串的结束位置
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/php-yunsuanfu/" itemprop="url">
-                  PHP之运算符
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/php-yunsuanfu/" itemprop="url">PHP之运算符</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-27T21:56:18+08:00" content="2012-03-27">
-              2012-03-27
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-27T21:56:18+08:00">
+                2012-03-27
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
                     <span itemprop="name">PHP</span>
                   </a>
@@ -719,7 +866,6 @@ $         匹配输入字符串的结束位置
 
                 
                 
-
               
             </span>
           
@@ -727,24 +873,29 @@ $         匹配输入字符串的结束位置
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/php-yunsuanfu/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="php-yunsuanfu/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="php-yunsuanfu/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -754,19 +905,21 @@ $         匹配输入字符串的结束位置
       
         
           
-          php运算符同其他语言的运算符大同小异。
-算数运算符：+     -    *    /    %    ++    –  等。%取模运算符一般用来确定一个范围，比如对50求模，那结果肯定在50之内。
-比较运算符：==    ===    !=或&lt;&gt;    !==   &lt;    &gt;    &lt;=    &gt;=     ?    :        ===为全等运算符，比较的对象需要是值跟数据类型均相同才为真。对于!==不全等，只要值跟数据类型有一个不同就为真。
+            <p>php运算符同其他语言的运算符大同小异。<img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/2-300x285.jpg" alt="眸" title="眸"></p>
+<p>算数运算符：<span style="color: #666699;">+     -    *    /</span>    <span style="color: #ff6600;">%</span>    <span style="color: #666699;">++    –</span>  等。%取模运算符一般用来确定一个范围，比如对50求模，那结果肯定在50之内。</p>
+<p>比较运算符：==    <span style="color: #00ff00;">===</span>    !=或&lt;&gt;    <span style="color: #99cc00;">!==</span>   &lt;    &gt;    &lt;=    &gt;=     <span style="color: #00ccff;">?    :        <span style="color: #000000;">===为全等运算符，比较的对象需要是值跟数据类型均相同才为真。对于!==不全等，只要值跟数据类型有一个不同就为真。</span></span></p>
+<!--more Read more...-->
+<p>逻辑运算符：<span style="color: #ff9900;">&amp;&amp;      ||</span>     <span style="color: #ff0000;">&amp;      |</span>       !       『 &amp;&amp;  ||』 跟 『&amp;  |』两组运算符都可以作逻辑运算，不同点在于<span style="color: #339966;">前者存在短路，<span style="color: #000000;">比如逻辑与&amp;&amp;，左边的逻辑值为假时，右边的表达式不再计算。</span></span></p>
+<p>位运算符：<span style="color: #ff99cc;">&amp;     |       ^        ~       &lt;&lt;     &gt;&gt;  <span style="color: #000000;">首先将数据转换成二进制，然后按位进行相应的操作。</span></span></p>
+<p>赋值运算符  =      -=      +=     /=     %=</p>
+<p>其他：   <span style="color: #808000;"> .        .=      . <span style="color: #000000;">用来连接字符串。</span></span></p>
 
-逻
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/php-yunsuanfu/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -784,6 +937,8 @@ $         匹配输入字符串的结束位置
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -795,13 +950,23 @@ $         匹配输入字符串的结束位置
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/php-biaodan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -809,38 +974,42 @@ $         匹配输入字符串的结束位置
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/php-biaodan/" itemprop="url">
-                  PHP之表单
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/php-biaodan/" itemprop="url">PHP之表单</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-26T23:26:11+08:00" content="2012-03-26">
-              2012-03-26
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-26T23:26:11+08:00">
+                2012-03-26
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
                     <span itemprop="name">PHP</span>
                   </a>
@@ -848,7 +1017,6 @@ $         匹配输入字符串的结束位置
 
                 
                 
-
               
             </span>
           
@@ -856,24 +1024,29 @@ $         匹配输入字符串的结束位置
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/php-biaodan/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="php-biaodan/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="php-biaodan/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -883,19 +1056,25 @@ $         匹配输入字符串的结束位置
       
         
           
-          每天一点PHP，这次我们练习一下php的表单，认识几个外部变量：$_GET ，           $_POST ,还有$_REQUEST。
-在本地目录建两个文件：welcome.html      welcome.php   我们在html文件中创建简单的表单，然后在welcome.php中接受html传递的信息。
+            <p>每天一点<strong>PHP</strong>，这次我们练习一下php的<strong>表单</strong>，认识几个外部变量：<span style="color: #008080;">$_GET</span> ，           <span style="color: #808000;">$_POST</span> ,还有<span style="color: #666699;">$_REQUEST</span>。</p>
+<p>在本地目录建两个文件：<span style="color: #ff00ff;">welcome.html</span>      <span style="color: #993366;">welcome.php   <span style="color: #000000;">我们在html文件中创建简单的表单，然后在welcome.php中接受html传递的信息。</span></span></p>
+<!--more Read more...-->
+<p>welcome.html</p>
+<p><pre>&lt;html&gt;<br>&lt;center&gt;<br> &lt;h1&gt;welcome to VAT58!&lt;/h1&gt;<br> &lt;form action=”welcome.php” method=”post”&gt;<br> 虔诚地输入姓名：&lt;input type=”text” name=”username” /&gt; &lt;br&gt;<br> 想要对她说的话：&lt;input type=”text” name=”mywish” /&gt; &lt;br&gt;<br> &lt;input type=”submit” value=”捎去” /&gt;<br> &lt;/form&gt;<br>&lt;/center&gt;<br>&lt;/html&gt;</pre><br>welcome.php</p>
+<p><pre>&lt;html&gt;<br>&lt;center&gt;<br> &lt;h3&gt;真心话中转站&lt;/h3&gt;<br>&lt;?php<br> echo “委托人：”.$_POST[“username”].”&lt;br&gt;”;<br> echo “真心话：”.$_POST[“mywish”];<br>?&gt;<br>&lt;/center&gt;<br>&lt;/html&gt;</pre><br>运行如下：</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/y1.png" alt="表单" title="表单"></p>
+<p>提交：</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/p.png" alt="php" title="php"></p>
+<p>在表单中，同样可用get方法传值，对应的外部变量为<span style="color: #00ccff;">$_GET</span>（注意大写）。                         无论是get还是post，都可以用外部变量<span style="color: #0000ff;">$_REQUEST</span>接收信息。                                            另外还有一个简单的方法，上列中，可以用<span style="color: #ff6600;">$username</span>和<span style="color: #ff6600;">$mywish<span style="color: #000000;">直接</span></span>取得html中的信息。</p>
+<p>Try It By Yourself .</p>
+<p>&nbsp;</p>
 
-welcome.html
-&lt;html&gt;&lt;center&gt; &lt;h1&gt;welcome to VAT58!&lt;/h1&gt; &lt;form a
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/php-biaodan/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -913,6 +1092,8 @@ welcome.html
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -924,13 +1105,23 @@ welcome.html
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/didadi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -938,38 +1129,42 @@ welcome.html
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/didadi/" itemprop="url">
-                  滴答滴-北京爱情故事
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/didadi/" itemprop="url">滴答滴-北京爱情故事</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-25T21:58:04+08:00" content="2012-03-25">
-              2012-03-25
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-25T21:58:04+08:00">
+                2012-03-25
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V音乐/" itemprop="url" rel="index">
                     <span itemprop="name">V音乐</span>
                   </a>
@@ -977,7 +1172,6 @@ welcome.html
 
                 
                 
-
               
             </span>
           
@@ -985,24 +1179,29 @@ welcome.html
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/didadi/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="didadi/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="didadi/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1012,20 +1211,19 @@ welcome.html
       
         
           
-          ##### 
-滴答铃答铃答铃达,时针它不停在转动滴答铃答铃答铃达,小雨它拍打着水花滴答铃答铃答铃达,是不是还会牵挂她滴答铃答铃答铃达,有几滴眼泪已落下
-滴答铃答铃答铃达,寂寞的夜和谁说话滴答铃答铃答铃达,伤心的泪儿谁来擦 滴答铃答铃答铃达,整理好心情再出发滴答铃答铃答铃达,还会有人把您牵挂滴答铃答铃答铃达,寂寞的夜和谁说话 滴答铃答铃答铃达,伤心的泪儿谁来擦 滴答铃答铃答铃达,整理好心情再出发滴答铃答铃答铃达,还会有人把你牵挂
+            <p>##### </p>
+<h5 id="滴答铃答铃答铃达,时针它不停在转动"><span style="color: #cc99ff;">滴答铃答铃答铃达,时针它不停在转动</span></h5><h5 id="滴答铃答铃答铃达,小雨它拍打着水花"><span style="color: #cc99ff;">滴答铃答铃答铃达,小雨它拍打着水花</span></h5><h5 id="滴答铃答铃答铃达,是不是还会牵挂她"><span style="color: #cc99ff;">滴答铃答铃答铃达,是不是还会牵挂她</span></h5><h5 id="滴答铃答铃答铃达,有几滴眼泪已落下"><span style="color: #cc99ff;">滴答铃答铃答铃达,有几滴眼泪已落下</span></h5><!--more Read more...-->
+<h5 id="滴答铃答铃答铃达,寂寞的夜和谁说话"><span style="color: #cc99ff;">滴答铃答铃答铃达,寂寞的夜和谁说话</span></h5><h5 id="滴答铃答铃答铃达,伤心的泪儿谁来擦"><span style="color: #cc99ff;">滴答铃答铃答铃达,伤心的泪儿谁来擦</span></h5><h5 id="滴答铃答铃答铃达,整理好心情再出发"><span style="color: #cc99ff;"> 滴答铃答铃答铃达,整理好心情再出发</span></h5><h5 id="滴答铃答铃答铃达,还会有人把您牵挂"><span style="color: #cc99ff;">滴答铃答铃答铃达,还会有人把您牵挂</span></h5><h5 id="滴答铃答铃答铃达,寂寞的夜和谁说话-1"><span style="color: #cc99ff;">滴答铃答铃答铃达,寂寞的夜和谁说话</span></h5><h5 id="滴答铃答铃答铃达,伤心的泪儿谁来擦-1"><span style="color: #cc99ff;"> 滴答铃答铃答铃达,伤心的泪儿谁来擦</span></h5><h5 id="滴答铃答铃答铃达,整理好心情再出发-1"><span style="color: #cc99ff;"> 滴答铃答铃答铃达,整理好心情再出发</span></h5><h5 id="滴答铃答铃答铃达,还会有人把你牵挂"><span style="color: #cc99ff;">滴答铃答铃答铃达,还会有人把你牵挂</span></h5><p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/032582.jpg" alt="" title="dida"></p>
+<div style="text-align: left;">
 
-
-情感的上空飘荡着一个空灵的声音，她像一个导演，导演着你内心的独白
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/didadi/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<h5 id="情感的上空飘荡着一个空灵的声音，她像一个导演，导演着你内心的独白，"><span style="color: #808000;">情感的上空飘荡着一个空灵的声音，她像一个导演，导演着你内心的独白，</span></h5><h5 id="导演着你思绪，导演你流泪。滴答滴答，像时间的脚步；像静谧的夜雨，"><span style="color: #808000;">导演着你思绪，导演你流泪。</span><span style="color: #808000;">滴答滴答，像时间的脚步；像静谧的夜雨</span><span style="color: #808000;">，</span></h5><h5 id="一滴一滴轻叩你的心门；一个干净的你被放空，毫无杂念的打理你的心事，"><span style="color: #808000;">一滴一滴轻叩你的心门；一个干净的你被放空，毫无杂念的打理你的心事，</span></h5><h5 id="就像受伤的鸟儿轻舐自己的伤口。那些随风而去的往事，那些不在身边的人儿，"><span style="color: #808000;">就像受伤的鸟儿轻舐自己的伤口。那些随风而去的往事，那些不在身边的人儿，</span></h5><h5 id="像一部微电影，逐渐清晰流畅起来。你一不小心，自己走了进去，每一寸记忆都如自己的皮肤，"><span style="color: #808000;">像一部微电影，逐渐清晰流畅起来。你一不小心，自己走了进去，每一寸记忆都如自己的皮肤，</span></h5><h5 id="可触可感。缓过神来，已经泪如满面。或许她最后就是一部摇篮曲，哄你入眠。"><span style="color: #808000;">可触可感。缓过神来，已经泪如满面。或许她最后就是一部摇篮曲，哄你入</span><span style="color: #808000;">眠。</span></h5><p></p></div><p></p>
+<center>[audio:didadi.mp3|loop=yes|autostart=yes]</center>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1043,6 +1241,8 @@ welcome.html
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1054,13 +1254,23 @@ welcome.html
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/wordpress-childthemes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1068,38 +1278,42 @@ welcome.html
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/wordpress-childthemes/" itemprop="url">
-                  WordPress之创建子主题
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/wordpress-childthemes/" itemprop="url">WordPress之创建子主题</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-25T13:33:34+08:00" content="2012-03-25">
-              2012-03-25
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-25T13:33:34+08:00">
+                2012-03-25
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -1107,7 +1321,6 @@ welcome.html
 
                 
                 
-
               
             </span>
           
@@ -1115,24 +1328,29 @@ welcome.html
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/wordpress-childthemes/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="wordpress-childthemes/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="wordpress-childthemes/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1142,19 +1360,26 @@ welcome.html
       
         
           
-          Wordpress是一款强大的个人博客系统，如果你已经在写一个wp的博客，那么恭喜你：你己经站在了巨人的肩膀上。我们有理由把它完善地更好，更符合个人的要求和特色，所以有时候我们需要自己DIY。可你 有没有想过，你的“定制”和修改会随着下一次的升级付之东流，我确实担心过。
-创建wordpress的子主题，会让这个问题迎刃而解。
+            <p>Wordpress是一款强大的个人博客系统，如果你已经在写一个wp的博客，那么恭喜你：你己经站在了巨人的肩膀上。我们有理由把它完善地更好，更符合个人的要求和特色，所以有时候我们需要自己DIY。可你 有没有想过，你的“定制”和修改会随着下一次的升级付之东流，我确实担心过。</p>
+<p>创建<strong>wordpress</strong>的<strong>子主题</strong>，会让这个问题迎刃而解。</p>
+<!--more Read more...-->
+<p>WordPress子主题也是一个主题，它继承了另一个主题——父主题——的功能，并允许你对父主题的功能进行修改，或者添加新功能。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/03/03251.png" alt="子主题目录" title="子主题"><em>style.css</em>是一个子主题唯一<strong>必须的</strong>文件。它的头部提供的信息让WordPress辨认出子主题，并且重写父主题中的style.css文件。</p>
+<p>这样一个子主题就建好了。对一个父主题的样式和布局进行修改和扩展，而不需要对父主题的文件作任何修改。通过这样的方式，当父主题被更新的时候，所做的修改就可以保存下来。所以<strong>强烈建议</strong>以这种方式对主题进行修改。</p>
+<p>你的子主题文件夹里面可以少至只包含一个<em>style.css</em>文件，也可以包含多至一个完整WordPress主题所拥有的文件：</p>
+<iframe src="http://rcm-cn.amazon-adsystem.com/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=vat58-23&o=28&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B004TJLW64" style="width:120px;height:240px;float:right;margin-right:200px" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
 
-WordPress子主题也是一个主题，它继承了另一个主题——父主题——的功能，并允许你对父主题的功能进行修改，或者添加新功能。
-style.css是一个子主题唯一必须的文
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/wordpress-childthemes/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<p>1.<span style="color: #ff0000;">style.css</span> (必需)</p>
+<div><br><pre>/<em><br>Theme Name: Vinny<br>Theme URI: <a href="http://www.vat58.com/">http://www.vat58.com/</a><br>Description: the test one by vinny_dong<br>Author: dong<br>Version: 1.0<br>Template: twentyten
+</em>/</pre><br></div><br><span style="font-size: small;"><span style="line-height: 24px;">以上头部信息解释为：</span></span><br><div><br><br><em>   <code>Theme Name</code>. (<strong>必需</strong>) 子主题的<strong>名称 </strong>vinny。
+</em>   <code>Theme URI</code>. (可选) 子主题的主页 www.vat58.com。<br><em>   <code>Description</code>. (可选) 子主题的描述。比如：the test one by vinny_dong
+</em>   <code>Author</code>. (optional) 作者的名字 dong。<br><em>   <code>Template</code>. (<strong>必需</strong>) 父主题的目录名，区别大小写。<code>Version</code>. (可选) 子主题的版本。比如：0.1，1.0，等。<br>可以用import命令将模板的css导入，然后修改样式规则，覆盖同名的样式规则<br><br>如：@import url(“../twentyten/style.css”); （此语句必须在所有规则之上才能起作用）<br><br>2.<span style="color: #339966;">functions.php</span> (可选)<br><br>不像<em>style.css</em>，子主题中的<em>functions.php</em>不会覆盖父主题中对应功能，而是将新的功能加入到父主题的<em>functions.php</em>中。（其实它会在<strong>父主题文件加载之前先载入</strong>。）<br><div>&lt;?php</div><br><div>     Function newFunction() {}</div><br><div> ?&gt;</div><br>可以以上述方式给主题添加功能。你也可以对父主题中的一个PHP函数重新声明替换。<br><br>3.<span style="color: #3366ff;">Template files</span> (可选)<br><br>在子主题中的表现和<em>style.css</em>一样，它们会覆盖父主题中的相同文件。子主题可以覆盖任何父主题模板中的文件，只需要创建同名文件就行。<br><br>相信接下来你肯定有很多工作要做了，定制一个<em>*子主题</em></em>，将以前改动的地方体现在你的子主题文件里，这样才可以后枕无忧。<br><br>参考文章：<a href="http://codex.wordpress.org/zh-cn:%E5%AD%90%E4%B8%BB%E9%A2%98" target="_blank" rel="external">http://codex.wordpress.org/zh-cn:%E5%AD%90%E4%B8%BB%E9%A2%98</a><br><br>&nbsp;<br><br></div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1172,6 +1397,8 @@ style.css是一个子主题唯一必须的文
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1183,13 +1410,23 @@ style.css是一个子主题唯一必须的文
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/php-datatype/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1197,38 +1434,42 @@ style.css是一个子主题唯一必须的文
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/php-datatype/" itemprop="url">
-                  php之数据类型
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/php-datatype/" itemprop="url">php之数据类型</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-23T22:50:42+08:00" content="2012-03-23">
-              2012-03-23
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-23T22:50:42+08:00">
+                2012-03-23
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
                     <span itemprop="name">PHP</span>
                   </a>
@@ -1236,7 +1477,6 @@ style.css是一个子主题唯一必须的文
 
                 
                 
-
               
             </span>
           
@@ -1244,24 +1484,29 @@ style.css是一个子主题唯一必须的文
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/php-datatype/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="php-datatype/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="php-datatype/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1271,20 +1516,31 @@ style.css是一个子主题唯一必须的文
       
         
           
-          每门语言的前几章都是比较类似的基础知识，一个helloworld,讲讲数据类型，讲讲语法。什么时候才能抓住核心部分啊？不要急，step by step.这一步我们学习（回顾）php的数据类型。
+            <p>每门语言的前几章都是比较类似的基础知识，一个helloworld,讲讲数据类型，讲讲语法。什么时候才能抓住核心部分啊？不要急，step by step.这一步我们学习（回顾）php的数据类型。</p>
+<!--more Read more...-->
+<p>在<a href="http://www.vat58.com/phpgaishu/" title="php概述">php概述</a>一文中，我们提到，php是一种松散型的语言。也就是说，它比较“怂”。向来是“逆来顺受”，赋给它什么样的值，它都老老实实地接着，不知道反抗。</p>
+<p>1.主要的数据类型有：</p>
+<p><span style="color: #993366;">整型（int）</span>：十进制，二进制，八进制，十六进制。怎么相互转换？忘了的自觉翻课本。</p>
+<p><span style="color: #993366;">浮点数（float）</span>:写到这里，我想到了计算机组成原理课本中，那些琐碎的题目。唉！零零碎碎，没完没了。这个也不多说。</p>
+<p><span style="color: #ff0000;">字符串（string）</span>:在php中，单引号 ‘’ 跟双引号 “” 都可以表示字符串。说到这里，你应该想到在其他语言中存在一个字符（char）类型,它就是用单引号 ‘’ 表示的。而在php中，字符型是不存在的。那单引号 ‘’ 跟双引号 “” 表示的字符串有什么区别吗？以后会提到。</p>
+<p><span style="color: #ff99cc;">布尔型（bool）</span>:敞亮一点就是true跟false。另外，背地里还有不少：</p>
+<p><span style="color: #008080;">整型非零为真，零为假；字符串中空””和”0”为假；其他为真;没有成员的数组为假;任何资源类型（什么是资源类型？）为真；空类型null代表假。</span>大体上如此。</p>
+<p>至于资源，对象等比较复杂的，以后细细品味。</p>
+<p>2.两个取数据类型的函数：<span style="color: #0000ff;">getType(<span style="color: #000000;">$a</span>)</span> 和<span style="color: #0000ff;">var_dump(<span style="color: #000000;">$a</span>)</span></p>
+<p>3.强制数据类型转换：（php中也有自动转换的机制）</p>
+<ul>
+<li>$b=（int）$a，形成新变量，元变量不变。$b是新变量，$a还是$a,不悲不喜。</li>
+<li>setType($a,”int”)  原变量$a改变了，如果它之前不是int型。</li>
+<li>$b=intval($a) 效果同第一种。类似方法还有floatval();    strval();<br>最后提醒，转换时别忘了考虑溢出。大家可以动手试试强制转换一种到另一种，是什么规律。</li>
+</ul>
+<p>晚安。</p>
 
-在php概述一文中，我们提到，php是一种松散型的语言。也就是说，它比较“怂”。向来是“逆来顺受”，赋给它什么样的值，它都老老实实地接着，不知道反抗。
-1.主要的数据类型有：
-整型（int）：十进制，二进制，八进制，十六进制。怎么相互转换？忘了的自觉翻课本。
-浮点数（float）:写到这里，我想到了计算
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/php-datatype/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1302,6 +1558,8 @@ style.css是一个子主题唯一必须的文
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1313,13 +1571,23 @@ style.css是一个子主题唯一必须的文
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/evereyone-is-pm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1327,38 +1595,42 @@ style.css是一个子主题唯一必须的文
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/evereyone-is-pm/" itemprop="url">
-                  人人都是产品经理by苏杰 完整版下载
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/evereyone-is-pm/" itemprop="url">人人都是产品经理by苏杰 完整版下载</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-22T22:38:23+08:00" content="2012-03-22">
-              2012-03-22
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-22T22:38:23+08:00">
+                2012-03-22
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
                     <span itemprop="name">移动互联网</span>
                   </a>
@@ -1366,7 +1638,6 @@ style.css是一个子主题唯一必须的文
 
                 
                 
-
               
             </span>
           
@@ -1374,24 +1645,29 @@ style.css是一个子主题唯一必须的文
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/evereyone-is-pm/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="evereyone-is-pm/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="evereyone-is-pm/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1401,21 +1677,23 @@ style.css是一个子主题唯一必须的文
       
         
           
-          &nbsp;
+            <p>&nbsp;</p>
+<iframe style="width: 120px; height: 240px; float: left; margin-right: 50px;" src="http://rcm-cn.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=vat58-23&amp;o=28&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00FF1Y1O0" width="300" height="150" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
+<p>因为自己性格的关系，对<strong>产品经理</strong>这个职位或者这类人有很大的兴趣。于是找了本苏杰的《<strong>人人都是产品经理</strong>》拜读，起初都是前两章的不完整版，现在跟大家分享下完整版及我的学习笔记。</p>
+<p>[坎坷的项目一生]这一章让我对未来的产品工作有了一个清晰的蓝图。我将来的团队，战友，一起要走的岁月，要分享的成功，想到这里真是欢欣鼓舞。我需要深化的能力：沟通表达的能力，流畅度；披荆斩棘的编程能力作技术支撑；到最后，俯瞰整体的大局观，管理中的方法学。就让我一口吃个胖子吧。</p>
+<!--more Read more...-->
+<p>卖包子的故事让我对创意营销产生了浓厚的兴趣。这些创意是那么的美丽动人。一个有文化底蕴的人，一个懂得人情世故却不忍心世故的人，一个懂得大众心理学善于洞察的人，一个善于利用各种资源不断学习成长的人。对，没错，就是我！哈哈，天生我材。卖包子都有那么多维度的拓展，可见一个点里边蕴含着多少“兵法”。所以做事情的时候，找准一个点就可以。</p>
+<p>苏杰提到了打井（自我提高）的方式-写，坚持写。不断记录，不断总结，不断深化。博客的意义体现出来了，而且更高的意义在于博览众客之长，学习并打好自己的井。</p>
+<p>善良的读者，请原谅我扯了那么多，以及些许不检点的大话。下面奉上《人人都是产品经理》完整下载。</p>
+<p><span style="color: #008000;"><span style="color: #000000;">打开网盘 </span><a href="http://www.rayfile.com/zh-cn/files/e22f44d7-7429-11e1-9471-0015c55db73d/" title="人人都是产品经理" target="_blank" rel="external">低调下载</a></span><br>支持正版：<a href="http://www.amazon.cn/gp/product/B00NWSS7YI/ref=as_li_ss_tl?ie=UTF8&amp;camp=536&amp;creative=3132&amp;creativeASIN=B00NWSS7YI&amp;linkCode=as2&amp;tag=vat58-23" target="_blank" rel="external">人人都是产品经理(纪念版)</a><img src="http://ir-cn.amazon-adsystem.com/e/ir?t=vat58-23&amp;l=as2&amp;o=28&amp;a=B00NWSS7YI" alt=""></p>
 
-因为自己性格的关系，对产品经理这个职位或者这类人有很大的兴趣。于是找了本苏杰的《人人都是产品经理》拜读，起初都是前两章的不完整版，现在跟大家分享下完整版及我的学习笔记。
-[坎坷的项目一生]这一章让我对未来的产品工作有了一个清晰的蓝图。我将来的团队，战友，一起要走的岁月，要分享的成功，想到这里真是欢欣鼓舞。我需要深化的能力：沟通表达的能力，流畅度；披荆斩棘的编程能力作技术支撑；到最后，俯瞰整体的大局观，管理中的方法学。就让我一口吃个胖子吧。
-
-卖包子的故事让我对创意营销产生了浓厚
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/evereyone-is-pm/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1428,6 +1706,8 @@ style.css是一个子主题唯一必须的文
     </div>
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1444,13 +1724,23 @@ style.css是一个子主题唯一必须的文
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/jimaosuanpi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1458,38 +1748,42 @@ style.css是一个子主题唯一必须的文
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/jimaosuanpi/" itemprop="url">
-                  谈编程语言之“鸡毛蒜皮”
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/jimaosuanpi/" itemprop="url">谈编程语言之“鸡毛蒜皮”</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-03-20T23:15:45+08:00" content="2012-03-20">
-              2012-03-20
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-03-20T23:15:45+08:00">
+                2012-03-20
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
                     <span itemprop="name">PHP</span>
                   </a>
@@ -1497,7 +1791,6 @@ style.css是一个子主题唯一必须的文
 
                 
                 
-
               
             </span>
           
@@ -1505,24 +1798,29 @@ style.css是一个子主题唯一必须的文
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/jimaosuanpi/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="jimaosuanpi/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="jimaosuanpi/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1532,17 +1830,25 @@ style.css是一个子主题唯一必须的文
       
         
           
-          当你为了一个bug调试半天，缓过神来你才发现，竟是一个大小写的问题。也许你像我一样刚刚接触编程，亦或是对某种语言放下的时间太久，用到的时候总会出现一些鸡毛蒜皮的小事，却足以让人抓心挠肝。那么请接着往下看。
+            <p>当你为了一个bug调试半天，缓过神来你才发现，竟是一个大小写的问题。也许你像我一样刚刚接触编程，亦或是对某种语言放下的时间太久，用到的时候总会出现一些鸡毛蒜皮的小事，却足以让人抓心挠肝。那么请接着往下看。</p>
+<!--more Read more...-->
+<p><span style="color: #0000ff;">大小写敏感性</span>：我接触的大部分语言都是大小写敏感的，像某些高级语言如<strong>Java</strong>，<strong>C++</strong>；<strong>php</strong>，<strong>jsp</strong>，<strong>javascript</strong>也都是大小写敏感的(php中只有变量对大小写敏感)。而像html,sql,vb则是比较迟钝的，呵呵。如果你不想理会这些，不妨都当作大小写敏感，规范编程，保险上上策。<br><span style="color: #0000ff;">命名规则：<span style="color: #000000;">最基本的变量的命名规则：由字母，数字，下划线组成，且第一个元素不能为数字和下划线。具体到各种语言，细节就很多了。比如Java中包的命名，类的命名，函数的命名，都有相应的规范。基本的原则就是容易阅读，可维护性强。</span></span></p>
+<p><span style="color: #0000ff;">注释：<span style="color: #000000;"><span style="color: #ff00ff;">//</span>这是通用的单行注释</span></span></p>
+<p><span style="color: #ff00ff;">/*</span>这是多行注释</p>
+<p>………..    <span style="color: #ff00ff;">*/</span></p>
+<p><span style="color: #ff00ff;">&lt;!</span>–html和xml中这样加注释–<span style="color: #ff00ff;">&gt;</span></p>
+<p><span style="color: #ff00ff;"> ‘<span style="color: #000000;">这是vb注释</span></span></p>
+<p><span style="color: #ff00ff;">#<span style="color: #000000;">印象中有些文件用这个注释</span></span></p>
+<p>欢迎补充共享，多实践多总结。</p>
+<p>12/03/20 by vinny</p>
+<p>&nbsp;</p>
 
-大小写敏感性：我接触的大部分语言都是大小写敏感的，像某些高级语言如Java，C++；php，jsp，javascript也都是大小写敏感的(php中只有变量对大小写敏感)。而像html,sql,vb则是比较迟钝的，呵呵。如果你不想理会这些，不妨都当作大小写敏感，规范编程，保险上上策。命名规则
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/jimaosuanpi/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1555,6 +1861,8 @@ style.css是一个子主题唯一必须的文
     </div>
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1602,34 +1910,43 @@ style.css是一个子主题唯一必须的文
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://vat58.qiniudn.com/avatar.jpg"
                alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">165</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">48</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">165</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">128</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -1684,7 +2001,12 @@ style.css是一个子主题唯一必须的文
           </div>
         
 
+        
+
+
       </section>
+
+      
 
       
 
@@ -1701,49 +2023,39 @@ style.css是一个子主题唯一必须的文
         <div class="copyright" >
   
   &copy;  2012 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+
         
-
-<div class="busuanzi-count">
-
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
-  
-
-  
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
-  
-</div>
-
-
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1766,43 +2078,56 @@ style.css是一个子主题唯一必须的文
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
   
 
   
 
-  
 
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 
@@ -1827,6 +2152,9 @@ style.css是一个子主题唯一必须的文
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
@@ -1834,8 +2162,28 @@ style.css是一个子主题唯一必须的文
 
 
 
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
   
+
+  
+
+  
+
   
 
   

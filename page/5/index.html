@@ -5,11 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
 
 
 
@@ -29,9 +35,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,21 +74,21 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="program, life" />
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -98,33 +107,47 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> VAT58 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="http://www.vat58.com/page/5/"/>
+
+
+
+
+
+  <title>VAT58</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-30055046-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -137,36 +160,46 @@
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">VAT58</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">VAT58</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
+      
   </div>
-  <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -187,7 +220,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -197,7 +230,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +242,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="#" class="st-search-show-outputs">
+            <a href="javascript:;" class="st-search-show-outputs">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -243,6 +276,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -256,13 +291,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/whynotslowly/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -270,38 +315,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/whynotslowly/" itemprop="url">
-                  转载《中国人为什么慢不下来》
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/whynotslowly/" itemprop="url">转载《中国人为什么慢不下来》</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-11T08:30:08+08:00" content="2014-12-11">
-              2014-12-11
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-11T08:30:08+08:00">
+                2014-12-11
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -309,7 +358,6 @@
 
                 
                 
-
               
             </span>
           
@@ -317,24 +365,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/whynotslowly/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="whynotslowly/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="whynotslowly/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -351,12 +404,18 @@
 <p>可以快，就绝不能慢。有了比较，加上重复、单调、复杂、呆板、逼仄、拖延、消耗、超出理解范围、失控和不公平等经常性的情境，中国人急不可耐，又因欲求未满而耐心等待，焦躁不安又心安理得。</p>
 <p>急的心态带来了什么？欲速则不达。‌‌“大多数人在追求快乐时急得上气不接下气，以至于和快乐擦肩而过。‌‌”(克尔凯郭尔语)我们迎来了更多的灾难和意外，更低的效率和更坏的结果。</p>
 <p>就这样，在‌‌“急之国‌‌”，我们快速地消耗着自己。等我们真正明白快慢、张弛、紧疏、得失、成败、忙闲的人生之道时，可能一切都晚了。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/whynotslowly/#more" rel="contents">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/whynotslowly/#далее" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -374,6 +433,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -385,13 +446,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/android-studio-1-0-gradle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -399,38 +470,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/android-studio-1-0-gradle/" itemprop="url">
-                  Android studio1.0升级后关于Gradle的问题及解决办法
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/android-studio-1-0-gradle/" itemprop="url">Android studio1.0升级后关于Gradle的问题及解决办法</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-10T08:30:58+08:00" content="2014-12-10">
-              2014-12-10
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-10T08:30:58+08:00">
+                2014-12-10
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -438,7 +513,6 @@
 
                 
                 
-
               
             </span>
           
@@ -446,24 +520,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/android-studio-1-0-gradle/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="android-studio-1-0-gradle/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="android-studio-1-0-gradle/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -478,12 +557,18 @@
 <p>为什么会重新下载gradle呢？我发现在gradle的默认下载路径C:\Users\username.gradle\wrapper\dists\gradle-1.12-all里新增了一个文件夹。理论上只要把离线的gradle-1.12-all.zip放进去应该就OK了。我的具体操作是把旧文件夹里的gradle-1.12-all.zip放了进去。这个问题解决。但是接下来出现了问题2</p>
 <p><img src="http://vat58.qiniudn.com/20141201104125890.png" alt=""></p>
 <p>&nbsp;</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/android-studio-1-0-gradle/#more" rel="contents">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/android-studio-1-0-gradle/#далее" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -501,6 +586,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -512,13 +599,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/luoyonghao/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -526,38 +623,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/luoyonghao/" itemprop="url">
-                  从《一个理想主义者的创业故事IV》谈情怀
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/luoyonghao/" itemprop="url">从《一个理想主义者的创业故事IV》谈情怀</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-09T08:28:02+08:00" content="2014-12-09">
-              2014-12-09
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-09T08:28:02+08:00">
+                2014-12-09
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -565,7 +666,6 @@
 
                 
                 
-
               
             </span>
           
@@ -573,24 +673,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/luoyonghao/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="luoyonghao/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="luoyonghao/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -600,18 +705,22 @@
       
         
           
+            <iframe src="http://player.youku.com/embed/XODQzMDQ0NTQ0" width="600" height="400" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<p>看完这次演讲才知道这个系列已经有四部了，我是因为锤子手机才开始接触罗永浩，新东方时代甚至更早的罗永浩对我而言根本就没有听说过，所以老罗别再吹牛自己是什么网络红人了，哈哈。除了这次演讲，看过的另外一次是罗永浩跟王自如“骂架”那个，感觉有看点，隐隐感觉到老罗是一个有态度、彪悍的人。</p>
+<p>刚刚打开这次演讲的页面，老婆大人说又看这个人，我讨厌他。跟我相比，她对老罗更是一无所知。但是媒体以及周边的朋友发出的声音，让她得出了一个结论：无论是老罗还是锤子，都是备受争议的“品牌”。我没说话，俩人一继续起看，中间时不常暴几个亮点，也乐呵了好几次。看得出来，老婆的态度慢慢地在改变，一点点挪近了屏幕，老罗依旧在娓娓道来。看到白色的T1定价2480时，老婆说，确实不贵啊。我当时惊得虎躯一颤，老罗的营销很成功。</p>
+<p>我没有买过锤子手机，也是老罗口中没有见过真机的人。偶尔听朋友在群里聊起，也大都是满嘴的不屑和鄙视。他们虽然也没有真正见过锤子，却跟我老婆起初的看法一样，早早地选好了舆论阵营严阵以待。我想他们肯定不是故意黑他，只是有那么一点的羊群效应作祟。在某个媒体上看到了某个观点，自己稍作理解加以吸收，之后经过类似媒体观点的不断强化，一个谈资就这么塑造完成了。而这个环节，没有<a href="http://www.vat58.com/critical-thinking1/" title="批判性思维补脑（1）">批判性思维</a>的参与，你说能是健康的吗？</p>
+<p>我起初关注罗永浩，是冲他的演讲去的，当成段子看。第一次笑笑，第二次乐乐，第三次发现自己竟然认真起来了。他“鼓吹”的情怀、信仰虽然是以调侃、风趣甚至自嘲的方式来讲述，大家一直当成笑话看，但是当你发现那些东西确实着陆了，不是飘渺在空中时，你才体会到什么是“寓庄于谐”，那一刻你不得不认真了，因为我们一直以来当成笑话的东西很有可能是真的。</p>
+<p>看完这次演讲，我心里有些触动。当提到天生骄傲时，老罗列举了很多例子说明了一种冰清玉洁的品质，在我看来，无异于阳明心学中的<a href="http://www.vat58.com/xinxue/" title="初探王阳明心学">致良知</a>吧。如果确实是凭着良知来经营，我也给你加油，但愿你这种情怀战略可以所向披靡，当然你也应该满载而归。</p>
+<p>写了这么一篇类似软文的东东，我还是始终没接触过锤子手机，所以本文没有跟产品扯上半毛钱的关系，就当是跟老罗一起扯扯情怀吧。</p>
+<p>但愿没有骗我，祝福罗永浩。</p>
+
           
-
-看完这次演讲才知道这个系列已经有四部了，我是因为锤子手机才开始接触罗永浩，新东方时代甚至更早的罗永浩对我而言根本就没有听说过，所以老罗别再吹牛自己是什么网络红人了，哈哈。除了这次演讲，看过的另外一次是罗永浩跟王自如“骂架”那个，感觉有看点，隐隐感觉到老罗是一个有态度、彪悍的人。
-刚刚打开这次演讲的页面，老婆大人说又看这个人，我讨厌他。跟我相比，她对老罗更是一无所知。但是媒体以及周边的朋友发出的声音，让她得出了一个结论：无论是老罗还是锤子，都是备受争议的“品牌”。我没说话，俩人一继续起看，中间
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/luoyonghao/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -629,6 +738,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -640,13 +751,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/historyofandroid/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -654,38 +775,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/historyofandroid/" itemprop="url">
-                  从5.0回顾安卓历史(视频+组图)
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/historyofandroid/" itemprop="url">从5.0回顾安卓历史(视频+组图)</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-08T17:34:44+08:00" content="2014-12-08">
-              2014-12-08
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-08T17:34:44+08:00">
+                2014-12-08
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -693,7 +818,6 @@
 
                 
                 
-
               
             </span>
           
@@ -701,24 +825,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/historyofandroid/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="historyofandroid/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="historyofandroid/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -728,17 +857,28 @@
       
         
           
-          如今，安卓成为了应用最为广泛的手机操作系统，包含数百万的智能手机、平板、可穿戴设备等。安卓5.0 的重磅推出又给安卓新添了浓重且极具革命意义的一笔。异彩纷呈的安卓帝国起源于短短六年前的Android 1.0 。
-2008年，第一部安卓手机面世。它就是G1,又称作HTC dream。G1看起来跟今天的安卓不太一样，以今天的标准评判，她运行缓慢、笨拙、长相丑陋。但是GOOGLE毕竟是GOOGLE ，数年间更迭了各种各种的更新，增加功能、提高可用性、修正外观，经历了17个大版本，直到成为今天的样子。
+            <p>如今，安卓成为了应用最为广泛的手机操作系统，包含数百万的智能手机、平板、可穿戴设备等。安卓5.0 的重磅推出又给安卓新添了浓重且极具革命意义的一笔。异彩纷呈的安卓帝国起源于短短六年前的Android 1.0 。</p>
+<p>2008年，第一部安卓手机面世。它就是G1,又称作HTC dream。G1看起来跟今天的安卓不太一样，以今天的标准评判，她运行缓慢、笨拙、长相丑陋。但是GOOGLE毕竟是GOOGLE ，数年间更迭了各种各种的更新，增加功能、提高可用性、修正外观，经历了17个大版本，直到成为今天的样子。</p>
+<p>&nbsp;</p>
+<p><script height="370px" width="620px" src="http://player.ooyala.com/iframe.js#pbid=dcc84e41db014454b08662a766057e2b&ec=VyMWU0cjpXnJ2Fw11Yf7FaKa2mMxzwS4"></script><br>&nbsp;</p>
+<p>从android 1.5 开始使用甜品命名。</p>
+<p><img src="http://vat58.qiniudn.com/android1.5.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android1.6.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android2.0.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android2.2.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android2.3.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android3.0.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android4.0.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android4.1.jpg" alt=""></p>
+<p><img src="http://vat58.qiniudn.com/android4.4.jpg" alt=""></p>
+<p>&nbsp;</p>
 
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/historyofandroid/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -756,6 +896,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -767,13 +909,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/lollipop-secure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -781,38 +933,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/lollipop-secure/" itemprop="url">
-                  不可不知的lollipop的4条安全特性
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/lollipop-secure/" itemprop="url">不可不知的lollipop的4条安全特性</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-04T16:53:12+08:00" content="2014-12-04">
-              2014-12-04
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-04T16:53:12+08:00">
+                2014-12-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -820,7 +976,6 @@
 
                 
                 
-
               
             </span>
           
@@ -828,24 +983,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/lollipop-secure/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="lollipop-secure/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="lollipop-secure/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -855,16 +1015,25 @@
       
         
           
-          现在有越来越多的朋友吃上了棒棒糖，可是关于lollipop的几个安全特性你了解吗？我来帮你一一解析。
-1. 信任设备和信任面孔在lollipop中安卓新增了“smart lock” 智能锁新特性，在设置安全里边找到smart lock ，其中包含信任的设备和信任的面孔。信任的设备依赖于蓝牙和NFC，当手机跟已经信任的设备，例如智能手表、车载系统连接时，手机会认为这是一个安全的环境，会保持解锁的状态。这就意味着当你驾车或者带着智能手表在办公室工作时，再也不用频繁地解锁了。如果断开了与信任设备之间的
-          ...
+            <p>现在有越来越多的朋友吃上了棒棒糖，可是关于lollipop的几个安全特性你了解吗？我来帮你一一解析。</p>
+<h3 id="1-_信任设备和信任面孔">1. 信任设备和信任面孔</h3><p>在lollipop中安卓新增了“smart lock” 智能锁新特性，在设置安全里边找到smart lock ，其中包含信任的设备和信任的面孔。信任的设备依赖于蓝牙和NFC，当手机跟已经信任的设备，例如智能手表、车载系统连接时，手机会认为这是一个安全的环境，会保持解锁的状态。这就意味着当你驾车或者带着智能手表在办公室工作时，再也不用频繁地解锁了。如果断开了与信任设备之间的连接，手机会自动锁定。配合NFC标签会有意想不到的效果呢。</p>
+<p>再来说一下信任的面孔。首先设置信任的面孔，设定成功，注意体会下这时手机与脸之间的距离及角度，有助于解锁时提高成功率。当你需要解锁的时候，面对摄像头几秒钟即可解锁（一定要注意距离，保证整个脸被摄像头捕捉到）。特别说明，人脸识别状态下，屏幕下方圆圈中会出现一个人像，识别成功后会出现一把解锁的锁。非识别状态，圆圈中是一把锁，任你什么角度都没用。如果失败，可以通过PIN码等方式来解锁。so cool , 亲测有效，即便是风头已过的i9300格调又重新拉高了有没有？抓紧向你的朋友秀一下吧。</p>
+<p>&nbsp;</p>
+<p><img src="http://vat58.qiniudn.com/2014-12-04-16-38-59.png" alt=""></p>
+<h3 id="2-_通知的隐私控制">2. 通知的隐私控制</h3><p>我们知道，在lollipop的锁屏界面上会展现应用通知，比如wechat、G+ 、whatsapp 等应用推送的消息，这样一来更加方便了，但是隐私问题随之而来。幸好lollipop提供了完善细腻的隐私控制功能。在设置-提示音和通知 里，我们可以设定设备锁定时通知的状态，有三项可以选择：显示所有通知内容、隐藏敏感通知内容、完全不显示通知。</p>
+<p>其中，隐藏敏感通知内容应该是最具有应用场景的基于应用级别的设定方式了。在此选项下，当有新的通知时，你会知道有了一封新邮件、一条聊天的回复，但是任何人看不到具体内容甚至是内容来源，提示内容已隐藏。</p>
+<p>lollipop在应用通知里有了更为精细的针对每一个已安装应用的控制。也提供了三个选项：屏蔽（一律不显示来自此应用的通知）、优先（在列表顶部显示通知，并且在设备设置为“仅限优先打扰内容”时也显示）、敏感（来自此应用的敏感通知内容不会在设备锁定时显示）。这样一来，会满足你这样的应用场景：在锁屏界面，隐藏掉支付宝的敏感内容，同时可以便捷的看到不太敏感的QQ留言。</p>
+<p><img src="http://vat58.qiniudn.com/2014-12-04-14-18-26.png" alt=""></p>
+<h3 id="3-_屏幕固定（Screen_Pinning）">3. 屏幕固定（Screen Pinning）</h3><p>屏幕固定功能可以把你的设备屏幕固定在一个app上，成为一个app的设备。其他人不能离开此固定的APP查看其它信息，也不能打开下拉菜单。</p>
+<p>如何激活屏幕固定功能？在设置-安全-屏幕固定选项里开启此功能。然后可以在最近应用列表里点击第一个应用右下角的图钉按钮，即可锁定此应用。解锁的时候，需要同时触摸并按住“返回“和”概览“按钮。我发现解锁时几次未果，估计跟快捷键的设定有关系。这时候重启即可恢复。</p>
+<h3 id="4-_访客模式">4. 访客模式</h3><p>Lollipop改善了支持多用户账户功能，为手机和平板设备提供了一种全新的Guest Mode访客模式。Guest Mode给每一位设备使用者都提供了安全绿色的一次性的操作空间，并且可以随时在guest account（访客账户）中删除用户数据。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/lollipop-secure/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -882,6 +1051,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -893,13 +1064,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/lollipop/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -907,38 +1088,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/lollipop/" itemprop="url">
-                  安卓5.0萝莉泡体验小记
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/lollipop/" itemprop="url">安卓5.0萝莉泡体验小记</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-03T21:17:47+08:00" content="2014-12-03">
-              2014-12-03
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-03T21:17:47+08:00">
+                2014-12-03
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -946,7 +1131,6 @@
 
                 
                 
-
               
             </span>
           
@@ -954,24 +1138,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/lollipop/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="lollipop/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="lollipop/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -981,18 +1170,16 @@
       
         
           
-          ROM基于NamelessRom 。Android 5.0是一道视觉盛宴，动画、分层、简单却明快的调色板，所有这一切都体现得淋淋尽致。
-更贴心的通知方式：当你用手机阅读的时候，来电提示不再是突兀的弹出呼叫画面，在屏幕顶部弹出一个卡片选择忽略还是接听，这过程中没有打断阅读或之前的任何操作。锁屏界面的通知展现，充电时显示充满需要的时间。支持来电归属地，不需要第三方应用来实现了。
+            <p>ROM基于NamelessRom 。Android 5.0是一道视觉盛宴，动画、分层、简单却明快的调色板，所有这一切都体现得淋淋尽致。</p>
+<h4 id="更贴心的通知方式：">更贴心的通知方式：</h4><div>当你用手机阅读的时候，来电提示不再是突兀的弹出呼叫画面，在屏幕顶部弹出一个卡片选择忽略还是接听，这过程中没有打断阅读或之前的任何操作。</div><br><div></div><br><div>锁屏界面的通知展现，充电时显示充满需要的时间。</div><br><div></div><br><div>支持来电归属地，不需要第三方应用来实现了。</div>
 
-全新的应用多任务切换功能#### bug：自带相机程序不能使用wifi正常，移动数据不能正常使用，有个小的叹号。手机拨号
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/lollipop/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<h4 id="全新的应用多任务切换功能">全新的应用多任务切换功能</h4><div></div><br><div><img src="http://files.techcrunch.cn/2014/11/switching1.gif?w=600&amp;h=392" alt=""></div><br><div></div><br><div><br><br>#### bug：<br><br><div>自带相机程序不能使用</div><br><div>wifi正常，移动数据不能正常使用，有个小的叹号。</div><br><div>手机拨号偶尔停止运行</div><br></div><br><div></div><br><div>本文保持更新。</div><br><div></div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1010,6 +1197,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1021,13 +1210,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/i9300-lollipop-namelessrom/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1035,38 +1234,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/i9300-lollipop-namelessrom/" itemprop="url">
-                  i9300刷入Android5.0-lollipop之NamelessRom（保持更新）
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/i9300-lollipop-namelessrom/" itemprop="url">i9300刷入Android5.0-lollipop之NamelessRom（保持更新）</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-02T16:51:13+08:00" content="2014-12-02">
-              2014-12-02
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-02T16:51:13+08:00">
+                2014-12-02
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -1074,7 +1277,6 @@
 
                 
                 
-
               
             </span>
           
@@ -1082,24 +1284,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/i9300-lollipop-namelessrom/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="i9300-lollipop-namelessrom/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="i9300-lollipop-namelessrom/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1109,15 +1316,33 @@
       
         
           
-          首先评价下GT-i9300吧，这款曾经的旗舰明星机型到现在依然宝刀未老。入手i9300两年有余，如今屏幕上多了几处裂纹，之前也换过一次显示屏，不得不感叹智能手机屏幕的硬伤，屏幕依然是最容易坏的部件。时间会在硬件上慢慢留下痕迹，我也慢慢对硬件兴趣减淡，或许只有刚入手的时候才有那份独有的新鲜感。机器上的软件核心系统，谷歌服务框架、G+、绿色守护、Kindle APP、Google Keep、Evernote、Ted 等各类应用软件构成我工作生活的整个手机生态系统才是我对手机的依赖所在。给我任何一台新
-          ...
+            <p><span style="font-size: 12pt;">首先评价下GT-i9300吧，这款曾经的旗舰明星机型到现在依然宝刀未老。入手i9300两年有余，如今屏幕上多了几处裂纹，之前也换过一次显示屏，不得不感叹智能手机屏幕的硬伤，屏幕依然是最容易坏的部件。时间会在硬件上慢慢留下痕迹，我也慢慢对硬件兴趣减淡，或许只有刚入手的时候才有那份独有的新鲜感。机器上的软件核心系统，谷歌服务框架、G+、绿色守护、Kindle APP、Google Keep、Evernote、Ted 等各类应用软件构成我工作生活的整个手机生态系统才是我对手机的依赖所在。给我任何一台新的机器，没有任何吸引力，因为没啥可用。因为活跃的社区、基友、丰富的第三方rom支持，使得I9300的可玩性依旧很高。</span></p>
+<p><span style="font-size: 12pt;">在《<a href="http://www.vat58.com/i9100g/">i9100G体验lollipop</a>》中已经体验过android 5.0 ，CM的lollipop依旧不见踪影，最终决定尝试下NamelessROM，不能再等了。</span></p>
+<p><span style="font-size: 12pt;">1. 资源准备</span></p>
+<p><del><span style="font-size: 12pt;">nameless-5.0-20141128-i9300.zip   (链接: <a href="http://pan.baidu.com/s/1i3BrMpJ" target="_blank" rel="external">http://pan.baidu.com/s/1i3BrMpJ</a> 密码: 4nho)</span></del></p>
+<p><span style="font-size: 12pt;"><a href="file:///D:/Downloads/nameless-5.0.2-20150101-i9300.zip" target="_blank" rel="external">nameless-5.0.2-20150101-i9300.zip</a> （<a href="https://build.nameless-rom.org/rom/" target="_blank" rel="external">官网地址</a>） /<em> 20150102更新 </em>/</span></p>
+<p><span style="font-size: 12pt;">已刷入第三方recovery，比如CWM、TWRP，并更新到新的版本，如何刷入recovery? 参考《<a href="http://www.vat58.com/adb/">ADB指令刷入recovery、获取root权限、刷机</a>》</span></p>
+<p><span style="font-size: 12pt;">2. 如有必要备份现有的手机系统，以备不时之需。</span></p>
+<p><span style="font-size: 12pt;">3.  双清: wipe data / factory reset + wipe cache partition ，然后刷入rom</span></p>
+<p><span style="font-size: 12pt;">4. 刷入Gapps(可选)（链接: <a href="http://pan.baidu.com/s/1pJkboc7" target="_blank" rel="external">http://pan.baidu.com/s/1pJkboc7</a> 密码: mo27）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><img src="http://vat58.qiniudn.com/5.0a.png" alt="">  <img src="http://vat58.qiniudn.com/5.0b.png" alt=""></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;">历代版本bug情况:</span></p>
+<p><span style="font-size: 12pt;">20141128：自带相机无法使用，使用google相机代替；无法使用移动数据，可刷入补丁解决；耗电严重。</span></p>
+<p><span style="font-size: 12pt;">20141221：耗电问题得以改善，移动数据修复，自带相机问题修复；从应用切换至桌面时出现卡顿，应该与5.0的内存泄漏bug有关.</span></p>
+<p><span style="font-size: 12pt;">20150101:  ….</span></p>
+<p>&nbsp;</p>
+<p>相关广告：<a href="http://www.amazon.cn/gp/product/B00HZDB9G4/ref=as_li_ss_tl?ie=UTF8&amp;camp=536&amp;creative=3132&amp;creativeASIN=B00HZDB9G4&amp;linkCode=as2&amp;tag=vat58-23" target="_blank" rel="external">SAMSUNG 三星 Galaxy S3 Neo I9300i WCDMA/GSM 双卡双待 手机(云石白)</a><img src="http://ir-cn.amazon-adsystem.com/e/ir?t=vat58-23&amp;l=as2&amp;o=28&amp;a=B00HZDB9G4" alt=""></p>
+<p><span style="font-size: 12pt;"> </span></p>
+<p><span style="font-size: 12pt;"> </span></p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/i9300-lollipop-namelessrom/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1135,6 +1360,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1146,13 +1373,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/google-glass-return/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1160,38 +1397,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/google-glass-return/" itemprop="url">
-                  传Google Glass将携手intel于2015年回归
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/google-glass-return/" itemprop="url">传Google Glass将携手intel于2015年回归</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-12-01T22:52:22+08:00" content="2014-12-01">
-              2014-12-01
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-12-01T22:52:22+08:00">
+                2014-12-01
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/google/" itemprop="url" rel="index">
                     <span itemprop="name">google</span>
                   </a>
@@ -1201,9 +1442,8 @@
                 
                   ， 
                 
-
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/google/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -1213,9 +1453,8 @@
                 
                   ， 
                 
-
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/google/V文摘/科技/" itemprop="url" rel="index">
                     <span itemprop="name">科技</span>
                   </a>
@@ -1223,7 +1462,6 @@
 
                 
                 
-
               
             </span>
           
@@ -1231,24 +1469,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/google-glass-return/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="google-glass-return/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="google-glass-return/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1258,18 +1501,19 @@
       
         
           
-          据华尔街日报报道，2015年google glass二代将内置因特尔芯片并且提供更长的电池续航。之前google glass有过几次小的升级，其中包括对传统镜片的兼容以及RAM的双倍扩容。但是处理器的更换将是谷歌眼镜作为一款穿戴产品一次更加彻底的革新。
-直到现在，谷歌眼镜较短的电池续航以及无法亲民的高昂价格未能被广泛地推广使用。搭配更加给力的处理器，焕然一新的谷歌眼镜二代有望重新燃起消费者的兴趣。因特尔将与谷歌合作，把谷歌眼镜推向医院网络、制造商以及更多的使用场所和情境。
+            <p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">据华尔街日报报道，2015年google glass二代将内置因特尔芯片并且提供更长的电池续航。之前google glass有过几次小的升级，其中包括对传统镜片的兼容以及RAM的双倍扩容。但是处理器的更换将是谷歌眼镜作为一款穿戴产品一次更加彻底的革新。</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">直到现在，谷歌眼镜较短的电池续航以及无法亲民的高昂价格未能被广泛地推广使用。搭配更加给力的处理器，焕然一新的谷歌眼镜二代有望重新燃起消费者的兴趣。因特尔将与谷歌合作，把谷歌眼镜推向医院网络、制造商以及更多的使用场所和情境。</span></p>
+<p><span style="font-size: 12pt;"><img src="http://vat58.qiniudn.com/gg.png" alt=""></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 12pt;">目前尚不清楚因特尔用于谷歌眼镜二代的硬件细节，但是最有可能的候选是因特尔MICA手链的低功耗芯片。但是有一点是明确的，因特尔已经为进入物联网和智能穿戴领域做了充足的准备，与谷歌的合作将是一次展露头角的契机。</span></p>
+<p><span style="font-size: 12pt;">本文由vatcom_dong 翻译整理自 <a href="http://www.theverge.com/2014/12/1/7312687/google-glass-will-return-in-2015-with-intel-inside-says-wsj" target="_blank" rel="external">The Verge</a>.</span></p>
+<p><span style="font-size: 12pt;"> </span></p>
 
-目前尚不清楚因特尔用
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/google-glass-return/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1287,6 +1531,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1298,13 +1544,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/i9100g/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1312,38 +1568,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/i9100g/" itemprop="url">
-                  i9100G体验lollipop
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/i9100g/" itemprop="url">i9100G体验lollipop</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-11-30T22:57:09+08:00" content="2014-11-30">
-              2014-11-30
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-30T22:57:09+08:00">
+                2014-11-30
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -1351,7 +1611,6 @@
 
                 
                 
-
               
             </span>
           
@@ -1359,24 +1618,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/i9100g/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="i9100g/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="i9100g/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1386,11 +1650,13 @@
       
         
           <p>这几天等CM官方的lollipop快要等疯了，我的I9300一直没有刷非官方的版本，主要是作为日常使用的话BUG太多。说好的11月底呢？对于android 5.0 lollipop，看了太多的Materail Design 风格的截图，看了太多小伙伴的秀，但是只能说隔靴搔痒而已。正好手头有台旧的I9100G，正好手痒，就先练练手了。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/i9100g/#more" rel="contents">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/i9100g/#далее" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1403,7 +1669,13 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -1420,13 +1692,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/8lifeskills/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1434,38 +1716,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/8lifeskills/" itemprop="url">
-                  8个必学软技能，让生活更美好
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/8lifeskills/" itemprop="url">8个必学软技能，让生活更美好</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2014-11-27T11:30:49+08:00" content="2014-11-27">
-              2014-11-27
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-27T11:30:49+08:00">
+                2014-11-27
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -1473,7 +1759,6 @@
 
                 
                 
-
               
             </span>
           
@@ -1481,24 +1766,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/8lifeskills/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="8lifeskills/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="8lifeskills/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1508,16 +1798,27 @@
       
         
           
-          感谢我们曾经的学校和老师教给我们的东西，经历了启蒙、学习成长的过程。但是有些东西是学校里学不到的，或者说没有侧重到的。这里分享10个重要的人生必学技能，抓紧对照自己来清点一下，看看自己是不是“武林高手”。
-1、战胜恐惧与接受挑战的能力不管有多少选择项，其实仅仅就是在“过去”和“将来之间选择”。面对选择，有些人会非常纠结，评估风险、评估成本和机遇。如果你选择较简单的方案，没有风险、挑战和未知的东西，你就是选择了过去。很显然，那样会舒适安逸。但是你却永远没法实现更大的目标，除非你挑战自己。那就是为什
-          ...
+            <p>感谢我们曾经的学校和老师教给我们的东西，经历了启蒙、学习成长的过程。但是有些东西是学校里学不到的，或者说没有侧重到的。这里分享10个重要的人生必学技能，抓紧对照自己来清点一下，看看自己是不是“武林高手”。</p>
+<h3 id="1、战胜恐惧与接受挑战的能力">1、战胜恐惧与接受挑战的能力</h3><p>不管有多少选择项，其实仅仅就是在“过去”和“将来之间选择”。面对选择，有些人会非常纠结，评估风险、评估成本和机遇。如果你选择较简单的方案，没有风险、挑战和未知的东西，你就是选择了过去。很显然，那样会舒适安逸。但是你却永远没法实现更大的目标，除非你挑战自己。那就是为什么你必须学着选择艰难的道路，让一切恐惧你的成为你的下一个目标。</p>
+<p>克服恐惧的能力将开启数以千计的新契机，会让你更加自信。这是学习改善人生的首要技能。如今我已为人父，同时也在努力尝试着给孩子提供满满地安全感。因为我知道，有安全感的孩子更优秀，更愿意接受挑战解决问题，更容易培养战胜恐惧和接受挑战的能力。</p>
+<h3 id="2、目标设定技巧">2、目标设定技巧</h3><p>学会设定目标及分解目标，这将让你更有效的分配时间和精力资源。</p>
+<p>规划自己的人生，通常比随意的人更成功。有人说要制定五年计划，确定大致蓝图和最终方向，但是我想说这对我们普通人来说太难了。我们不是圣人，看不到五年之后的趋势和模样，追随自己的本心作适当的修整、妥协、偏离会不会更加顺势而为？在《初探阳明心学》一文中有门徒问阳明先生：伟人们的大事业是不是都有计划？ 先生说：<strong>怎么可能有计划？他们的良知光明，守株待兔而已。</strong></p>
+<p><img src="http://vat58.qiniudn.com/skill.jpg" alt=""></p>
+<h3 id="3、合理的财务管理">3、合理的财务管理</h3><p>赚多少钱是一件重要的事情，如何聪明的规划金钱是一件更重要的事情。不管你的收入多少，你可以每月省下一笔特定金额的钱。养成省下至少20%的收入的习惯，你将有不错的积蓄。那意味着更大程度上的自由。</p>
+<h3 id="4、公众演说技巧">4、公众演说技巧</h3><p>不知有多少人为此恐惧，但是它却延伸到工作及生活的方方面面。无论如何，假如你想获得自信和自尊，认识新的专业人士和社交往来，公众演说技能必不可缺。</p>
+<h3 id="5、批判性思考的能力">5、批判性思考的能力</h3><p>这恰恰是我们在学校里没有学到的最宝贵的技能之一。批判性思维不包含情绪的回应，而是意味着纯粹的分析和判断。它给你机会看清事实，让别人无法轻易操控你，任何时候有自己独立的思考和想法。如果你想深入的学习，可以阅读博客里之前写的《批判性思维补脑》。</p>
+<h3 id="6、终身学习的理念">6、终身学习的理念</h3><p>这是我一直推崇和自诩的。因为我能看到终身学习的理念所蕴藏的巨大的能量和对一个人巨大的改变。你的人生如果比作地球，它足以翘起你的地球。毕业不是学习过程的终止，不要停止开发、进化自己。即使有一天我们的年龄很大了，也要让别人看到、让自己看到一个老当益壮的自己。</p>
+<h3 id="7、人际交往的能力">7、人际交往的能力</h3><p>你的人际关系和事业，在很大程度上取决于你的沟通技巧。要学会如何与人相处、解决问题和进行建设性对话。与人交谈、交往，是理解和有效合作的关键。如果对心理学感兴趣，可以学习一下。心理学会成为人际交往中奇妙的润滑剂。</p>
+<h3 id="8、_学会写作">8、 学会写作</h3><p>写作技巧是一个人职业生涯发展中的重点。准确、清晰、连贯的写作能力是沟通的有力工具。同时，你的想法、阅历、经验都可以随时通过笔尖流淌出来。写作是一个输出的过程，不仅仅是整理、构思，更重要的是这个过程中的沉淀、升华和内化。</p>
+<p>&nbsp;</p>
+<p><span style="color: #808080;">参考博谈网<a href="http://www.botanwang.com/node/31263" target="_blank" rel="external">译文</a></span></p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/8lifeskills/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1530,6 +1831,8 @@
     </div>
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1577,34 +1880,43 @@
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://vat58.qiniudn.com/avatar.jpg"
                alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">165</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">48</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">165</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">128</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -1659,7 +1971,12 @@
           </div>
         
 
+        
+
+
       </section>
+
+      
 
       
 
@@ -1676,49 +1993,39 @@
         <div class="copyright" >
   
   &copy;  2012 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+
         
-
-<div class="busuanzi-count">
-
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
-  
-
-  
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
-  
-</div>
-
-
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1741,43 +2048,56 @@
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
   
 
   
 
-  
 
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 
@@ -1802,6 +2122,9 @@
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
@@ -1809,8 +2132,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
   
+
+  
+
+  
+
   
 
   

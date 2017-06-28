@@ -5,11 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
 
 
 
@@ -29,9 +35,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,21 +74,21 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="program, life" />
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -98,33 +107,47 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> VAT58 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="http://www.vat58.com/page/13/"/>
+
+
+
+
+
+  <title>VAT58</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-30055046-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -137,36 +160,46 @@
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">VAT58</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">VAT58</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
+      
   </div>
-  <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -187,7 +220,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -197,7 +230,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +242,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="#" class="st-search-show-outputs">
+            <a href="javascript:;" class="st-search-show-outputs">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -243,6 +276,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -256,13 +291,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/google-drive/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -270,38 +315,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/google-drive/" itemprop="url">
-                  Google Drive不得不爱
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/google-drive/" itemprop="url">Google Drive不得不爱</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-29T09:52:25+08:00" content="2012-04-29">
-              2012-04-29
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-29T09:52:25+08:00">
+                2012-04-29
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/google/" itemprop="url" rel="index">
                     <span itemprop="name">google</span>
                   </a>
@@ -309,7 +358,6 @@
 
                 
                 
-
               
             </span>
           
@@ -317,24 +365,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/google-drive/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="google-drive/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="google-drive/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -344,27 +397,34 @@
       
         
           
-          Google drive 不得不爱的几大理由：
+            <div><span style="font-size: small;"><span style="line-height: 24px;">Google drive 不得不爱的几大理由：<br></span></span></div>
 
+<ul>
+<li><p>同步不同设备间所有文件：Google Drive 的本地客户端覆盖了 Android、OSX、iOS（尚未发布） 和 Windows 平台，你的文件将始终在你的手边；即使没有安装客户端，你也可以方便的在网页端操作文件。</p>
+<div><span style="font-size: small;"><span style="line-height: 24px;"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/ds_illustration_sync_440x420.png" alt="同步" title="ds_illustration_sync_440x420"></span></span></div><br><div><!--more Read more...--></div>
+</li>
+<li><p>迅速定位特定文件：延续 Google 的传统，Google Drive 提供了强大的搜索功能，不仅能够对文档内容进行全文搜索，还提供了图片内容搜索和 OCR 的强大功能。</p>
+<div><span style="font-size: small;"><span style="line-height: 24px;"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/ds_illustration_search_440x420.png" alt="图片搜索" title="ds_illustration_search_440x420"></span></span></div>
+</li>
+<li><p>免费获得5GB的存储空间</p>
+<div><span style="font-size: small;"><span style="line-height: 24px;"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/ds_illustration_storage_440x420.png" alt="免费5g" title="ds_illustration_storage_440x420"></span></span></div><br><div><span style="font-size: small;"><span style="line-height: 24px;"><br></span></span></div>
+</li>
+<li><p>与他人分享文件、协同工作：Google Drive 内建的 Google Docs 让你可以实现强大的文档分享、实时协作。</p>
+<div><span style="font-size: small;"><span style="line-height: 24px;"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/ds_illustration_collaborate_440x420a.png" alt="协同" title="ds_illustration_collaborate_440x420a"></span></span></div><br><div></div>
+</li>
+<li><p>查看各种各样的内容：即使未在计算机中安装相应的应用，您也可以在浏览器中直接打开超过 30 种类型的文件，包括高清视频、Adobe Illustrator 和 Photoshop。</p>
+</li>
+</ul>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/ds_illustration_view_440x420-1.png" alt="各种文件类型" title="ds_illustration_view_440x420 (1)"></p>
+<p>快去体验下吧：<a href="https://drive.google.com" target="_blank" rel="external">https://drive.google.com</a> （需翻墙）</p>
+<p> <img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-29-9-48-52.jpg" alt="google drive" title="google drive"></p>
 
-同步不同设备间所有文件：Google Drive 的本地客户端覆盖了 Android、OSX、iOS（尚未发布） 和 Windows 平台，你的文件将始终在你的手边；即使没有安装客户端，你也可以方便的在网页端操作文件。
-
-
-迅速定位特定文件：延续 Google 的传统，Google Drive 提供了强大的搜索功能，不仅能够对文档内容进行全文搜索，还提供了图片内容搜索和 OCR 的强大功能。
-
-
-免费获得5GB的存储空间
-
-
-与他人分享文件、协
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/google-drive/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -382,6 +442,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -393,13 +455,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/digest-precise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -407,38 +479,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/digest-precise/" itemprop="url">
-                  在工作中创造精确
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/digest-precise/" itemprop="url">在工作中创造精确</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-27T20:35:32+08:00" content="2012-04-27">
-              2012-04-27
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-27T20:35:32+08:00">
+                2012-04-27
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -446,7 +522,6 @@
 
                 
                 
-
               
             </span>
           
@@ -454,24 +529,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/digest-precise/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="digest-precise/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="digest-precise/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -481,18 +561,24 @@
       
         
           
-          人物周刊：拿到剧本，认领了角色，通常你会做哪些准备？
-王志文：我现在的生活，除了演戏，基本上两点一线：儿子，球场。我跟孩子玩，脑子里会琢磨；到球场打球，不用跟人说话，也在慢慢进入。首先是理解角色，接收他，剔掉个人偏好、习惯地接收，同时让那部分变得丰富、生动起来。心里要有——你得满满当当才能表达，否则只能是敷衍。但现在拍戏大多是每天得拍掉多少页，这个景拍完了，马上换下一个，都游击队了，这事儿就比较麻烦了。同行说你太使劲儿了，可我觉得还不够。我的方式还是原来的，准备得充分一点。
+            <p><strong>人物周刊：拿到剧本，认领了角色，通常你会做哪些准备？</strong></p>
+<p><strong>王志文</strong>：我现在的生活，除了演戏，基本上两点一线：儿子，球场。我跟孩子玩，脑子里会琢磨；到球场打球，不用跟人说话，也在慢慢进入。首先是理解角色，接收他，剔掉个人偏好、习惯地接收，同时让那部分变得丰富、生动起来。心里要有——<span style="color: #0000ff;">你得满满当当才能表达，否则只能是敷衍。</span>但现在拍戏大多是每天得拍掉多少页，这个景拍完了，马上换下一个，都游击队了，这事儿就比较麻烦了。同行说你太使劲儿了，可我觉得还不够。我的方式还是原来的，准备得充分一点。</p>
+<!--more Read more...-->
+<p><strong>人物周刊：《南行记》演艾芜那会儿，跟老先生相处了一段时间，现在还会有这类功课吗？</strong></p>
+<p><strong>王志文</strong>：依然会。但年轻时跟现在准备的方式会不太一样。二十四五岁我可能需要坐下来跟艾老面对面聊，但四十多岁这个方式不见得是最好的，毕竟对老人是一种打扰。你的阅历、经验、理解力、想象力，都可以成为“准备”时可调动的资源。</p>
+<p><strong>人物周刊：对那些可能在经验之外的呢？比方《黑冰》里的毒枭郭小鹏。</strong></p>
+<p><strong>王志文</strong>：<span style="color: #0000ff;">芸芸众生，其实不分正面反面，每个人都是一个糅杂的打包，每个人也都是复杂而说不清的；但人类又有一些东西是本质的、相通的，所谓人性。所以不管什么角色，我只要把他当一个人去演就好了</span>。</p>
+<p>我可能就应该是做演员的人。有时候我不需要去跟某一类人具体接触，就可以体会到他。借助想象力，还有你的心。为什么我们都说妈妈做的饭菜好吃？因为那里面有她的心。</p>
+<p>现在回想起来，郭小鹏是一个特别专情的人，他对什么事情（他的职业、他的女人）都很专注——这跟我有共通的地方。那么我就抓住这个点，让人物的力量流出来。<span style="color: #0000ff;">想要一个什么感觉呢，就是如果这么一个人，他如果不从事制毒贩毒，该有多美妙</span>。这样，他跟观众的关系就建立起来了（ <span style="color: #cc99ff;">注：自身实践证明，这种关系建立的相当准确。<span style="color: #008000;"><a href="http://www.vat58.com/blackice/" title="《黑冰》观后感">读郭小鹏</a></span></span>）。<br>（信息来源：南方人物周刊 ）</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/re_4f9a5bbc007df.jpg" alt="王志文" title="志士文迷"></p>
+<p><span style="color: #808000;">他的说话风格跟剧中是一致的，很多观众跟我一样喜欢王志文剧中的演绎风格：深沉，朴实。我不追星，甚至有时候还会解释，我喜欢的是他演绎的人物。仔细想想，要想把某种角色诠释的立体、神似、有血有肉，与观众建立起直接的关系，何尝不需要相应的经验和理解力，何尝不需要人物本身的“功力”？甚至只有你的“功力”高于待演绎的角色，才能够信手拈来，游刃有余。用他自己的话说，“你得满满当当才能够表达，否则只能是敷衍”。所以，王志文是一个我喜欢的不简单的演员。王大叔在演员生涯中创造着精确，我们有不少可以学习的地方：<span style="color: #99cc00;">专注，在点上发力才能够精彩</span>！这种感觉跟王志文的戏一样有味道。</span></p>
 
-人物周刊：《南行记
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/digest-precise/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -510,6 +596,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -521,13 +609,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/html5-cs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -535,38 +633,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/html5-cs/" itemprop="url">
-                  HTML5体验之CS
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/html5-cs/" itemprop="url">HTML5体验之CS</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-26T23:35:03+08:00" content="2012-04-26">
-              2012-04-26
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-26T23:35:03+08:00">
+                2012-04-26
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/HTML5/" itemprop="url" rel="index">
                     <span itemprop="name">HTML5</span>
                   </a>
@@ -576,9 +678,8 @@
                 
                   ， 
                 
-
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/HTML5/移动互联网/" itemprop="url" rel="index">
                     <span itemprop="name">移动互联网</span>
                   </a>
@@ -586,7 +687,6 @@
 
                 
                 
-
               
             </span>
           
@@ -594,24 +694,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/html5-cs/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="html5-cs/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="html5-cs/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -621,18 +726,16 @@
       
         
           
-              
-各位同学对HTML5应该早有耳闻，为了迎合HTML5，主流浏览器为了抢占先机一直没有放松研发的脚步。作为用户的我们，如果还在用较低级的浏览器，势必会错过互联网更多的精彩。HTML5版CS游戏，这或许是互联网革命的开端。
-提示：通过方向键控制进退和左右，空格键为跳。                        
-                                                                                        
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/html5-cs/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+            <p><head><br>    <div></div></head></p>
+<p>各位同学对HTML5应该早有耳闻，为了迎合HTML5，主流浏览器为了抢占先机一直没有放松研发的脚步。作为用户的我们，如果还在用较低级的浏览器，势必会错过互联网更多的精彩。HTML5版CS游戏，这或许是互联网革命的开端。</p>
+<p>提示：通过方向键控制进退和左右，空格键为跳。<br><!--more Read more...--><br><br>    <script type="text/javascript" src="http://www.vat58.com/blog/wp-includes/js/csmain.js"></script><br>    <style type="text/css"><br>        <!-- @import "main3.css"; --><!-- @import "http://www.vat58.com/blog/wp-includes/css/csstyle.css"; --><br>    </style><br>    <script type="text/javascript" src="http://www.vat58.com/blog/wp-includes/js/cscode.js"></script><br></p>
+<body><br>    <div id="benjoffe" class="cbox-content"><br>        <div id="content"><br>            <div id="app"><br>                <canvas id="underMap" width="80" height="80"></canvas><br>                <canvas id="map" width="80" height="80"></canvas><br>                <div id="holder" style="clear: both;"><br>                    <div id="sky"><br>                    </div><br>                    <div id="floor"><br>                    </div><br>                    <canvas id="canvas" width="400" height="300"></canvas><br>                    <div id="overlay"><br>                    </div><br>                </div><br><br>                <div><br><br>作者：Benjamin Joffe<br><br>               </div><br>            </div><br>        </div><br>    </div><br></body>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -650,6 +753,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -661,13 +766,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/wpup-332/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -675,38 +790,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/wpup-332/" itemprop="url">
-                  wordpress 3.3.2 帅美来袭，ready？
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/wpup-332/" itemprop="url">wordpress 3.3.2 帅美来袭，ready？</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-25T20:56:02+08:00" content="2012-04-25">
-              2012-04-25
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-25T20:56:02+08:00">
+                2012-04-25
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -714,7 +833,6 @@
 
                 
                 
-
               
             </span>
           
@@ -722,24 +840,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/wpup-332/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="wpup-332/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="wpup-332/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -749,20 +872,25 @@
       
         
           
-          相识wordpress是在3.3.1版本，什么？我几岁了？嗯，我不狡辩，新手上路，多多包涵。更多口水请对准《wordpress到底火了多久？我落后了多久？》，呵呵。前几天迎来了wordpress 3.3.2的帅美升级，马上体验吧。
-wordpress3.3.2是对以往版本的安全升级：
+            <p>相识wordpress是在3.3.1版本，什么？我几岁了？嗯，我不狡辩，新手上路，多多包涵。更<img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/how-to-find-optimal-wordpress-theme.png" alt="wplogo" title="wplogo">多口水请对准《<a href="http://www.vat58.com/twentyten_posted_on/" title="链向 wordpress到底火了多久？我落后了多久？ 的固定链接">wordpress到底火了多久？我落后了多久？</a>》，呵呵。前几天迎来了wordpress 3.3.2的帅美升级，马上体验吧。</p>
+<p>wordpress3.3.2是对以往版本的<strong>安全升级</strong>：</p>
+<ol>
+<li>Plupload（1.5.4 版本）  WordPress 用它来完成媒体文件的上传。</li>
+<li>SWFUpload   WordPress 原先使用的库，用于上传媒体文件，一些插件可能仍在使用它。</li>
+<li><p>SWFObject — WordPress 原先用来嵌入 Flash 内容的库，一些插件和主题可能仍在使用它。<br><div><span style="font-size: small;"><span style="line-height: 24px;"><!--more Read more...--></span></span></div><br><span style="color: #99cc00;">修补点</span>：</p>
+</li>
+<li><p>在 WordPress “站点网络”功能启用的环境下，站点管理员有可能在整个站点网络范围停用某个插件。</p>
+</li>
+<li>URL 自动链接的算法可能允许跨站脚本攻击。</li>
+<li>过滤 URL 的算法可能允许跨站脚本攻击。<br><div><span style="font-size: small;"><span style="line-height: 24px;">升级前注意<strong>备份</strong>整个网站，包括数据库。如果平时养成定时备份的好习惯，上天会在关键时刻眷顾我们的。</span></span></div><br><pre>感谢升级到最新版本！使用 WordPress 3.3.2 不仅可以让男生更帅，女生更美、改良人格，还可以大幅提升您的网上发布体验。诶，开玩笑的，其实她只能提升您的使用体验，但是光这一点就很不错了。</pre><br>开始了吗？已经结束了。wordpress的升级是如此简单。<br>wordpress更有活力，大家更有动力！</li>
+</ol>
 
-Plupload（1.5.4 版本）  WordPress 用它来完成媒体文件的上传。
-SWFUpload   WordPress 原先使用的库，用于上传媒体文件，一些插件可能仍在使用它。
-SWFObject —
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/wpup-332/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -780,6 +908,8 @@ SWFObject —
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -791,13 +921,23 @@ SWFObject —
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/feedsky-upd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -805,38 +945,42 @@ SWFObject —
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/feedsky-upd/" itemprop="url">
-                  feedsky绑定二级域名后不能更新有解啦
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/feedsky-upd/" itemprop="url">feedsky绑定二级域名后不能更新有解啦</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-23T20:20:04+08:00" content="2012-04-23">
-              2012-04-23
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-23T20:20:04+08:00">
+                2012-04-23
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -844,7 +988,6 @@ SWFObject —
 
                 
                 
-
               
             </span>
           
@@ -852,24 +995,29 @@ SWFObject —
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/feedsky-upd/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="feedsky-upd/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="feedsky-upd/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -879,19 +1027,22 @@ SWFObject —
       
         
           
-          在《cpanel设置二级域名与WordPress Rss优化》中，兴冲冲地跟大家分享了rss的终极优化方案。我本人也在不断的学习体验中。接下来的这一星期，feedsky不能更新了，郁闷了一个“十一长假”的阵容。现在终于解决了，特来相告。
-这段时间，feedsky中feed状态一直处于失败状态。最近的一条让人欣喜，正常。
+            <p>在<a href="http://www.vat58.com/rss-to-subdomain/" title="cpanel设置二级域名与WordPress Rss优化">《cpanel设置二级域名与WordPress Rss优化》</a>中，兴冲冲地跟大家分享了rss的终极优化方案。我本人也在不断的学习体验中。接下来的这一星期，feedsky不能更新了，郁闷了一个“十一长假”的阵容。现在终于解决了，特来相告。</p>
+<p>这段时间，feedsky中feed状态一直处于失败状态。最近的一条让人欣喜，<strong><span style="color: #008080;">正常</span></strong>。<img src="http://www.vat58.com/blog/wp-content/plugins/ultimate-tinymce/emotions/img/popobig/big_smile.png" alt="Big Smile" title="Big Smile"></p>
+<!--more Read more...-->
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-23-19-47-26.jpg" alt="feed状态" title="feed status"></p>
+<p>feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，其他一概不管。客服论坛里都是发贴者在自己的帖子里自言自语：怎么没人回答呢。可以上溯到2008年之前了。想要让它给点帮助是不可能了。于是一遍遍地联系主机空间商，各种措施都失败了，在此感谢老薛主机技术人员的帮助。</p>
+<p>见到“上述情况”，替我问一句，还记得在capnel中设置二级域名时生成的”feed“文件根目录吗？我设置的二级域名为feed.vat58.com，于是在主机目录里多了一个feed文件夹。这就是原因所在。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-23-20-11-04.jpg" alt="目录" title="dir"></p>
+<p>删掉feed文件夹，RSS从此顺畅无阻！(追记：长时间以来，feed文件夹是删了生，生了删，斗争了很久。稳妥的办法是更改二级域名的文件根目录，具体是由feed改成其他如feeds就好，避免与wordpress feed源的冲突。)</p>
+<p>本文算是对《cpanel设置二级域名与WordPress Rss优化》一文的补充，feed.vat58.com正式启动，你即将订阅的是”<strong><span style="color: #ff0000;">成长</span></strong>“！</p>
 
-
-feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，其他一概不管。客服论坛里都是发贴者在自己的帖子里自言自语：怎么没人回答呢。可以上溯到2008年之前了。想要让
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/feedsky-upd/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -909,6 +1060,8 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -920,13 +1073,23 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/html5-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -934,38 +1097,42 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/html5-1/" itemprop="url">
-                  wordpress中小试HTML5
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/html5-1/" itemprop="url">wordpress中小试HTML5</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-22T00:44:18+08:00" content="2012-04-22">
-              2012-04-22
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-22T00:44:18+08:00">
+                2012-04-22
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/HTML5/" itemprop="url" rel="index">
                     <span itemprop="name">HTML5</span>
                   </a>
@@ -975,9 +1142,8 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
                 
                   ， 
                 
-
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/HTML5/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -985,7 +1151,6 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
                 
                 
-
               
             </span>
           
@@ -993,24 +1158,29 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/html5-1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="html5-1/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="html5-1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1020,16 +1190,28 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
       
         
           
-          尽管HTML5到目前为止仍然是下一代html的草案，它的相关教程已经是铺天盖地。话说HTML5前景一片光明， 给个人站点披上HTML5的外衣，逐步学习体验新的特性，既紧随了潮流，又不失为一个好的学习方法。还在等什么？本文讲一下wordpress中小试HTML5。
-几点说明：1. 本次示例的为wordpress 3.0 twentyten 主题，编辑的相关文件在“/wp-content/themes/twentyten/ ”目录。2. 下文中提到的行号为修改代码的大体位置，请根据自己的实际灵活操作
-          ...
+            <p>尽管HTML5到目前为止仍然是下一代html的草案，它的相关教程已经是铺天盖地。<img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/201101212350420012.jpg" alt="html5" title="html5"><br>话说HTML5前景一片光明， 给个人站点披上HTML5的外衣，逐步学习体验新的特<br>性，既紧随了潮流，又不失为一个好的学习方法。还在等什么？本文讲一下wordpress<br>中小试HTML5。</p>
+<p><strong><span style="color: #99cc00;">几点说明</span></strong>：<br>1. 本次示例的为wordpress 3.0 twentyten 主题，编辑的相关文件在“/wp-content/themes/twentyten/ ”目录。<br>2. 下文中提到的行号为修改代码的大体位置，请根据自己的实际灵活操作。</p>
+<!--more Read more...-->
+<p>&lt;<strong>article</strong>&gt;标签</p>
+<p>&lt;article&gt;标签定义外部的内容。外部内容可以是来自一个外部的新闻提供者的一篇新的文章，或者来自 blog 的文本，或者是来自论坛的文本。亦或是来自其他外部源内容。我们可以将此标签用于wordpress的文本中。</p>
+<p><span style="color: #3366ff;">loop.php</span>:<br><span style="background-color: #b5bab6;">&lt;div id=”post-&lt;?php the_ID(); ?&gt;” &lt;?php post_class(); ?&gt;&gt;  <span style="background-color: #fcfcfc;">（61行左右）</span></span><br><span style="background-color: #b5bab6;"> =&gt;(变更为)</span><br><span style="background-color: #b5bab6;"> &lt;<span style="color: #ff0000;">article</span> id=”post-&lt;?php the_ID(); ?&gt;” &lt;?php post_class(); ?&gt;&gt;</span><br>关闭标签处：<br><span style="background-color: #b5bab6;">&lt;/div&gt;&lt;!– #post-##  –&gt;</span><br><span style="background-color: #b5bab6;">=&gt;(变更为)</span><br><span style="background-color: #b5bab6;">&lt;<span style="color: #ff0000;">/article</span>&gt;&lt;!– #post-##  –&gt;</span></p>
+<p>此文件的其他地方以及其他文件如，loop.php、loop-single.php、loop-page.php等等都有可能需要作类似的改动。</p>
+<p>&lt;<strong>header</strong>&gt; ,&lt;<strong>nav</strong>&gt; ,&lt;<strong>footer</strong>&gt;</p>
+<p>&lt;header&gt; 标签定义文档的页眉（介绍信息）。<br>&lt;nav&gt; 标签定义导航链接的部分。<br>&lt;footer&gt; 标签定义 section 或 document 的页脚。<br>&lt;section&gt; 标签定义文档中的节（section、区段）。比如章节、页眉、页脚或文档中的其他部分。</p>
+<p><span style="color: #3366ff;">header.php</span>:<br><span style="background-color: #b5bab6;">&lt;div id=”header”&gt;  （57行）</span><br><span style="background-color: #b5bab6;">=&gt;</span><br><span style="background-color: #b5bab6;">&lt;<span style="color: #ff0000;">header</span> id=”header”&gt;<br></span></p>
+<p><span style="background-color: #b5bab6;">&lt;div id=”masthead”&gt;   （58行）<br>=&gt;<br>&lt;<span style="color: #ff0000;">section</span> id=”masthead”&gt; </span></p>
+<p><span style="background-color: #b8bbb4;">&lt;div id=”access” role=”navigation”&gt;   （81行）<br>=&gt;<br>&lt;<span style="color: #ff0000;">nav</span> id=”access” role=”navigation”&gt; </span></p>
+<p><span style="color: #3366ff;">footer.php:</span><br><span style="background-color: #b8bbb4;">&lt;div id=”footer” role=”contentinfo”&gt;  （15行）</span><br><span style="background-color: #b8bbb4;">=&gt;</span><br><span style="background-color: #b8bbb4;">&lt;<span style="color: #ff0000;">footer</span> role=”contentinfo”&gt; </span></p>
+<p>附：关闭标签处不要忘记更改关闭标签。</p>
+<p>虽然都是些细小的改动，外观上可能没有明显的效果，但是你已经在体验学习html5了，这将是网站彻底革新的开端。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/html5-1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1047,6 +1229,8 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1058,13 +1242,23 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/php-function/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1072,38 +1266,42 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/php-function/" itemprop="url">
-                  php之函数
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/php-function/" itemprop="url">php之函数</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-18T22:38:18+08:00" content="2012-04-18">
-              2012-04-18
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-18T22:38:18+08:00">
+                2012-04-18
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/PHP/" itemprop="url" rel="index">
                     <span itemprop="name">PHP</span>
                   </a>
@@ -1111,7 +1309,6 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
 
                 
                 
-
               
             </span>
           
@@ -1119,24 +1316,29 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/php-function/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="php-function/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="php-function/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1146,18 +1348,18 @@ feedsky现在的状态就是安安静静地提供一个最简陋的rss服务，�
       
         
           
-          php中有超过700个内置函数，这或许是php最给力的地方。
-如何创建自己的函数？关键字：functionfunction functionname () {/函数体/}
+            <p>php中有超过700个内置函数，这或许是php最给力的地方。</p>
+<p><span style="background-color: #19f30b;">如何创建自己的函数？<br><span style="background-color: #f8f8ff;">关键字：function<br>function functionname () {<br>/<em>函数体</em>/<br></span></span>}</p>
+<!--more Read more...-->
+<p><span style="background-color: #1ff20c;">php中没有函数重载的概念<br><span style="background-color: #f8f8ff;">不像Java，c 等高级语言，可以使用相同的函数名称，以参数的类型、个数、位置区分来实现函数重载。这在php中是不可以的。在php中调用函数时可以有任意的参数。<br>&lt;?php<br>function demo($a) {<br>$args=<span style="color: #0000ff;">func_get_args()</span>;<br>echo($a);<br>echo($args[1]);<br>}<br>demo(“vat58”,”每天一点PHP”);<br>?&gt;<br>执行上述代码，页面上输出 <span style="color: #ff00ff;">vat58每天一点PHP</span><br>我们看到，尽管定义函数demo时只有一个形参，而在调用时却给它传递了两个参数。<br>这时没有发生错误，而是第一个实参传给了$a，其他参数可通过函数 <span style="color: #0000ff;">func_get_args()<br><span style="color: #333333;">获得。func_get_args()返回值是一个数组，下标从零开始。于是$args[1]取到了第二个<br>参数“每天一点PHP”。 </span></span></span></span></p>
+<p><span style="background-color: #30ee11;">引用函数include()和require()</span><br>很多时候，我们要实现代码的重用，提高编写效率，就要在一个文件中引用其他文件<br>中的函数等等， 这时要用到include()或require()函数，相当于java中的import语句。<br>include(和require()唯一的区别在于对错误的处理方式上：<br>include() 函数会生成一个警告（但是脚本会继续执行），而 require() 函数会生成一个<br>致命错误（fatal error）（在错误发生后脚本会停止执行）。</p>
 
-php中没有函数重载的概念不像Java，c 等高级语言，可以使用相同的函数名称，以参数的类型、个数、位置区分来实现函数重载。这在php中是不可以的。在php中调用函数时可以有任意的参数。&lt;?phpfunction demo($a) {$args=func_get_args();echo($a);echo($args[1
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/php-function/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1175,6 +1377,8 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1186,13 +1390,23 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/rss-to-subdomain/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1200,38 +1414,42 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/rss-to-subdomain/" itemprop="url">
-                  cpanel设置二级域名与Wordpress Rss优化
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/rss-to-subdomain/" itemprop="url">cpanel设置二级域名与Wordpress Rss优化</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-17T22:14:41+08:00" content="2012-04-17">
-              2012-04-17
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-17T22:14:41+08:00">
+                2012-04-17
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -1239,7 +1457,6 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
 
                 
                 
-
               
             </span>
           
@@ -1247,24 +1464,29 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/rss-to-subdomain/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="rss-to-subdomain/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="rss-to-subdomain/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1274,19 +1496,24 @@ php中没有函数重载的概念不像Java，c 等高级语言，可以使用�
       
         
           
-          在《WordPress RSS 初步优化》一文中，我们谈到了如何用feedsky第三方Feed工具优化wordpress原有feed，实现了feed更好的管理。可第三方feed提供商自身存在不稳定的因素，完全依赖feed提供商未必是理想的方法。
-还有什么高招呢？用子域名的方式feed.domain.com来发布feed，通过修改自己Feed子域名的DNS记录，来实现Feed托管服务和自己主机之间完美切换是目前最稳定的方案。
+            <p>在《<a href="http://www.vat58.com/rssyouhua/" title="WordPress RSS 初步优化">WordPress RSS 初步优化</a>》一文中，我们谈到了如何用feedsky第三方Feed工具优化wordpress原有feed，实现了feed更好的管理。可第三方feed提供商自身存在不稳定的因素，完全依赖feed提供商未必是理想的方法。</p>
+<p>还有什么高招呢？用子域名的方式<span style="color: #0000ff;">feed.domain.com</span>来发布feed，通过修改自己Feed子域名的DNS记录，来实现Feed托管服务和自己主机之间完美切换是目前最稳定的方案。</p>
+<!--more Read more...-->
+<p><strong>如何绑定？</strong></p>
+<p>FeedSky有免费域名绑定服务,可以将子域名绑定到个人FeedSky的帐号。<br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-17-21-40-55.jpg" alt="bangding" title="feedsky"></p>
+<p>依据图中操作步骤，结合Cpanel，我们首先在DNS中添加子域名，并CNAME至“mydomain.feedsky.com”（固定格式）。</p>
+<p><span style="color: #993300;">何谓CNAME？</span><br>CNAME指别名记录也被称为规范名字,这种记录允许您将多个名字映射到同一台计算机。<br>去<a href="http://baike.baidu.com/view/552919.htm" target="_blank" rel="external">百科</a>探个究竟吧</p>
+<p><span style="color: #993300;">Cpanel中如何添加子域名并实现CNAME?</span></p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-17-21-54-30.jpg" alt="Cpanel" title="Cpanel"><br>在子域中添加子域，例：feed.vat58.com<br>在DNS编辑器中，编辑你的子域记录，实现Cname至<span style="background-color: #daf10d;">mydomain.feedsky.com<br></span></p>
+<p>待子域解析成功后，在feedsky中实现绑定即可。</p>
+<p>这样一来，即使那天feedsky不给力出现了异常情况，我们可以直接修改子域名的CNAME到另外一家就可以避免读者流失的情况。</p>
 
-如何绑定？
-FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/rss-to-subdomain/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1304,6 +1531,8 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1315,13 +1544,23 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/duoshuo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1329,38 +1568,42 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/duoshuo/" itemprop="url">
-                  废话不“多说”，wordpress之“广开言路”
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/duoshuo/" itemprop="url">废话不“多说”，wordpress之“广开言路”</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-16T22:36:18+08:00" content="2012-04-16">
-              2012-04-16
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-16T22:36:18+08:00">
+                2012-04-16
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -1368,7 +1611,6 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
                 
                 
-
               
             </span>
           
@@ -1376,24 +1618,29 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/duoshuo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="duoshuo/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="duoshuo/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1403,20 +1650,20 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
       
         
           
-          第三方社交评论服务如今已成为独立博客不可缺少的枢纽，将不同的社区，不同的人群联系起来，增强了博客与用户之间的黏性。评论更自由，交流更简洁。本文将展示“多说”评论系统，使wordpress“广开言路”。
-在wordpress插件安装中，搜索“duoshuo”，找到多说社会化评论框插件安装启用，接下来按照你的喜好配置多说就可以了。
-在多说中，可以同步wordpress原有评论，精彩不流失，友情不间断。从此可以轻松管理你的博客评论。
+            <p>第三方<strong>社交评论服务</strong>如今已成为独立博客不可缺少的枢纽，将不同的社区，不同的人群联系起来，增强了博客与用户之间的黏性。评论更自由，交流更简洁。本文将展示“<strong>多说</strong>”评论系统，使<strong>wordpress“</strong>广开言路”。</p>
+<p>在wordpress插件安装中，搜索“duoshuo”，找到<span style="color: #339966;">多说社会化评论框</span>插件安装启用，接下来按照你的喜好配置多说就可以了。</p>
+<p>在多说中，可以同步wordpress原有评论，精彩不流失，友情不间断。从此可以轻松管理你的博客评论。</p>
+<!--more Read more...-->
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-16-22-05-21.jpg" alt="comment" title="duoshuo"></p>
+<p>通过多说，你可以将多方帐号集结到你的麾下。你可以绑定多个多说帐号，人人网，QQ,各种微博，豆瓣网，MSN等等，并且可以在社交账号同步发布文章。<br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-16-22-18-15.jpg" alt="tongbu" title="同步"><br>介绍了一个“多说”，泄漏了不少个人信息<img src="http://www.vat58.com/blog/wp-content/plugins/ultimate-tinymce/emotions/img/popobig/embarrassed.png" alt="Embarrassed" title="Embarrassed"><br>“多说”果然让人 把不住嘴门啊。<br>正是由于这样的第三方社交工具，分享到，订阅到，同步到，登录到，互联网才如同一个巨大的蜘蛛网，千丝万缕联系你我她。<br>我倒没有多少个人隐私，乐意跟大家分享我的讯息。</p>
+<p>类似的第三方社交评论系统还有友言，评论啦，等等。感兴趣的朋友可以自行比较，选取你中意的一款。</p>
 
-
-通过多说，你可以将多方帐号集结到你的麾下。你可以绑定多个多说帐号
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/duoshuo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1429,6 +1676,8 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
     </div>
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1445,13 +1694,23 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/twentyten-posted-on/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1459,38 +1718,42 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/twentyten-posted-on/" itemprop="url">
-                  wordpress到底火了多久？我落后了多久？
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/twentyten-posted-on/" itemprop="url">wordpress到底火了多久？我落后了多久？</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-15T22:50:05+08:00" content="2012-04-15">
-              2012-04-15
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-15T22:50:05+08:00">
+                2012-04-15
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -1498,7 +1761,6 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
                 
                 
-
               
             </span>
           
@@ -1506,24 +1768,29 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/twentyten-posted-on/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="twentyten-posted-on/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="twentyten-posted-on/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1533,16 +1800,23 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
       
         
           
-          至今，vat58还是一个婴儿，将近一个月了。左看右看，依旧有很多不尽如人意的地方。比如，页面不是很美观（看到很多博客都有那种淡淡的模块边框，有板有眼），目前只有“首页”跟“about me”两个页面（新建的页面用什么内容填充还是不清楚），诸多困惑。
-你看，上图中“发表于…由…”这种格式有没有很丑？posted on…by…这样还可以接受，中文版的wordpress内部的翻译机制没太搞明白，主题文件夹下的languages里面的zh_CN.mo和zh_CN.po文件是如何工作的？一时半会儿是搞不清
-          ...
+            <p>至今，vat58还是一个婴儿，将近一个月了。左看右看，依旧有很多不尽如人意的地方。比如，页面不是很美观（看到很多博客都有那种淡淡的模块边框，有板有眼），目前只有“首页”跟“about me”两个页面（新建的页面用什么内容填充还是不清楚），诸多困惑。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-15-21-27-54.jpg" alt="示例" title="example"><br>你看，上图中“发表于…由…”这种格式有没有很丑？posted on…by…这样还可以接受，中文版的wordpress内部的翻译机制没太搞明白，主题文件夹下的languages里面的zh_CN.mo和zh_CN.po文件是如何工作的？一时半会儿是搞不清楚了。魅力指数这个字有点大？</p>
+<!--more Read more...-->
+<p>今天花了相当长的时间去研究wordpress的模板文件，尽管我的php基础薄弱。从网上找了很多关于主题修改的资料。大部分都是“过时”的，年份都很早了。之所以说“过时”，是对于“生搬硬套”来说的。从很多资料的日期来看，是四五年之前的，估计那个时候我还在读高中吧，可是wordpress已经在流行了。至今wordpress跨了N多的版本，有些教程可能已经不那么好用了。可能很多朋友犯了跟我一样的错误，喜欢拿过来直接用，要是按照教程一步一步的做能搞定最好不过了。可是事实证明：生搬硬套是要犯错误的，参考资料自己研究掌握“实情”与时俱进才是好同志！这应该适用于任何东西的学习吧。</p>
+<p>wordpress火了很久，我也落后了很久。一些事情总是后知后觉。至少有了这个博客，可以一直督促我学习，记录，总结。可是给自己提个醒，不要为了写而写。</p>
+<p>为了给上图中的问题一个交代，我研究了functions.php里面的twentyten_posted_on函数：</p>
+<p>function <strong>twentyten_posted_on</strong>() {<br>printf( <strong>( ‘&lt;span class=”%1$s”&gt;<span style="color: #ff6600;">Posted on</span>&lt;/span&gt; %2$s &lt;span class=”meta- sep”&gt;<span style="color: #ff6600;">by</span>&lt;/span&gt; %3$s’, ‘twentyten’ ),<br>‘meta-prep meta-prep-author’,<br>sprintf( ‘&lt;a href=”%1$s” title=”%2$s” rel=”bookmark”&gt;&lt;span class=”entry-date”&gt;%3$s&lt;/span&gt;&lt;/a&gt;’,<br>get_permalink(),<br>esc_attr( get_the_time() ),<br>get_the_date()<br>),<br>sprintf( ‘&lt;span class=”author vcard”&gt;&lt;a class=”url fn n” href=”%1$s” title=”%2$s” rel=”author”&gt;%3$s&lt;/a&gt;&lt;/span&gt;’,<br>get_author_posts_url( get_the_author_meta( ‘ID’ ) ),<br>esc_attr( sprintf( </strong>( ‘View all posts by %s’, ‘twentyten’ ), get_the_author() ) ),<br>get_the_author()<br>)<br>);<br>}</p>
+<p>这个函数没完全看懂。简单地去掉了“<span style="color: #ff6600;">Posted on”<span style="color: #000000;">，将<span style="color: #ff9900;">by</span>换成了“ | 作者：”，效果如下图：</span></span><span style="color: #ff6600;"><span style="color: #000000;"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-15-22-21-53.jpg" alt="示例2" title="example2"></span></span></p>
+<p><span style="color: #ff6600;"><span style="color: #000000;">还算可以吧。告别了中式英语的翻译风格。感兴趣的话可以研究下twentyten_posted_in函数，里面涉及了分类目录，标签等。</span></span></p>
+<p>还是再去学习下php吧。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/twentyten-posted-on/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1555,6 +1829,8 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
     </div>
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1602,34 +1878,43 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://vat58.qiniudn.com/avatar.jpg"
                alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">165</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">48</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">165</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">128</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -1684,7 +1969,12 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
           </div>
         
 
+        
+
+
       </section>
+
+      
 
       
 
@@ -1701,49 +1991,39 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
         <div class="copyright" >
   
   &copy;  2012 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+
         
-
-<div class="busuanzi-count">
-
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
-  
-
-  
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
-  
-</div>
-
-
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1766,43 +2046,56 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
   
 
   
 
-  
 
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 
@@ -1827,6 +2120,9 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
@@ -1834,8 +2130,28 @@ FeedSky有免费域名绑定服务,可以将子域名绑定到个人F
 
 
 
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
   
+
+  
+
+  
+
   
 
   

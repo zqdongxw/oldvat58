@@ -5,11 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
 
 
 
@@ -29,9 +35,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,21 +74,21 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="program, life" />
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -98,33 +107,47 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> VAT58 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="http://www.vat58.com/page/14/"/>
+
+
+
+
+
+  <title>VAT58</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-30055046-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -137,36 +160,46 @@
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">VAT58</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">VAT58</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
+      
   </div>
-  <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -187,7 +220,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -197,7 +230,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +242,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="#" class="st-search-show-outputs">
+            <a href="javascript:;" class="st-search-show-outputs">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -243,6 +276,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -256,13 +291,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/classpath/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -270,38 +315,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/classpath/" itemprop="url">
-                  有包参与时，类路径（classpath）的问题
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/classpath/" itemprop="url">有包参与时，类路径（classpath）的问题</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-12T22:06:58+08:00" content="2012-04-12">
-              2012-04-12
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-12T22:06:58+08:00">
+                2012-04-12
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Java/" itemprop="url" rel="index">
                     <span itemprop="name">Java</span>
                   </a>
@@ -309,7 +358,6 @@
 
                 
                 
-
               
             </span>
           
@@ -317,24 +365,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/classpath/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="classpath/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="classpath/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -344,17 +397,31 @@
       
         
           
-          如果用package语句指明一个包，则包的层次结构必须与文件目录的层次相匹配。
-比如：
-F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层次相匹配public class Test {Test () {System.out.println(“test constructor”);}public static void main(String[] args) {Test x = new Test ();}}下面编译执行java（日文系统中”¥
-          ...
+            <p>如果用<span style="color: #339966;">package</span>语句指明一个包，则包的层次结构必须与文件目录的层次相匹配。</p>
+<p>比如：</p>
+<p>F:\<span style="color: #ff6600;">test</span>\Test.java<br>package<span style="color: #ff6600;"> test</span>;       // 包的层次结构与文件目录的层次相匹配<br>public class Test {<br>Test () {<br>System.out.println(“test constructor”);<br>}<br>public static void main(String[] args) {<br>Test x = new Test ();<br>}<br>}<br><!--more Read more...--><br>下面编译执行java（日文系统中”¥”代表”\”）</p>
+<p>F:\test&gt;<span style="color: #ff99cc;">javac Test.java</span></p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/1.jpg" alt="cmd1" title="cmd1"><br>成功编译，得到Test.class</p>
+<p>如果直接  F:\test&gt;<span style="color: #ff0000;">java Test</span> 会报错：找不到Test 类</p>
+<p><span style="color: #0000ff;">需要注意的两点</span>：</p>
+<ol>
+<li>运行包中的类时，需要<span style="color: #008080;">指明包名</span>，也就是要指明<span style="color: #008080;">test.Test</span></li>
+<li>当前的类路径为classpath=.; 也就是当前目录。本例中由于包的参与，执行时寻找的路径为<span style="color: #00ccff;">F:\test\test</span>，而这个目录是不存在的。<br><span style="color: #0000ff;">于是解决办法</span>：</li>
+</ol>
+<p>1． F:\test&gt;<span style="color: #ff99cc;">java -classpath F:\  test.Test</span><br>用-classpath选项指定类路径为当前目录的上一层目录F:\</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2.jpg" alt="cmd2" title="cmd2"></p>
+<p>2． 到上一层目录F:\执行命令</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/3.jpg" alt="cmd3" title="cmd3"><br>得到正确结果。</p>
+<p>或者在classpath中包含当前目录的上一层记录。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/classpath/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -372,6 +439,8 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -383,13 +452,23 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/rssyouhua/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -397,38 +476,42 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/rssyouhua/" itemprop="url">
-                  WordPress RSS 初步优化
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/rssyouhua/" itemprop="url">WordPress RSS 初步优化</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-12T00:05:25+08:00" content="2012-04-12">
-              2012-04-12
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-12T00:05:25+08:00">
+                2012-04-12
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/wordpress/" itemprop="url" rel="index">
                     <span itemprop="name">wordpress</span>
                   </a>
@@ -436,7 +519,6 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
 
                 
                 
-
               
             </span>
           
@@ -444,24 +526,29 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/rssyouhua/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="rssyouhua/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="rssyouhua/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -471,18 +558,32 @@ F:\test\Test.javapackage test;       // 包的层次结构与文件目录的层�
       
         
           
-          认识RSS
-RSS全称为Really Simple Syndication，称之为聚合内容。网站提供RSS输出有利于让用户获取网站内容的最新更新，这样读者就可以根据自己的需要订阅信息，在最短的时间内获取最有价值的信息。在博客时代，RSS已经成为不可缺少的工具。
-wordpress RSS 优化
-在《WordPress完善笔记》一文中提到，chrome下的wordpress原有的RSS订阅功能异常。不仅如此，wordpress自带的Rss功能较简陋，有诸多不便。于是用feedsky来管理我的fee
-          ...
+            <p><strong>认识RSS</strong></p>
+<p>RSS全称为Really Simple Syndication，称之为聚合内容。网站提供RSS输出有利于让用户获取网站内容的最新更新，这样读者就可以根据自己的需要订阅信息，在最短的时间内获取最有价值的信息。在博客时代，RSS已经成为不可缺少的工具。</p>
+<p><strong>wordpress RSS 优化</strong></p>
+<p>在《<a href="http://www.vat58.com/wordpressbiji/">WordPress完善笔记</a>》一文中提到，chrome下的wordpress原有的RSS订阅功能异常。不仅如此，wordpress自带的Rss功能较简陋，有诸多不便。于是用feedsky来管理我的feed（feedburner被墙，国内使用不太方便）。Feedsky目前提供的服务包括Feed统计、优化和发布三部份，Feed的优化和传播管理得到了加强。</p>
+<!--more Read more...-->
+<p>去feedsky管理你的wordpress rss feed</p>
+<p><a href="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-11-23-43-31.jpg"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-11-23-43-31.jpg" alt="feedsky set" title="feedsky"></a></p>
+<p>在feedsky发布中可以定制你喜欢的形式。我的feed发布：</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-11-23-51-15.jpg" alt="feed 发布" title="feed发布"></p>
+<p><span style="color: #339966;">重定向WordPress Feeds 到申请的Feedsky地址</span>，这样就不用把_bloginfo(‘rss2<em>url’)</em> 换成自己的feed地址，省去了系统升级或主题更换带来的手动修改的麻烦。</p>
+<p>具体操作：新建或修改.htaccess文件，添加如下内容（粉色部分替换成自己的feed地址）</p>
+<h1 id="temp_redirect_wordpress_content_feeds_to_feedsky">temp redirect wordpress content feeds to feedsky</h1><p>&lt;IfModule mod_rewrite.c&gt;<br>RewriteEngine on<br>RewriteCond %{HTTP_USER_AGENT} !FeedBurner [NC]<br>RewriteCond %{HTTP_USER_AGENT} !FeedValidator [NC]<br>RewriteRule ^feed/?([_0-9a-z-]+)?/?$ <span style="color: #ff00ff;"><a href="http://feed.feedsky.com/vat58" target="_blank" rel="external">http://feed.feedsky.com/vat58</a></span> [R=302,NC,L]<br>&lt;/IfModule&gt;</p>
+<p>保存.htaccess上传到网站根目录。</p>
+<p>最后，删除默认的小工具“功能”中”文章RSS”，“RSS评论”和“wordpress.org”等多余选项：在wp-include内的default-widgets.php里删除以下内容：</p>
+<ol>
+<li>&lt;li&gt;&lt;a href=”&lt;?php bloginfo(‘rss2_url’); ?&gt;” title=”&lt;?php echo esc_attr(__(‘Syndicate this site using RSS 2.0’)); ?&gt;”&gt;&lt;?php _e(‘Entries &lt;abbr title=”Really Simple Syndication”&gt;RSS&lt;/abbr&gt;’); ?&gt;&lt;/a&gt;&lt;/li&gt;</li>
+<li>&lt;li&gt;&lt;a href=”&lt;?php bloginfo(‘comments_rss2_url’); ?&gt;” title=”&lt;?php echo esc_attr(__(‘The latest comments to all posts in RSS’)); ?&gt;”&gt;&lt;?php _e(‘Comments &lt;abbr title=”Really Simple Syndication”&gt;RSS&lt;/abbr&gt;’); ?&gt;&lt;/a&gt;&lt;/li&gt;</li>
+<li>&lt;li&gt;&lt;a href=”<a href="http://wordpress.org/" target="_blank" rel="external">http://wordpress.org/</a>“ title=”&lt;?php echo esc_attr(__(‘Powered by WordPress, state-of-the-art semantic personal publishing platform.’)); ?&gt;”&gt;WordPress.org&lt;/a&gt;&lt;/li&gt;<br>本博期待第一位订阅用户。</li>
+</ol>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/rssyouhua/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -500,6 +601,8 @@ wordpress RSS 优化
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -511,13 +614,23 @@ wordpress RSS 优化
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/jdk-set/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -525,38 +638,42 @@ wordpress RSS 优化
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/jdk-set/" itemprop="url">
-                  JDK环境变量设置与“Could not find main class”错误
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/jdk-set/" itemprop="url">JDK环境变量设置与“Could not find main class”错误</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-11T00:46:59+08:00" content="2012-04-11">
-              2012-04-11
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-11T00:46:59+08:00">
+                2012-04-11
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Java/" itemprop="url" rel="index">
                     <span itemprop="name">Java</span>
                   </a>
@@ -564,7 +681,6 @@ wordpress RSS 优化
 
                 
                 
-
               
             </span>
           
@@ -572,24 +688,29 @@ wordpress RSS 优化
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/jdk-set/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="jdk-set/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="jdk-set/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -599,19 +720,32 @@ wordpress RSS 优化
       
         
           
-          JDK环境变量如何设置
-JAVA_HOME  =  X:\jdk1.6   (注：新建系统变量JAVA_HOME，其值”X:\jdk1.6”为jdk文件夹的绝对路径)
-Path  = …; %JAVA_HOME%\bin   (注：在path变量中增加路径”%JAVA_HOME%\bin”，用”;”与其他路径隔开)
-ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建变量ClassPath)
-另：环境变量不用
-          ...
+            <p><strong>JDK环境变量如何设置</strong></p>
+<p><span style="color: #808000;">JAVA_HOME</span>  =  X:\jdk1.6   <span style="color: #666699;">(注：新建系统变量JAVA_HOME，其值”X:\jdk1.6”为jdk文件夹的绝对路径)</span></p>
+<p><span style="color: #808000;">Path</span>  = …; %JAVA_HOME%\bin   <span style="color: #666699;">(注：在path变量中增加路径”%JAVA_HOME%\bin”，用”;”与其他路径隔开)</span></p>
+<p><span style="color: #0000ff;">ClassPath</span> =  <span style="color: #ff0000;">.;</span>%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar <span style="color: #666699;"> (注：新建变量ClassPath)</span></p>
+<p>另：环境变量不用区分大小写，能统一使用即可。</p>
+<!--more Read more...-->
+<p><strong>为什么这样设置</strong></p>
+<p>1. JAVA_HOME指向jdk的安装目录，便于eclipse,netbean,tomcat等工具寻找jdk;同时可以简化Path和ClassPath路径，一旦jdk路径改变，只需更改JAVA_HOME。</p>
+<p>2. 如果不在path中添加jdk的bin目录，那么在cmd中javac，java等指令无法使用，显示为不是内部命令，也不是外部命令。这一步就是为了让java在cmd中”有处可寻“。</p>
+<p>3.  <span style="color: #ff0000;">. <span style="color: #000000;">代表命令提示符的当前目录（<span style="color: #0000ff;">注意</span>）。tools.jar，dt.jar 为sun提供的类包，一般会加上。如果有了自己的类包，也可以将路径加上。classpath就是让java开发中要引用的类”有处可寻“。</span></span></p>
+<p>附：</p>
+<p><span style="color: #00ccff;"> Classpath中要加入的jar包</span></p>
+<p>rt.jar:        java基础类库</p>
+<p>dt.jar:       运行环境的类库</p>
+<p>tools.jar:   工具类库</p>
+<p>如果要搞清楚该不该加，就必须清楚每个jar包中包含的功能（类）。如果你写一个简单的helloworld，暂时不加肯定没问题。</p>
+<p><strong>为何会出现“Could not find main class”错误</strong></p>
+<p>首先确定，但你编译完Test.java后，没有出现”java Test.class“这样的低级错误（应该是”java Test“），否则会出现如题的错误。一般的情况是classpath的问题。在设置classpath的时候你应该注意到上文中红色的”<span style="color: #ff0000;">.<span style="color: #000000;">“</span></span>了，表示将命令提示符的当前目录加入搜索路径。如果不是这样的话，java就找不到编译完成的类。另外，如果没有设置classpath,也可以利用javac ,java命令的相关选项指定搜索路径避免找不到类的错误。</p>
+<p>如若能知其所以然，就不用”死记硬背“jdk的环境配置，被小而难缠的细节阻碍你前行的脚步。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/jdk-set/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -629,6 +763,8 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -640,13 +776,23 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/mobile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -654,38 +800,42 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/mobile/" itemprop="url">
-                  未来手机终端的几点想法
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/mobile/" itemprop="url">未来手机终端的几点想法</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-07T23:09:37+08:00" content="2012-04-07">
-              2012-04-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-07T23:09:37+08:00">
+                2012-04-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
                     <span itemprop="name">移动互联网</span>
                   </a>
@@ -693,7 +843,6 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
 
                 
                 
-
               
             </span>
           
@@ -701,24 +850,29 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/mobile/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="mobile/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="mobile/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -728,20 +882,19 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
         
           
-          1.与计算机等设备完美协同使用。比如手机可以遥控电脑，不同设备间资源的同步共享。可将电脑，手机互补推出，更具杀伤力。
-2.人机合一。提高手机设备及配件与用户的粘度。将手机与个人真正绑定，一对一的认证。人机合一，获得一种拥有感。可否推出一种认证服务？将手机信息与个人信息注册认证。或者用指纹识别等技术，实现用户对手机的唯一使用“钥匙”。同时，手机辐射问题应该得到良好的处理。
+            <p>1.与计算机等设备完美协同使用。比如手机可以遥控电脑，不同设备间资源的同步共享。可将电脑，手机互补推出，更具杀伤力。</p>
+<p>2.人机合一。提高手机设备及配件与用户的粘度。将手机与个人真正绑定，一对一的认证。人机合一，获得一种拥有感。可否推出一种认证服务？将手机信息与个人信息注册认证。或者用指纹识别等技术，实现用户对手机的唯一使用“钥匙”。同时，手机辐射问题应该得到良好的处理。</p>
+<!--more Read more...-->
+<p>3.多传感器。重力传感器，温度传感器等实现多维度拓展手机终端。</p>
+<p>4.差异化，市场不断细分，专门的，专业的手机终端登上舞台。</p>
+<p>5.移动互联网安全越来越受到重视。</p>
 
-3.多传感器。重力传感器，温度传感器等实现多维度拓展手机终端。
-4.差异化，市场不断细分，专门的，专业的手机终端登上舞台。
-
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/mobile/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -759,6 +912,8 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -770,13 +925,23 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/good-boke/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -784,38 +949,42 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/good-boke/" itemprop="url">
-                  不会翻墙？GoAgent带你畅游博客中的博客
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/good-boke/" itemprop="url">不会翻墙？GoAgent带你畅游博客中的博客</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-07T14:28:03+08:00" content="2012-04-07">
-              2012-04-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-07T14:28:03+08:00">
+                2012-04-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
                     <span itemprop="name">移动互联网</span>
                   </a>
@@ -823,7 +992,6 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
 
                 
                 
-
               
             </span>
           
@@ -831,24 +999,29 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/good-boke/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="good-boke/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="good-boke/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -858,16 +1031,22 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
         
           
-          本来计划应该是两篇文章：《不会翻墙？GoAgent带你畅游》+《博客中的博客》。转念一想，翻墙教程铺天盖地，这里就不在赘述。当今社会，自由不自由看你的追求。‘我要翻墙’就可以一句话证明你在中国，呵呵。不会翻墙真的是辱没了整个互联网。翻墙的目的是纵观实事捕捉资讯，“另辟蹊径”寻找智慧，“煽风点火”的事情咱不干，“不利于团结的事情”咱不干。《GoAgent翻墙教程》。
-一直感觉自己消息闭塞，跟不上节奏。之前的优酷跟土豆合并的消息也是后知后觉，甚是自责惭愧。门户网站我不常去，整个页面没有几个我想要的信
-          ...
+            <p>本来计划应该是两篇文章：《不会翻墙？GoAgent带你畅游》+《博客中的博客》。转念一想，翻墙教程铺天盖地，这里就不在赘述。当今社会，自由不自由看你的追求。‘我要翻墙’就可以一句话证明你在中国，呵呵。不会翻墙真的是辱没了整个互联网。翻墙的目的是纵观实事捕捉资讯，“另辟蹊径”寻找智慧，“煽风点火”的事情咱不干，“不利于团结的事情”咱不干。《<a href="http://www.vat58.com/goagent-windows/" title="Goagent翻墙（windows）">GoAgent翻墙教程</a>》。</p>
+<p>一直感觉自己消息闭塞，跟不上节奏。之前的优酷跟土豆合并的消息也是后知后觉，甚是自责惭愧。门户网站我不常去，整个页面没有几个我想要的信息。以前还会被某些“诱人”的标题和图片骗来骗去，现在不会了，呵呵。今天上午着实把信息源整理了一下。定制了Google的快讯，RSS订阅了Google的黑板报，谷奥等等。还发现了几个别人推荐的博客，真的是如获至宝，仿佛找到了光明的出口一般。</p>
+<!--more Read more...-->
+<p>唯一遗憾的是，很多被墙，虽然会翻，还是惆怅。</p>
+<p>我也有微博，却一直不会用，还是找不到自己想要的讯息。某些语录，经典看多了会疲劳，不疼不痒。有点兴趣的吧，一百来个字，老是不过瘾。时间长了微博就成了大众一起乐呵的东西，闲的时候转一转发一发。我真的想学会如何用好微博。有人教吗？</p>
+<p>在vat58这个博客上，倒是花费了不少的精力。记录这个博客应该算是一件有意义的事情。博客中的博客，博客中的战斗机。确实有很多优秀的博主，沉淀了多年的精华，订阅他们，就打开了交流的窗户，即使翻墙，也要另辟蹊径找到他们。互联网很大，如果为我所用，想想多少资源会被你掌控。在这个网络世界，不要迷失，把它当作仆人，而不是上帝。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/rss.jpg" alt="我的订阅" title="优秀的博客资源推荐"></p>
+<p>品香茗，看博客。vat58还在成长。</p>
+<p>&nbsp;</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/good-boke/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -885,6 +1064,8 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -896,13 +1077,23 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/jstimer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -910,38 +1101,42 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/jstimer/" itemprop="url">
-                  初识JavaScript
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/jstimer/" itemprop="url">初识JavaScript</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-06T23:59:48+08:00" content="2012-04-06">
-              2012-04-06
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-06T23:59:48+08:00">
+                2012-04-06
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/JavaScript/" itemprop="url" rel="index">
                     <span itemprop="name">JavaScript</span>
                   </a>
@@ -949,7 +1144,6 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
 
                 
                 
-
               
             </span>
           
@@ -957,24 +1151,29 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/jstimer/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="jstimer/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="jstimer/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -984,21 +1183,24 @@ ClassPath =  .;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar  (注：新建�
       
         
           
-          将**javascript**放在何处？
-使用&lt;script&gt;标签将javascript插入html页面：
-Head部：当脚本被调用时，或者当事件被触发时，脚本就会被执行。把脚本放置到 head 部分，就可以确保在需要使用脚本之前，它已经被载入了。
-Body部：在页面载入时脚本就会被执行。
-Tips（注意区分head部跟body部的不同点）
+            <p><strong>将**</strong>javascript<strong>**放在何处？</strong></p>
+<p>使用&lt;script&gt;标签将javascript插入html页面：</p>
+<p><span style="color: #339966;">Head部</span>：当脚本被调用时，或者当事件被触发时，脚本就会被执行。把脚本放置到 head 部分，就可以确保在需要使用脚本之前，它已经被载入了。</p>
+<p><span style="color: #339966;">Body部</span>：在页面载入时脚本就会被执行。</p>
+<p><span style="background-color: #cee21d;">Tips</span>（注意区分head部跟body部的不同点）</p>
+<!--more Read more...-->
+<p><span style="color: #339966;">外部js文件</span>：如果在多个页面中需要相同的javascript，简单的办法就是引用外部的js文件。给&lt;script&gt;标签指定src属性就可，同时这种方法叫容易管理和维护。</p>
+<p><strong>应对老的浏览器</strong></p>
+<p>那些不支持 JavaScript 的浏览器会把脚本作为页面的内容来显示。我们可以使用HTML 注释标签来避免这个问题。</p>
+<p><span style="color: #993366;">Javascript函数</span>：由function关键字定义。</p>
+<p><span style="color: #993366;">Javascript事件</span>：当用户进入或离开页面时就会触发 <span style="color: #3366ff;">onload</span> 和 <span style="color: #3366ff;">onUnload</span> 事件，可以用来处理cookie，同时onload事件可以用来检测访问者的浏览器类型和版本，然后载入特定版本的页面;<span style="color: #3366ff;">onSubmit</span> 用于在提交表单之前验证所有的表单域;<span style="color: #3366ff;">onMouseOver</span> 和 <span style="color: #3366ff;">onMouseOut</span> 表示鼠标相关的事件。</p>
 
-外部js文件：如果在多个页面中需要相同的javascript，简单的办法就是引用外部的js文件。给&lt;script&gt;标签指定src属
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/jstimer/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1016,6 +1218,8 @@ Tips（注意区分head部跟body部的不同点）
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1027,13 +1231,23 @@ Tips（注意区分head部跟body部的不同点）
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/zhujikongjian/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1041,38 +1255,42 @@ Tips（注意区分head部跟body部的不同点）
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/zhujikongjian/" itemprop="url">
-                  精打细算做站长--选择划算的主机空间
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/zhujikongjian/" itemprop="url">精打细算做站长--选择划算的主机空间</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-05T21:18:00+08:00" content="2012-04-05">
-              2012-04-05
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-05T21:18:00+08:00">
+                2012-04-05
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
                     <span itemprop="name">移动互联网</span>
                   </a>
@@ -1080,7 +1298,6 @@ Tips（注意区分head部跟body部的不同点）
 
                 
                 
-
               
             </span>
           
@@ -1088,24 +1305,29 @@ Tips（注意区分head部跟body部的不同点）
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/zhujikongjian/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="zhujikongjian/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="zhujikongjian/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1115,20 +1337,22 @@ Tips（注意区分head部跟body部的不同点）
       
         
           
-          有朋友给我留言，问我主机空间的相关问题。我以自己一个月来的体验汇报一下使用老薛主机的情况。实事求是，如果人家做得真好，那就没有不强大兴旺的理由。
+            <p>有朋友给我留言，问我主机空间的相关问题。我以自己一个月来的体验汇报一下使用<strong>老薛主机</strong>的情况。实事求是，如果人家做得真好，那就没有不强大兴旺的理由。</p>
+<p><a href="https://my.laoxuehost.com/aff.php?aff=1063" target="_blank" rel="external"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/6-logo-trans.png" alt="zhujilogo" title="laoxuelogo"></a></p>
+<!--more Read more...-->
+<p>我虽建站菜鸟一枚，却有着长足的打算。我会用足够的精力去经营我的这个博客，记录分享自己的成长历程。何谓精打细算，就是小心翼翼去花钱，呵呵，把钱花在合适的地方。万网，新网，我都咨询过，应该也不错，毕竟做的大。价格高应该有高的理由。但这对于尚不成熟，还在探索摸索的新手站长来说可能不是一个最好的选择。这里给大家推荐一下老薛主机。</p>
+<p><a href="https://my.laoxuehost.com/aff.php?aff=1063" target="_blank" rel="external"><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/laoxue.jpg" alt="zhuji" title="laoxue"></a></p>
+<p>我选择的是美国入门型主机，便宜。当时让我心动的是，有5天的免费体验空间的机会。光便宜可不是我们站长的目的，自己试过才知道是不是“便宜没好货”。后来还是选择了老薛主机，免费获得了一个VPN帐号，可以免费搬家。考虑到刚开始站点流量不大，所以选择了入门型，空间大小300M，流量4500M。到目前为止，我的空间用掉了30M（毕竟不是下载站），上个月的流量只有可怜的200M。所以，像我一样的新手，入门型配置应该足够了。至于速度，你应该体验到了，还可以吧。如果博客做大了，空间跟流量也可以付费升级（增加100MB空间每年5元，增加1GB月流量每年5元）。将精打细算进行到底，呵呵。</p>
+<p>现在用着老薛主机还算稳定，服务态度很好，咨询的问题很快就能得到答复。应该有不少站长都在用老薛主机吧，我刚买的时候看见顶的人不少。建议大家先免费试用，再进行选择。如果你的要求较高，可以选择高配置的主机。有其他需要了解的，可以去<strong>老薛主机</strong>那一探究竟。还是那句话，如果人家做得真好，那就没有不支持的理由，就没有不兴旺的理由，祝老薛主机越办越好，也祝大家的站点也越办越好。</p>
+<p><a href="https://my.laoxuehost.com/aff.php?aff=1063" title="老薛主机" target="_blank" rel="external">点击咨询老薛主机</a></p>
+<p><a href="http://item.taobao.com/item.htm?id=42692584834" target="_blank" rel="external">获取20%促销折扣</a></p>
 
-
-我虽建站菜鸟一枚，却有着长足的打算。我会用足够的精力去经营我的这个博客，记录分享自己的成长历程。何谓精打细算，就是小心翼翼去花钱，呵呵，把钱花在合适的地方。万网，新网，我都咨询过，应该也不错，毕竟做的大。价格高应该有高的理由。但这对于尚不成熟，还在探索摸索的新手站长来说可能不是一个最好的选择。这里给大家推荐一下老薛主机。
-
-我选择的是美国入门型主机
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/zhujikongjian/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1146,6 +1370,8 @@ Tips（注意区分head部跟body部的不同点）
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1157,13 +1383,23 @@ Tips（注意区分head部跟body部的不同点）
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/blackice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1171,38 +1407,42 @@ Tips（注意区分head部跟body部的不同点）
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/blackice/" itemprop="url">
-                  《黑冰》观后感
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/blackice/" itemprop="url">《黑冰》观后感</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-04T20:26:39+08:00" content="2012-04-04">
-              2012-04-04
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-04T20:26:39+08:00">
+                2012-04-04
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -1210,7 +1450,6 @@ Tips（注意区分head部跟body部的不同点）
 
                 
                 
-
               
             </span>
           
@@ -1218,24 +1457,29 @@ Tips（注意区分head部跟body部的不同点）
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/blackice/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="blackice/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="blackice/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1245,17 +1489,23 @@ Tips（注意区分head部跟body部的不同点）
       
         
           
-          最近看完了电视剧《黑冰》，由王志文诠释的郭小鹏形象在脑海里久久挥之不去。有太多的东西想不明白，有太多的东西想要弄明白。这里边似乎潜藏着一个大的超出我认知范围的命题，让我想不明白道不清楚，急得抓耳挠腮，最终憋不住写下下面的感想。
+            <p>最近看完了电视剧《黑冰》，由王志文诠释的郭小鹏形象在脑海里久久挥之不去。有太多的东西想不明白，有太多的东西想要弄明白。这里边似乎潜藏着一个大的超出我认知范围的命题，让我想不明白道不清楚，急得抓耳挠腮，最终憋不住写下下面的感想。</p>
+<!--more Read more...-->
+<p>如果用一句话评价郭小鹏，那他是一个高学历、高智商、谨慎、稳重、睿智、儒雅、风度翩翩有文化有地位有身份的大毒枭！不得不惊叹人是一种多么复杂的生命现象。它可以综合善与恶，美与丑，良知和残暴。我喜欢郭言行举止的绅士风度，羡慕他所达到的事业高度。他说话引经据典，俨然一副学者风派，用最精辟的语言回答一切质疑，没有一句废话；他处事沉着冷静，足够高的智商，足够强的经济实力可以解决理论上没有解决不了的问题。可说到底，他是一个大毒枭。在这个邪恶光环的笼罩下，一切美好的品质都归于暗淡。他的一生注定是一个自我成长，自我毁灭的过程。不能不让人感到痛惜！</p>
+<p>于是，好多人开始质疑了。剧中警方卧底汪静雯曾经问过跟随郭多年的一名工程师：像郭小鹏这样有文化有地位有身份的人，为什么要生产毒品？ 后来又正面问过郭：以你的智商、资历、学养和财富，完全可以从事一些获利依然丰厚但并不危险的事业，你为什么要选择这个呢？ 郭说：这是一个很深很大的问题，但是一些很深很大的问题不一定是有很深很大的理由。有时候因为一点点小的原因，就会让人的一生发生根本的变化。凡有硬壳的动物，像乌龟 蜗牛还有河蚌，他们攻击力很弱，行走的速度也非常的缓慢，你很少会看到有一群蜗牛或一圈乌龟它们在一起嬉戏玩耍。我是个内心非常黑暗的人，很少有阳关沐浴到我的心里。</p>
+<p>童年的经历造成了他内心的黑暗和人性的扭曲，等他拥有一番事业后，他的最终目的竟是通过毒品控制人类和社会，进而报复社会。在某种程度上，郭小鹏的所有优点似乎都是为自我毁灭准备的。他的盖世才华让他费尽心血开发出一种新型毒品，他的本领让他逃脱法律的制裁，他的拳拳孝心让他割舍不下慈祥的母亲，最终从容的被捕。郭小鹏给他的母亲洗脚的镜头一直深深感动着我。每一次都是那么尽心，每一次都倾注了一个为人子的拳拳孝心。除了感动还有惭愧，我从来没给我的妈妈洗过脚，以后应该会补上的。</p>
+<p>郭与其母的最后告别让我热泪盈眶，不能自已。郭深情地走到母亲身边，跪倒在地，“妈，这次儿子是真的要出远门了”，“有多远？”，“很远，连儿子自己都不知道”，“鹏儿，再给妈洗洗脚吧”，“恩，你等着”。当郭头也不回地离开后，郭母嚎啕大哭，在郭小鹏被捕后不久去世。</p>
+<p>监狱里，面对着他曾经爱慕而又欺骗了他的汪静雯，他做了最后的演讲：<span style="color: #808080;">你说，这人是什么东西，从生物学的角度来讲，人只不过是直立行走的无毛动物而已，但是在我看来，人更象是一封不知道从那里发出，也不知道发向何处的电子邮件，就是这些电子邮件构成了一个复杂的人类社会，这是一个多么可怕的世界，他们残酷的把人分成3，6，9等，最高层的人可以最大程度的享受物质和精神的供应，然后随着层次逐渐递减，最底层的人所拥有的物质能量通常只能勉强维持他们的生存，精神供应几乎为零，本人曾经就活在这个层面。你可以有充分的理由不相信我说的话，你可以想，我有一个才华出众的父亲，他是位作家，我可以从他那里继承他的智慧和良知，我还有一个曾经是越剧名旦的母亲，我可以继承她的艺术天赋和不俗的容貌，我还有一个出生在资产阶级家庭的高级干部的继父，我可以继承他的政治野心和使他成功的机会，我怎么可能生活在最底层呢？我应该是这个社会当中的精神贵族，但是，我生活的另一面，你们看不到，永远看不到，我可以一顿吃下三斤牛肉然后再吃下半只烤鸭，还有一碗地道的北京杂交面，我还可以三天三夜的不吃饭，然后象疯子一样的在雪地上狂跑，要没这点能耐，所以，有时候，我觉得，我的前生可能是只骆驼，要没这点能耐，当年，我怀揣10个美元从旧金山下飞机，可能连一天都混不下去。后来，我不在为钱发愁了，但是，这个时候，我比任何时候都仇恨钱，仇恨人类，仇恨这个肮脏的世界。</span></p>
+<p>最终带着自己的理论奔赴了刑场。</p>
+<p>不能不说这是一个悲剧，一个让人深思的悲剧。或许悲剧真的就是把美好的事物摔碎给人看。没有绝对的善，也没有绝对的恶。不知道郭小鹏在你心中是否曾经是一个美好的事物，至少我曾经欣赏他。社会伤害了他，他反过来疯狂的追求钱和权去报复社会。这场悲剧到底归咎于谁呢？社会？个人？他的内心从未沐浴过阳光，假如汪静雯能给他呢？假如汪静雯能感化他呢？那又会是怎么的结局？</p>
+<p>王志文访谈：<a href="http://www.vat58.com/digest-precise/" title="在工作中创造精确">在工作中创造精确</a></p>
 
-如果用一句话评价郭小鹏，那他是一个高学历、高智商、谨慎、稳重、睿智、儒雅、风度翩翩有文化有地位有身份的大毒枭！不得不惊叹人是一种多么复杂的生命现象。它可以综合善与恶，美与丑，良知和残暴。我喜欢郭言行举止的绅士风度，羡慕他所达到的事业高度。他说话引经据典，俨然一副学者风派
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/blackice/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1273,6 +1523,8 @@ Tips（注意区分head部跟body部的不同点）
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1284,13 +1536,23 @@ Tips（注意区分head部跟body部的不同点）
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/tiandao/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1298,38 +1560,42 @@ Tips（注意区分head部跟body部的不同点）
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/tiandao/" itemprop="url">
-                  《天道》有感
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/tiandao/" itemprop="url">《天道》有感</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-02T20:15:52+08:00" content="2012-04-02">
-              2012-04-02
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-02T20:15:52+08:00">
+                2012-04-02
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -1337,7 +1603,6 @@ Tips（注意区分head部跟body部的不同点）
 
                 
                 
-
               
             </span>
           
@@ -1345,24 +1610,29 @@ Tips（注意区分head部跟body部的不同点）
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/tiandao/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="tiandao/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="tiandao/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1372,16 +1642,17 @@ Tips（注意区分head部跟body部的不同点）
       
         
           
-          怀着各种心情品读了《天道》这部电视剧，每天一到两集的进度慢慢将剧情展开，将丁元英的睿智达观展开，将某些悲剧展开。我在剧情的湍流中浮沉着，感受着周围依旧的环境，迫切想体会出什么东西。
-芮小丹，当生则生，当死则死，来去自如，这个被丁元英认为不简单的丫头，呈现给众人的永远是一种气质美，一种沐浴过智慧芬芳油然而生的女性魅力。她想追求依附的是像丁元英那样的高度。她过于圣洁，因而注定是天国的女儿，是一种可望而不可及的美好。上帝送她来到世间，让周围的人惊羡于她的存在，又恰到好处地将她带走，留给人一种空落落的感
-          ...
+            <p>怀着各种心情品读了《天道》这部电视剧，每天一到两集的进度慢慢将剧情展开，将丁元英的睿智达观展开，将某些悲剧展开。我在剧情的湍流中浮沉着，感受着周围依旧的环境，迫切想体会出什么东西。</p>
+<p>芮小丹，当生则生，当死则死，来去自如，这个被丁元英认为不简单的丫头，呈现给众人的永远是一种气质美，一种沐浴过智慧芬芳油然而生的女性魅力。她想追求依附的是像丁元英那样的高度。她过于圣洁，因而注定是天国的女儿，是一种可望而不可及的美好。上帝送她来到世间，让周围的人惊羡于她的存在，又恰到好处地将她带走，留给人一种空落落的感觉。丁元英尚是如此，更何况我辈？很难说清楚小丹跟元英谁更精明，谁更有大智慧.<br><!--more Read more...--><br>林雨峰死了，刘冰跳楼了，这两个可以勉强作为我辈代表人物的角色下场都不是很好。确切的说，刘冰才是真正作为我辈代表的角色之一吧。他跟我们一样，拥有人类启蒙前的愚蠢，贪婪，渴望得到地位、尊重、社会的认可。然而经过检验，他并不是一个合格品，而是一步步的把自己推向坟墓。我们每一个人都可以或多或少的从他身上找到自己的影子。从他身上，我们又能得到什么教训呢？表面上看，刘冰的死跟丁元英似乎有关联，可丁元英并不是凶手，在这一点上，丁元英只不过是规律的化身而已！如果我们可以达到林雨峰那样的事业高度也该知足了吧。可他又是怎样被憋死的呢？中国音响界的领军人物难道就这样不堪一击？他的对手仅仅是丁元英吗？两败俱伤，只要我比你多一口气，我就是赢家。或许刘跟林都应该好好学习下丁元英的那句话：神即道，道法自然，如来。而丁元英恰恰是掌握了道，掌握了规律醉心于音乐茶道之间的明白人。林刘不该跟规律作对，不该跟内心的道作对。世事纷扰，人心各异，作为人有很多处事原则，可最最根本的东西到底在哪里。是天道？人道？ “神即道，道法自然，如来”这句我看来神秘的话，在似懂非懂里我知道里面蕴含着无限的能量！</p>
+<p>发生了这么多的事，但从丁元英的角度来看仅仅是一个假期而已，从哪来回哪去，仅此而已？</p>
+<p>2009/09/25 (清明节献给大家)</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/tiandao/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1399,6 +1670,8 @@ Tips（注意区分head部跟body部的不同点）
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1410,13 +1683,23 @@ Tips（注意区分head部跟body部的不同点）
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/google-watersearch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1424,38 +1707,42 @@ Tips（注意区分head部跟body部的不同点）
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/google-watersearch/" itemprop="url">
-                  愚人节Google“情趣外衣”——水下搜索
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/google-watersearch/" itemprop="url">愚人节Google“情趣外衣”——水下搜索</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-04-01T21:37:44+08:00" content="2012-04-01">
-              2012-04-01
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-01T21:37:44+08:00">
+                2012-04-01
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/google/" itemprop="url" rel="index">
                     <span itemprop="name">google</span>
                   </a>
@@ -1463,7 +1750,6 @@ Tips（注意区分head部跟body部的不同点）
 
                 
                 
-
               
             </span>
           
@@ -1471,24 +1757,29 @@ Tips（注意区分head部跟body部的不同点）
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/google-watersearch/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="google-watersearch/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="google-watersearch/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1498,21 +1789,23 @@ Tips（注意区分head部跟body部的不同点）
       
         
           
-          &nbsp;
+            <p>&nbsp;</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/2012-4-1-21-04-32.jpg" alt="Google" title="google"></p>
+<p>我有一个不小的遗憾，而且看形势这遗憾还在蔓延：Google离开中国大陆后，我才认识并爱上她。每一次技术的创新与领跑，每一次舒适的用户体验和人文关怀，每一次精致到细节的惊喜，都让我对翻墙乐此不疲。Google你真的是华丽了全球，温暖了人心。我不是追星族，崇洋派，我只是被她魅惑了。</p>
+<p>2012年的愚人节，Google穿出了她的“情趣外衣”——水下搜索。用你的鼠标尽情点吧，晃吧。说不定，某一点就能惊喜到你。我大概点了半个多小时…<img src="http://www.vat58.com/blog/wp-content/plugins/ultimate-tinymce/emotions/img/popobig/dribble.png" alt="Dribble" title="Dribble"></p>
+<!--more Read more...-->
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/04/shuixia1.jpg" alt="googlesearch" title="watersearch"></p>
+<p>如上，Google真的有如一个巨大的海洋宝藏，蕴藏着无限的能量。拍Google的“G点”容易，好好向她学习才是真道理。<img src="http://www.vat58.com/blog/wp-content/plugins/ultimate-tinymce/emotions/img/popobig/sweet_kiss.png" alt="Sweet Kiss" title="Sweet Kiss"></p>
+<p>什么？Google要返回中国啦？</p>
+<p>真的吗？</p>
+<p>愚人节，我在骗自己。唉，不过真的很希望。Google一直走“sexy”路线，我要追随她！</p>
 
-我有一个不小的遗憾，而且看形势这遗憾还在蔓延：Google离开中国大陆后，我才认识并爱上她。每一次技术的创新与领跑，每一次舒适的用户体验和人文关怀，每一次精致到细节的惊喜，都让我对翻墙乐此不疲。Google你真的是华丽了全球，温暖了人心。我不是追星族，崇洋派，我只是被她魅惑了。
-2012年的愚人节，Google穿出了她的“情趣外衣”——水下搜索。用你的鼠标尽情点吧，晃吧。说不定，某一点就能惊喜到你。我大概点了半个多小时…
-
-
-如上，Google真的有如一个巨大的海洋宝藏，蕴藏着无
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/google-watersearch/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1525,6 +1818,8 @@ Tips（注意区分head部跟body部的不同点）
     </div>
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1572,34 +1867,43 @@ Tips（注意区分head部跟body部的不同点）
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://vat58.qiniudn.com/avatar.jpg"
                alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">165</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">48</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">165</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">128</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -1654,7 +1958,12 @@ Tips（注意区分head部跟body部的不同点）
           </div>
         
 
+        
+
+
       </section>
+
+      
 
       
 
@@ -1671,49 +1980,39 @@ Tips（注意区分head部跟body部的不同点）
         <div class="copyright" >
   
   &copy;  2012 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+
         
-
-<div class="busuanzi-count">
-
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
-  
-
-  
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
-  
-</div>
-
-
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1736,43 +2035,56 @@ Tips（注意区分head部跟body部的不同点）
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
   
 
   
 
-  
 
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 
@@ -1797,6 +2109,9 @@ Tips（注意区分head部跟body部的不同点）
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
@@ -1804,8 +2119,28 @@ Tips（注意区分head部跟body部的不同点）
 
 
 
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
   
+
+  
+
+  
+
   
 
   

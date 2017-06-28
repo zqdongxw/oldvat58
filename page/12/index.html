@@ -5,11 +5,17 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
 
 
 
@@ -29,9 +35,12 @@
 
 
 
+
+
+
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -65,21 +74,21 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="program, life" />
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -98,33 +107,47 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: 0,
+      userId: '0',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> VAT58 </title>
-</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
+  <link rel="canonical" href="http://www.vat58.com/page/12/"/>
+
+
+
+
+
+  <title>VAT58</title>
   
+
+
 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-30055046-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -137,36 +160,46 @@
 
 
 
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">VAT58</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">VAT58</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
+      
   </div>
-  <p class="site-subtitle">关注移动互联网的科技文摘媒体</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -187,7 +220,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -197,7 +230,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -209,7 +242,7 @@
       
         <li class="menu-item menu-item-search">
           
-            <a href="#" class="st-search-show-outputs">
+            <a href="javascript:;" class="st-search-show-outputs">
           
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -243,6 +276,8 @@
   
 </nav>
 
+
+
  </div>
     </header>
 
@@ -256,13 +291,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/ubuntu-permissions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -270,38 +315,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/ubuntu-permissions/" itemprop="url">
-                  ubuntu有关权限
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/ubuntu-permissions/" itemprop="url">ubuntu有关权限</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-14T20:12:13+08:00" content="2012-05-14">
-              2012-05-14
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-14T20:12:13+08:00">
+                2012-05-14
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/ubuntu/" itemprop="url" rel="index">
                     <span itemprop="name">ubuntu</span>
                   </a>
@@ -309,7 +358,6 @@
 
                 
                 
-
               
             </span>
           
@@ -317,24 +365,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/ubuntu-permissions/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="ubuntu-permissions/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="ubuntu-permissions/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -345,12 +398,18 @@
         
           <p>如果是简单的上网、办公，ubuntu同样简单上手，流畅便捷；<br>如果你是linux新手，在涉及到一些高级应用的时候就可能磕磕绊绊。<br>不要沮丧，我们要做的就是逐步消灭每一个障碍。这一篇是ubuntu有关权限的小总结。</p>
 <p>在shell中，可以用 <span style="color: #800000;">ls -l</span> 来查看目录下文件的详细信息，包括权限。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/ubuntu-permissions/#more" rel="contents">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/ubuntu-permissions/#далее" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -368,6 +427,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -379,13 +440,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/happy-mothers-day/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -393,38 +464,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/happy-mothers-day/" itemprop="url">
-                  母亲节快乐
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/happy-mothers-day/" itemprop="url">母亲节快乐</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-13T12:15:58+08:00" content="2012-05-13">
-              2012-05-13
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-13T12:15:58+08:00">
+                2012-05-13
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -432,7 +507,6 @@
 
                 
                 
-
               
             </span>
           
@@ -440,24 +514,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/happy-mothers-day/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="happy-mothers-day/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="happy-mothers-day/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -469,12 +548,18 @@
           <p>今天十点起床，这是第一个错误；第二个错误是没注意到google今天的动态doodle。</p>
 <p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/选区_004.png" alt="mother" title="mother"></p>
 <p>动态doodle的寓意是我和姐姐手牵手跑过来送给妈妈一束康乃馨，<img src="http://www.vat58.com/blog/wp-content/plugins/ultimate-tinymce/emotions/img/popobig/haha.png" alt="Ha Ha" title="Ha Ha">。可实际上，是今早上妈妈给我打的电话。<img src="http://www.vat58.com/blog/wp-content/plugins/ultimate-tinymce/emotions/img/popobig/beat_brick.png" alt="Hit with Brick" title="Hit with Brick">
-          <div class="post-more-link text-center">
-            <a class="btn" href="/happy-mothers-day/#more" rel="contents">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/happy-mothers-day/#далее" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -492,6 +577,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -503,13 +590,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/yesterday-once-more/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -517,38 +614,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/yesterday-once-more/" itemprop="url">
-                  忘情于昨天
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/yesterday-once-more/" itemprop="url">忘情于昨天</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-11T00:25:41+08:00" content="2012-05-11">
-              2012-05-11
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-11T00:25:41+08:00">
+                2012-05-11
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/V文摘/" itemprop="url" rel="index">
                     <span itemprop="name">V文摘</span>
                   </a>
@@ -556,7 +657,6 @@
 
                 
                 
-
               
             </span>
           
@@ -564,24 +664,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/yesterday-once-more/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="yesterday-once-more/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="yesterday-once-more/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -591,16 +696,18 @@
       
         
           
-          下午我坐在软件园的长椅上，静静观察着周围的一切。夏日火辣的阳光渐渐温顺下来，不再那么咄咄逼人。不时有几丝轻风飘过，荡漾了园内的柳条，轻盈而不张扬。
-湖的旁边有有几个颇具创意的设施，水风车等。虽然叫不上名字，都能与湖中的水完成很好的互动，所以这儿经常聚集不少嬉戏的小孩。一个小女孩扎着可爱的马角辫，爬上爬下，玩的不亦乐乎，制造着园内独特的“噪音”。虽然阳光不是很强，可毕竟是春末夏初，小女孩不时擦汗，一会儿蹬，一会儿转，沉浸在自己的世界丝毫没有罢手的意思。大人们躲在阴凉处笑嘻嘻的看着，她的妈妈又气又爱
-          ...
+            <p>下午我坐在软件园的长椅上，静静观察着周围的一切。夏日火辣的阳光渐渐温顺下来，不再那么咄咄逼人。不时有几丝轻风飘过，荡漾了园内的柳条，轻盈而不张扬。</p>
+<p>湖的旁边有有几个颇具创意的设施，水风车等。虽然叫不上名字，都能与湖中的水完成很好的互动，所以这儿经常聚集不少嬉戏的小孩。一个小女孩扎着可爱的马角辫，爬上爬下，玩的不亦乐乎，制造着园内独特的“噪音”。虽然阳光不是很强，可毕竟是春末夏初，小女孩不时擦汗，一会儿蹬，一会儿转，沉浸在自己的世界丝毫没有罢手的意思。大人们躲在阴凉处笑嘻嘻的看着，她的妈妈又气又爱，脸上荡漾着幸福的笑容。<!--more Read more...--></p>
+<p>我多想拿着DV，拍下这一切。拍下小女孩每一个略带蛮劲“笨拙”的动作，拍下小女孩蹒跚而“楞楞”的感觉，拍下这个幸福的童年。这将是多么珍贵的影像资料啊！自然、纯净。这份不经意的记录远远胜过孩子们皱着眉头面对相机留下的所谓多少周年留念。有朝一日，小女孩出落成亭亭玉立端庄淑雅的大姑娘，看着自己当年的调皮假小子形象，也会噗哧笑出声吧。她会感谢这次记录吧。</p>
+<p>是啊，在哪里可以寻得一个出售回忆的公司。在人们疲惫念旧的时候可以搜寻出几年前甚至十几年前自己的身影，也怕一点点生活中的剪辑。看看那时自己的脸以及纯真的笑容，一前一后，昨天今天，时间带给人的落差会有多大？不管是欢喜还是惆怅，看到久违的自己，都应该是一种surprise。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/76d01ee0jw1drcvfw97fhj.jpg" alt="亭亭玉立" title="亭亭玉立"></p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/yesterday-once-more/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -618,6 +725,8 @@
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -629,13 +738,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/android-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -643,38 +762,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/android-02/" itemprop="url">
-                  Android学习笔记系列02–Activity
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/android-02/" itemprop="url">Android学习笔记系列02–Activity</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-08T21:56:05+08:00" content="2012-05-08">
-              2012-05-08
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-08T21:56:05+08:00">
+                2012-05-08
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -682,7 +805,6 @@
 
                 
                 
-
               
             </span>
           
@@ -690,24 +812,29 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/android-02/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="android-02/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="android-02/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -717,21 +844,31 @@
       
         
           
-          Activity的生命周期
-android世界中，Activity有四种基本状态：
+            <h3 id="Activity的生命周期">Activity的生命周期</h3><p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/activity_lifecycle.png" alt="activity_lifecycle" title="activity_lifecycle"></p>
+<p>android世界中，Activity有四种基本状态：<!--more Read more...--></p>
+<ul>
+<li>activity running 一个Activity启动后，它活跃在屏幕 的最前端，处于可见并可交互的状态</li>
+<li>paused 当activity被另一个acvitity透明覆盖时的状态。虽然失去焦点，不可交互，仍然与窗口保持连接、可见，故系统仍然在维持它</li>
+<li>stoped  当activity被另一个acvitity覆盖，失去焦点不可见时的状态</li>
+<li>killed  当activity被杀死回收或未启动时的状态<br>上图acvitity的生命周期中，四种状态不断循环往复。</li>
+</ul>
+<h3 id="创建一个activity">创建一个activity</h3><p>onCreate(): 创建一个activity需要继承Activity,并实现onCreate()方法。很多情况下，在这个方法中会调用setContentView()来定义布局。</p>
+<p>创建一个activity,需要在AndroidManifest文件中注册。<span style="color: #008080;">android:name</span> 是唯一必须的属性，指定对应的类。</p>
+<h3 id="启动另一个acvitity">启动另一个acvitity</h3><pre> Intent intent =new Intent(CurrentActivity.this,OtherActivity.class);
+ startActivity(intent);</pre>
+别忘了在AndroidManifest中注册它。
+我们可以看到Intent作为activity间通信的媒介。Intent中指定了信息的目的地，同时也可以传递封装的内容，好比一封邮件。
+<pre>intent.putExtra(name, value);</pre>
 
-activity running 一个Activity启动后，它活跃在屏幕 的最前端，处于可见并可交互的状态
-paused 当activity被另一个acvitity透明覆盖时的状态。虽然失去焦点，不可交互，仍然与窗口保持连接、可见，故系统仍然在维持它
-stoped  当activity被另一个acvitity覆盖，失去焦点不可见时的状态
-killed  当activity被杀死回收或未启动时的状态上图acvi
-          ...
+<h3 id="保存activity状态">保存activity状态</h3><p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/restore_instance.png" alt="restore_instance" title="restore_instance"></p>
+<p>当系统为了回收内存而毁坏activity时，系统会调用onSaveInstanceState()方法，将状态信息保存在Bundle中。当用户重新导航到这个activity时，系统会重建activity并将Bundle传递给oncreate()和onRestoreInstanceState()，恢复之前的状态，像什么都没发生一样。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/android-02/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -749,6 +886,8 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -760,13 +899,23 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/ecryptfs-recover-private/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -774,38 +923,42 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/ecryptfs-recover-private/" itemprop="url">
-                  重装ubuntu后如何恢复数据
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/ecryptfs-recover-private/" itemprop="url">重装ubuntu后如何恢复数据</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-07T15:54:49+08:00" content="2012-05-07">
-              2012-05-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-07T15:54:49+08:00">
+                2012-05-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/ubuntu/" itemprop="url" rel="index">
                     <span itemprop="name">ubuntu</span>
                   </a>
@@ -813,7 +966,6 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
                 
                 
-
               
             </span>
           
@@ -821,24 +973,29 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/ecryptfs-recover-private/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="ecryptfs-recover-private/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="ecryptfs-recover-private/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -848,17 +1005,22 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
       
         
           
-          主题：重装ubuntu后如何恢复数据实验环境：ubuntu 12.04感言： 说是“实验环境”，不如说是今中午本人的悲惨经历。各种抓心挠肝，各种抓狂！救命稻草： sudo ecryptfs-recover-private
-剧情回顾：今中午相当的作孽，在windows下的误操作动了ubuntu的“龙体”。什么误操作？我是不会告诉你的，否则你就会知道我当时有多“2”，总之就是到了重装ubuntu的时候了。天啊？我刚刚弄好的Android环境，这几天来的所有配置，统统付诸东流？太伤感情了。
-重装时有个
-          ...
+            <p><span style="color: #99cc00;">主题</span>：重装ubuntu后如何恢复数据<br><span style="color: #99cc00;">实验环境</span>：ubuntu 12.04<br><span style="color: #99cc00;">感言</span>： 说是“实验环境”，不如说是今中午本人的悲惨经历。各种抓心挠肝，各种抓狂！<br><span style="color: #99cc00;">救命稻草</span>： <span style="color: #993366;">sudo ecryptfs-recover-private</span></p>
+<p><span style="color: #008000;">剧情回顾</span>：<br>今中午相当的作孽，在windows下的误操作动了ubuntu的“龙体”。什么误操作？我是不会告诉你的，否则你就会知道我当时有多“2”，总之就是到了重装ubuntu的时候了。天啊？我刚刚弄好的Android环境，这几天来的所有配置，统统付诸东流？太伤感情了。<!--more Read more...--></p>
+<p>重装时有个选择：这台计算机安装了多个操作系统，你准备怎么做？<br>前两个都是要删除相关的文档，肯定不能选啊。抱着一丝希望，选择：<br><span style="color: #0000ff;">其他选项（您可以创建、调整分区，或者为ubuntu选择多个分区） 。</span></p>
+<p>胆战心惊地跑完安装进度条，打开/home,以前的主文件夹还在，同时有现在的主文件夹。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/选区_001.png" alt="directory" title="directory">打开目录：</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/选区_002.png" alt="private file" title="private"></p>
+<p>看到这里，心想终于有救了。<br>终端中飞快输入：sudo  ecryptfs-recover-private<br>按提示操作，先输入了之前系统的口令，再输入当前系统的口令， 之前主文件夹中的文件终于恢复在了tmp中，数数家珍，一个不少。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/选区_003.png" alt="recover file" title="recover file"></p>
+<p><span style="color: #ff6600;">结局</span>：为了纪念ecryptfs-recover-private，我把它加入到了本文中的固定链接中。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/ecryptfs-recover-private/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -876,6 +1038,8 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -887,13 +1051,23 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/android-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -901,38 +1075,42 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/android-01/" itemprop="url">
-                  Android学习笔记系列01--解剖项目结构
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/android-01/" itemprop="url">Android学习笔记系列01--解剖项目结构</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-07T08:16:24+08:00" content="2012-05-07">
-              2012-05-07
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-07T08:16:24+08:00">
+                2012-05-07
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Android/" itemprop="url" rel="index">
                     <span itemprop="name">Android</span>
                   </a>
@@ -940,7 +1118,6 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
 
                 
                 
-
               
             </span>
           
@@ -948,24 +1125,29 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/android-01/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="android-01/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="android-01/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -975,21 +1157,28 @@ killed  当activity被杀死回收或未启动时的状态上图acvi
       
         
           
-          这篇笔记，我们来认识一下Android项目的目录结构以及基本文件的释义。
-左图为一个简单的helloworld项目目录，不多说，麻雀虽小，五脏俱全。
-src:存放代码文件，左图中只有一个activity类
-res: resource文件夹，存放需要的资源
-drawable: 多个drawable文件夹，对应不同分辨率的图片资源，以适应不同手机环境的需要
-layout: 存放xml布局文件，一般一个activity对应一个xml文件，也可以多个activity对应一个xml文件
-values: x
-          ...
+            <p>这篇笔记，我们来认识一下Android项目的目录结构以及基本文件的释义。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/Android-project.png" alt="Android project" title="Android project">左图为一个简单的helloworld项目目录，不多说，麻雀虽小，五脏俱全。</p>
+<p><span style="color: #0000ff;">src</span>:存放代码文件，左图中只有一个activity类</p>
+<p><span style="color: #0000ff;">res</span>: resource文件夹，存放需要的资源</p>
+<p><span style="color: #0000ff;">drawable</span>: 多个drawable文件夹，对应不同分辨率的图片资源，以适应不同手机环境的需要</p>
+<p><span style="color: #0000ff;">layout</span>: 存放xml布局文件，一般一个activity对应一个xml文件，也可以多个activity对应一个xml文件</p>
+<p><span style="color: #0000ff;">values</span>: xml文件里储存了很多常量信息</p>
+<p><span style="color: #0000ff;">R.java</span>: gen 目录下的R.java由eclipse自动生成，不可更改。R.java中为本工程资源的索引。res中的资源会被分配一个ID，方便引用。</p>
+<p><span style="color: #0000ff;">AndroidManifest.xml</span>:整个工程的配置文件<!--more Read more...--></p>
+<p>来看配置文件AndroidManifest.xml</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/AndroidManifest.png" alt="AndroidManifest" title="AndroidManifest">package为工程的包名，activity中的android:name为activity的类（前面有点），两者可定位到vat58.Test.HelloAndroidActivity类。</p>
+<p>xml中引用文件的格式<span style="color: #ff0000;"> @</span> ，根据R.java的索引可以找到相关资源文件中的内容。</p>
+<p>如果有多个Activity或其他组件，都需要在此配置文件中注册。</p>
+<p>关于&lt;intent-filter&gt;不多解释，我们只需要知道，哪个activity中配置了它，那这个activity为首先启动的activity。</p>
+<p>简单分析到这里。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/android-01/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1007,6 +1196,8 @@ values: x
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1018,13 +1209,23 @@ values: x
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/androidify-you/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1032,38 +1233,42 @@ values: x
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/androidify-you/" itemprop="url">
-                  Androidify you --定制你的Android机器人
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/androidify-you/" itemprop="url">Androidify you --定制你的Android机器人</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-05T13:44:59+08:00" content="2012-05-05">
-              2012-05-05
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-05T13:44:59+08:00">
+                2012-05-05
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/移动互联网/" itemprop="url" rel="index">
                     <span itemprop="name">移动互联网</span>
                   </a>
@@ -1071,7 +1276,6 @@ values: x
 
                 
                 
-
               
             </span>
           
@@ -1079,24 +1283,29 @@ values: x
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/androidify-you/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="androidify-you/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="androidify-you/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1106,17 +1315,25 @@ values: x
       
         
           
-          来看一款Android手机软件：Androidify
- Androidify是由Google谷歌官方开发的Android平台的虚拟形象软件，你可以在android手机上安装Androidify，自定义安卓机器人的肤色、发色、衣服、裤子、鞋子、饰品等方面，还可变更身体的比例，把Android机器人的头部、身体、四肢进行随意的变换，拉长或者缩短，甚至可以加上一款时尚的Android手机，做成与真人相似的卡通机器人，在手机上创造属于自己的Android形象。
-如果你已经在自己的手机上摆弄起来，那就不打
-          ...
+            <p>来看一款Android手机软件：<strong>Androidify
+</strong> Androidify是由Google谷歌官方开发的Android平台的虚拟形象软件，你可以在android手机上安装Androidify，自定义安卓机器人的肤色、发色、衣服、裤子、鞋子、饰品等方面，还可变更身体的比例，把Android机器人的头部、身体、四肢进行随意的变换，拉长或者缩短，甚至可以加上一款时尚的Android手机，做成与真人相似的卡通机器人，在手机上创造属于自己的Android形象。</p>
+<p>如果你已经在自己的手机上摆弄起来，那就不打搅你了。如果你没有一款Android手机，也不要着急。还记得前几天我们搭建的<a href="http://www.vat58.com/ubuntu-settings/" title="ubuntu12.04环境配置（翻墙，jdk，eclipse，Android）篇">ubuntu12.04+android sdk+jdk+eclipse</a>环境吗？这才是本文的目的所在。<!--more Read more...--></p>
+<p>接下来给android虚拟机avd安装Androidify.apk</p>
+<ol>
+<li>启动AVD<br><span style="color: #ff9900;"> emulator -adv  avdname <span style="color: #333333;">或者</span> emulator @avdname</span></li>
+<li>安装apk文件<br><span style="color: #ff9900;"> adb install Androidify.apk</span><br><div><strong><span style="color: #ff6600;"><span style="font-size: small;"><span style="line-height: 24px;">command not found</span></span><span style="font-size: small;"><span style="line-height: 24px;">?</span></span></span></strong></div><br>如果碰到上述问题，说明你还没有配置相关的<strong>环境变量</strong>，这里算是ubuntu android 开发环境配置的补充。</li>
+</ol>
+<ul>
+<li>编辑bashrc文件，加入android-sdk目录下的tools和platform-tools路径<br><span style="color: #800000;">gedit ~/.bashrc<br><span style="color: #333333;">在文件最后，添加： export PATH=&lt;yourpath1&gt;:&lt;yourpath2&gt;:$PATH<br>保存退出。</span></span></li>
+<li><span style="color: #800000;"><span style="color: #333333;">使配置生效<br><span style="color: #993300;">source ~/.bashrc</span></span></span><br><div><span style="font-size: small;"><span style="line-height: 24px;">linux环境下你能搞定，windows当然就不在话下了。之后进行上述启动AVD，安装apk文件的操作。OK, 看下我的文艺android机器形象。</span></span></div><br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/Androidify-me.png" alt="android" title="Androidify me"></li>
+</ul>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/androidify-you/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1134,6 +1351,8 @@ values: x
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1145,13 +1364,23 @@ values: x
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/ubuntu-settings/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1159,38 +1388,42 @@ values: x
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/ubuntu-settings/" itemprop="url">
-                  ubuntu12.04环境配置（翻墙，jdk，eclipse，Android）篇
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/ubuntu-settings/" itemprop="url">ubuntu12.04环境配置（翻墙，jdk，eclipse，Android）篇</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-03T22:05:34+08:00" content="2012-05-03">
-              2012-05-03
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-03T22:05:34+08:00">
+                2012-05-03
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/ubuntu/" itemprop="url" rel="index">
                     <span itemprop="name">ubuntu</span>
                   </a>
@@ -1198,7 +1431,6 @@ values: x
 
                 
                 
-
               
             </span>
           
@@ -1206,24 +1438,29 @@ values: x
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/ubuntu-settings/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="ubuntu-settings/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="ubuntu-settings/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1233,17 +1470,27 @@ values: x
       
         
           
-          一：翻墙
-ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞啊。真正要做到畅行，呵呵，还得翻。windows下的教程详见《不会翻墙？GoAgent带你畅游博客中的博客》ubuntu下的方法大同小异。
-配置：local目录：修改proxy.ini 中appid为你的IDserver目录：python uploader.zip （终端命令），按提示输入appid，邮箱，密码等。运行： local目录：python proxy.py（终端命令）,接下来配合chrome sw
-          ...
+            <p>一：翻墙</p>
+<p>ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞啊。真正要做到畅行，呵呵，还得翻。windows下的教程详见《<a href="http://www.vat58.com/good-boke/" title="不会翻墙？GoAgent带你畅游博客中的博客">不会翻墙？GoAgent带你畅游博客中的博客</a>》<br>ubuntu下的方法大同小异。</p>
+<p>配置：local目录：修改proxy.ini 中appid为你的ID<br>server目录：<span style="color: #993300;">python uploader.zip</span> （终端命令），按提示输入appid，邮箱，密码等。<br>运行： local目录：<span style="color: #993300;">python proxy.py</span>（终端命令）,接下来配合chrome switchysharp就可以成功翻墙了。浏览器端的配置同windows下。<!--more Read more...--></p>
+<p>二：截图工具</p>
+<p>shutter: <span style="color: #993300;">sudo apt-get install shutter</span> 或者从软件中心查找<br>系统自带的screenshot也不错。<br>print screen 和 alt+print screen 等快捷键，在条件不苛刻时是最便捷的截图方法。<br>作为一名伪站长，截图工具不可少啊。snagit,抽空回windows看你。</p>
+<p>三: openjdk+eclipse</p>
+<p>安装openjdk: <span style="color: #993300;">sudo apt-get install openjdk-7-jre</span> 不知道这个版本是不是稳定。<br>安装eclipse: 从eclipse官网下载 <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/indigosr2" target="_blank" rel="external">Eclipse IDE for Java EE Developers</a> for linux<br>解压即可。</p>
+<p>四：Android开发</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/Android-env.png" alt="Android-env" title="Android-env"></p>
+<p>&nbsp;</p>
+<iframe style="width: 120px; height: 240px; float: left; margin-right: 80px;" src="http://rcm-cn.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=FFFFFF&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=vat58-23&amp;o=28&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00BSXRLR8" width="300" height="150" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/ubuntu-settings/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+<p>为eclipse安装ADT插件：<br>运行Eclipse，选择help-&gt;Install new software 选择add，将会弹出一个框 ：<br>Name: 自己随便取一个<br>Location: <span style="color: #0000ff;"><a href="http://dl-ssl.google.com/Android/eclipse" target="_blank" rel="external">http://dl-ssl.google.com/Android/eclipse</a></span><br>安装developer tools。<br>重启eclipse,Window-&gt;reference，设置Android SDK Home。<br>在eclipse工具栏，找到AVD manager创建AVD。<br>至此，Android开发环境完成。</p>
+<p>拓展阅读：<a href="http://www.vat58.com/androidify-you/" title="Androidify you –定制你的Android机器人">定制你的Android机器人</a>        <a href="http://www.amazon.cn/gp/product/B003TJNO98/ref=as_li_ss_tl?ie=UTF8&amp;camp=536&amp;creative=3132&amp;creativeASIN=B003TJNO98&amp;linkCode=as2&amp;tag=vat58-23" target="_blank" rel="external">鸟哥的Linux私房菜:基础学习篇(第3版)</a><img src="http://ir-cn.amazon-adsystem.com/e/ir?t=vat58-23&amp;l=as2&amp;o=28&amp;a=B003TJNO98" alt=""></p>
+
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1261,6 +1508,8 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1272,13 +1521,23 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/ubuntu12-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1286,38 +1545,42 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/ubuntu12-04/" itemprop="url">
-                  ubuntu最新发行版12.04 记
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/ubuntu12-04/" itemprop="url">ubuntu最新发行版12.04 记</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-03T08:30:56+08:00" content="2012-05-03">
-              2012-05-03
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-03T08:30:56+08:00">
+                2012-05-03
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/ubuntu/" itemprop="url" rel="index">
                     <span itemprop="name">ubuntu</span>
                   </a>
@@ -1325,7 +1588,6 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
                 
                 
-
               
             </span>
           
@@ -1333,24 +1595,29 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/ubuntu12-04/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="ubuntu12-04/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="ubuntu12-04/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1360,16 +1627,18 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
       
         
           
-          这是第一次发布linux相关的文章，因为对于linux一直以来都是浅尝辄止，停留在一个肤浅的程度上。会装系统，会几个命令，仅此而已。每到ubuntu发布新的版本前，各种linux迷ubuntu迷已是蠢蠢欲动，满网络上都是小白鼠在“竞速”，当然也不乏类似与我的“伪ubuntu迷”。ubuntu12.04发布，我忍住激动：一ubuntu12.04又不是我的产品，二对linux没有真正理解并应用，还激动个毛啊？说归说，到底还是屁颠屁颠地装上了。
-从笔记本上把ubuntu11.10升级12.04，出现了
-          ...
+            <p>这是第一次发布linux相关的文章，因为对于linux一直以来都是浅尝辄止，停留在一个肤浅的程度上。会装系统，会几个命令，仅此而已。每到ubuntu发布新的版本前，各种linux迷ubuntu迷已是蠢蠢欲动，满网络上都是小白鼠在“竞速”，当然也不乏类似与我的“伪ubuntu迷”。ubuntu12.04发布，我忍住激动：一ubuntu12.04又不是我的产品，二对linux没有真正理解并应用，还激动个毛啊？说归说，到底还是屁颠屁颠地装上了<img src="http://www.vat58.com/blog/wp-content/plugins/ultimate-tinymce/emotions/img/popobig/big_smile.png" alt="Big Smile" title="Big Smile">。<!--more Read more...--><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/linuxlogo.png" alt="linux" title="linuxlogo"></p>
+<p>从笔记本上把ubuntu11.10升级12.04，出现了不少问题，签名检验和不对，软件包未认证等等。于是重新下完镜像，从u盘启动装在我的台式机上了，最后用easyBCD添加了启动项。网上应该不少图文教程了，可以参考，自己多尝试才是正解。折腾了一晚上，我仅仅是个“伪ubuntu迷”啊。真是不能理解自己。</p>
+<p>无论是windows还是linux,只要能找到最舒适的“环境”，让学习工作更高效，才是我们应该追求的。至于两者的性能口水之战，我辈只可远观，哈哈。之前听网友说，ubuntu上的android开发环境挺高效的，准备试一下。本是同根生，应该能和谐高效。下一步抓紧体验下ubuntu下的开发环境，找到状态，开始学点东西。</p>
+<p><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/1204.jpg" alt="1204" title="1204"></p>
+<p>更多地学习体验UBUNTU，与ubuntu共勉。</p>
 
-          <div class="post-more-link text-center">
-            <a class="btn" href="/ubuntu12-04/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1387,6 +1656,8 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
       
 
       
+
+      
       
         <div class="post-eof"></div>
       
@@ -1398,13 +1669,23 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.vat58.com/manictime/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="vatcom_dong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="VAT58">
+    </span>
 
     
       <header class="post-header">
@@ -1412,38 +1693,42 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/manictime/" itemprop="url">
-                  找回迷路的时间--时间追踪软件ManicTime
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/manictime/" itemprop="url">找回迷路的时间--时间追踪软件ManicTime</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2012-05-01T22:31:00+08:00" content="2012-05-01">
-              2012-05-01
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-01T22:31:00+08:00">
+                2012-05-01
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/爱上V软/" itemprop="url" rel="index">
                     <span itemprop="name">爱上V软</span>
                   </a>
@@ -1451,7 +1736,6 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
 
                 
                 
-
               
             </span>
           
@@ -1459,24 +1743,29 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/manictime/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="manictime/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count ds-thread-count" data-thread-key="manictime/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
-
-          
           
 
           
+
+          
+
+          
+
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1486,19 +1775,27 @@ ubuntu下的chrome速度大大的优于windows下的龟速，这个确实很赞�
       
         
           
-          在周金根老师的博客里，第一次接触了敏捷个人。敏捷个人是一个指导框架，旨在认识自我，管理自我，找到快乐、高效、平衡的生活！在自我管理中，时间管理显得尤为重要，希望周老师推荐的这款manic time能帮到我们。在这里分享算是在我的博客里mark一下。
-ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何使用计算机的数据，包括使用时间和空闲时间，使用了哪些程序以及这些程序的使用时长。下载安装后它会自动在后台工作 。
+            <p>在周金根老师的博客里，第一次接触了<strong>敏捷个人</strong>。敏捷个人是一个指导框架，旨在认识自我，管理自我，找到快乐、高效、平衡的生活！在自我管理中，时间管理显得尤为重要，希望周老师推荐的这款<strong>manic time</strong>能帮到我们。在这里分享算是在我的博客里mark一下。</p>
+<p><strong>ManicTime</strong> 是一个个人的时间管理软件 ， 它会自动收集你如何使用计算机的数据，包括使用时间和空闲时间，使用了哪些程序以及这些程序的使用时长。下载安装后它会自动在后台工作 。</p>
+<!--more Read more...-->
+<ul>
+<li>自动收集计算机的使用资料。 您可以进行计算机活动而不自知ManicTime工作的奇迹背后的窗帘。</li>
+<li>本地数据存储。 隐私明智的，只有您或其他人，有机会到您的计算机可以读取您的个人计算机使用的信息。</li>
+<li>单独跟踪三个很酷的事情</li>
+</ul>
+<ol>
+<li>活动-跟踪您的活动时间（只要您使用的计算机）和远离/空闲时间（您的计算机是打开的，但没有人用它）<br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/2010011222012458.jpg" alt="active" title="active"></li>
+<li>应用程序-如何跟踪应用和长期使用它<br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/2010011222013759.jpg" alt="app" title="app"></li>
+<li>标签（可选）：指定部分时间为指定标签，更精确的跟踪时间，如与某人聊天、做某个任务等<br><img src="http://www.vat58.com/blog/wp-content/uploads/2012/05/2010011222015680.jpg" alt="more" title="more"><br><a href="http://www.rayfile.com/zh-cn/files/b7f12ea3-9399-11e1-aaae-0015c55db73d/" title="网盘下载ManicTime" target="_blank" rel="external">ManicTime DownLoad</a></li>
+</ol>
+<p>精确掌控时间，做自己的主人。自我管理，敏捷个人，才刚刚开始。</p>
 
-
-自动收集计算机的使用资料。 您可以进行计算机活动而不自知Mani
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/manictime/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
         
+      
+    </div>
+
+    <div>
       
     </div>
 
@@ -1511,6 +1808,8 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
     </div>
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -1558,34 +1857,43 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://vat58.qiniudn.com/avatar.jpg"
                alt="vatcom_dong" />
           <p class="site-author-name" itemprop="name">vatcom_dong</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">165</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">48</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">165</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">128</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -1640,7 +1948,12 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
           </div>
         
 
+        
+
+
       </section>
+
+      
 
       
 
@@ -1657,49 +1970,39 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
         <div class="copyright" >
   
   &copy;  2012 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">vatcom_dong</span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Muse
   </a>
 </div>
 
+
         
-
-<div class="busuanzi-count">
-
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
-  
-
-  
-    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
-  
-  
-</div>
-
-
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -1722,43 +2025,56 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
 
 
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
 
 
 
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
   
 
   
 
-  
 
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
 
 
 
@@ -1783,6 +2099,9 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
   
     
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
@@ -1790,8 +2109,28 @@ ManicTime 是一个个人的时间管理软件 ， 它会自动收集你如何�
 
 
 
+
+
+
+
+
+
+
+
+
+
   
+
+
+
+
+
   
+
+  
+
+  
+
   
 
   
