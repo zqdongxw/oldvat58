@@ -107,7 +107,7 @@
 我是代码区
 对齐方式：markdown貌似没有直接提供对齐的功能，最简单的办法就是通过内嵌html来实现。比如:
 &amp;lt;center&amp;gt;居中&amp;lt;/center&amp;gt;">
-<meta property="og:updated_time" content="2015-09-14T13:02:48.000Z">
+<meta property="og:updated_time" content="2017-07-13T02:52:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="markdown小白使用记录">
 <meta name="twitter:description" content="代码区块：Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以。简明方便！
@@ -418,10 +418,10 @@
 <span class="header">二级标题
 -------</span>
 </code></pre><p>或者</p>
-<pre><code><span class="preprocessor">#一级标题</span>
-<span class="preprocessor">##二级标题</span>
+<pre><code><span class="preprocessor"># 一级标题</span>
+<span class="preprocessor">## 二级标题</span>
 ....
-<span class="preprocessor">######六级标题</span>
+<span class="preprocessor">###### 六级标题</span>
 </code></pre><p><em>插入图片</em> ：</p>
 <pre><code>![<span class="link_label">Alt text</span>](<span class="link_url">/path/to/img.jpg</span>)    
 ![<span class="link_label">Alt text</span>](<span class="link_url">/path/to/img.jpg "Optional title"</span>)
@@ -449,6 +449,27 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>随喜</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechat-reward-image" alt="vatcom_dong WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/alipay-reward-image" alt="vatcom_dong Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
