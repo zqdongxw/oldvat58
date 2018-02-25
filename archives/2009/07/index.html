@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,11 +10,16 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -38,36 +43,11 @@
 
 
 
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -76,7 +56,22 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="English + Computer Skills = Freedom" />
@@ -88,22 +83,17 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
-
-
-
-
-<meta name="description">
+<meta name="description" content="以无所得故，菩提萨埵">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VAT58">
 <meta property="og:url" content="http://www.vat58.com/archives/2009/07/index.html">
 <meta property="og:site_name" content="VAT58">
-<meta property="og:description">
+<meta property="og:description" content="以无所得故，菩提萨埵">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VAT58">
-<meta name="twitter:description">
+<meta name="twitter:description" content="以无所得故，菩提萨埵">
 
 
 
@@ -112,9 +102,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -156,12 +148,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -171,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -187,7 +173,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">应无所住而生其心</p>
+        <h1 class="site-subtitle" itemprop="description">应无所住而生其心</h1>
       
   </div>
 
@@ -217,6 +203,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -227,12 +223,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -285,37 +281,41 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-    <span class="archive-page-counter">
-      
-      
-       
+      <span class="archive-page-counter">
         
-      很好! 目前共计 100 篇日志。 继续努力。
-    </span>
-
-    
-
-      
-      
-      
-
-      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2009">2009</h2>
-        </div>
-      
-      
+         
+          
+        很好! 目前共计 100 篇日志。 继续努力。
+      </span>
 
       
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h2 class="archive-year" id="archive-year-2009">2009</h2>
+          </div>
+        
+        
+
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h2 class="post-title">
+      <h3 class="post-title">
         
             <a class="post-title-link" href="/shulin/" itemprop="url">
               
@@ -323,7 +323,7 @@
               
             </a>
         
-      </h2>
+      </h3>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -338,9 +338,13 @@
 
 
 
-    
+      
 
-  </section>
+    </div>
+  </div>
+  
+  
+  
 
   
 
@@ -365,97 +369,99 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://vat58.qiniudn.com/avatar.jpg"
-               alt="观自在" />
-          <p class="site-author-name" itemprop="name">观自在</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="观自在" />
+            
+              <p class="site-author-name" itemprop="name">观自在</p>
               <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">100</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">38</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">90</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
-                </li>
-              
-            </ul>
           </div>
-        
 
-        
+          <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
       </section>
 
       
@@ -472,27 +478,27 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">观自在</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
 
 
         
@@ -517,6 +523,12 @@
 </div>
 
 
+
+
+
+
+
+
         
       </div>
     </footer>
@@ -525,6 +537,14 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
     
 
@@ -560,55 +580,61 @@
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
   
   
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -638,14 +664,8 @@
 
 
 
-  
 
 
-
-
-
-
-  
 
 
 
@@ -653,11 +673,94 @@
 
   
 
-  
+
+
+
 
   
 
   
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

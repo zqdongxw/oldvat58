@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,11 +10,16 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -38,36 +43,11 @@
 
 
 
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -76,7 +56,22 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="English + Computer Skills = Freedom" />
@@ -88,22 +83,17 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
-
-
-
-
-<meta name="description">
+<meta name="description" content="以无所得故，菩提萨埵">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VAT58">
 <meta property="og:url" content="http://www.vat58.com/index.html">
 <meta property="og:site_name" content="VAT58">
-<meta property="og:description">
+<meta property="og:description" content="以无所得故，菩提萨埵">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VAT58">
-<meta name="twitter:description">
+<meta name="twitter:description" content="以无所得故，菩提萨埵">
 
 
 
@@ -112,9 +102,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -156,12 +148,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,8 +158,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -189,7 +174,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">应无所住而生其心</p>
+        <h1 class="site-subtitle" itemprop="description">应无所住而生其心</h1>
       
   </div>
 
@@ -219,6 +204,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -229,12 +224,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -296,13 +291,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/《竹窗随笔》选读/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -314,9 +313,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/《竹窗随笔》选读/" itemprop="url">《竹窗随笔》选读</a></h1>
+                <a class="post-title-link" href="/《竹窗随笔》选读/" itemprop="url">《竹窗随笔》选读</a></h2>
         
 
         <div class="post-meta">
@@ -379,7 +378,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -388,10 +390,11 @@
         
           
           来生（一）今生持戒修福之僧，若心地未明、愿力轻微，又不求净土，是人来生多感富贵之报，亦多为富贵所迷，或至造业堕落者。有老僧摇手不之信。予谓无论隔世，亲见一僧结茅北峰之阴，十年颇著清修；一时善信敬慕，为别创庵，徙居之，遂致沉溺，前所微得俱丧。现世且然，况来生耶！问此为谁？予云：‘即老兄是。’其人默然。
+来生（二）僧有见贵显人而心生慕羡愿似之者，复有见贵显人而心生厌薄若不屑者，是二人皆过也。何也？尔徒知慕羡彼，而宁知彼之前生，即尔苦行修福僧人乎？则何必慕羡！尔徒知厌薄彼，而宁知尔之苦行，来生当作彼有
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/《竹窗随笔》选读/#далее" rel="contents">
+            <a class="btn" href="/《竹窗随笔》选读/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -399,18 +402,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -424,6 +424,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -436,13 +440,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/晚读了五年的书《黑客与画家》/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -454,9 +462,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/晚读了五年的书《黑客与画家》/" itemprop="url">晚读了五年的书《黑客与画家》</a></h1>
+                <a class="post-title-link" href="/晚读了五年的书《黑客与画家》/" itemprop="url">晚读了五年的书《黑客与画家》</a></h2>
         
 
         <div class="post-meta">
@@ -519,7 +527,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -528,11 +539,13 @@
         
           
           读完《黑客与画家》，这本书给我的第一感觉是至少晚读了五年。做一个自由自在的优秀程序员（黑客）是多么一件幸福的事情，我也越来越笃定与此，即便现在的职业很少参与编码，但好像做一名业余的自由的程序员也不是一个糟糕的主意。初次阅读《黑客与画家》，有感触的部分记录于下，我相信很快会有第二遍，第三遍。
-1.以前
+1.以前创业很昂贵，你不得不找投资人才能创业。而现在，唯一的门槛就是勇气。
+2.书呆子不受欢迎的真正原因，是他们脑子里想着别的事情。他们的注意力都放在读书或者观察世界上面，而不是放在穿衣打扮、开晚会上面。
+对
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/晚读了五年的书《黑客与画家》/#далее" rel="contents">
+            <a class="btn" href="/晚读了五年的书《黑客与画家》/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -540,18 +553,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -565,6 +575,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -577,13 +591,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/rework/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -595,9 +613,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/rework/" itemprop="url">rework</a></h1>
+                <a class="post-title-link" href="/rework/" itemprop="url">rework</a></h2>
         
 
         <div class="post-meta">
@@ -660,7 +678,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -671,11 +692,14 @@
           很久没有读到像rework（重塑工作）如此富含营养的书籍了，希望它也能够开拓你的视野，在你枯燥的工作生涯里注入一股清泉。以下为《rework》书摘：
 小、简单、基础的需求是恒久的
 1.真实的世界不是一个地方，而是你一个借口，是为毫无尝试而辩护。
-所以如果某人说，你这个想法在真实世界里是行不通的，先别
+所以如果某人说，你这个想法在真实世界里是行不通的，先别急着泄气，好好盘算一下，试试就知道了。
+2.决定你这个星期该做的，而不是几年。弄清下一件重要事情，然后去做。在你做某事之前找出正确的方向，而不要过于超前。
+我一直头疼于五年计划之流。
+3.每个人都应该
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/rework/#далее" rel="contents">
+            <a class="btn" href="/rework/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -683,18 +707,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -708,6 +729,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -720,13 +745,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/密行百事/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -738,9 +767,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/密行百事/" itemprop="url">密行百事</a></h1>
+                <a class="post-title-link" href="/密行百事/" itemprop="url">密行百事</a></h2>
         
 
         <div class="post-meta">
@@ -803,7 +832,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -811,11 +843,11 @@
       
         
           
-          密行是密而不宣的善行义举，以中国俗语来说，就是积阴德。譬如佛陀的三千威仪、八万细行；每日托钵乞食、洗足敷坐、行化说法，令众生入佛知见等，就是密行；又如罗砼罗忏悔改过，坚持清净戒行等，是为佛弟子中密行第一；大迦叶住兰若处，寂静少欲，灵山会上妙契真如法性，亦是密行；须菩提观空迎佛，也是密行。　　古人分粥
+          密行是密而不宣的善行义举，以中国俗语来说，就是积阴德。譬如佛陀的三千威仪、八万细行；每日托钵乞食、洗足敷坐、行化说法，令众生入佛知见等，就是密行；又如罗砼罗忏悔改过，坚持清净戒行等，是为佛弟子中密行第一；大迦叶住兰若处，寂静少欲，灵山会上妙契真如法性，亦是密行；须菩提观空迎佛，也是密行。　　古人分粥赈饥、筑桥铺路、凿井造水、点灯奉茶、施棺义葬、急难救助等情义之举，皆是培植福德的密行。所谓「怜蛾不点灯，为鼠常留饭」，即是慈悲遍及一切有情含识的最佳写照。　　密行是增进品行，圆满道德的不二法门。以下列
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/密行百事/#далее" rel="contents">
+            <a class="btn" href="/密行百事/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -823,18 +855,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -848,6 +877,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -860,13 +893,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/关于git、svn、maven/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -878,9 +915,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/关于git、svn、maven/" itemprop="url">关于git、svn、maven</a></h1>
+                <a class="post-title-link" href="/关于git、svn、maven/" itemprop="url">关于git、svn、maven</a></h2>
         
 
         <div class="post-meta">
@@ -943,7 +980,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -952,11 +992,11 @@
         
           
           git和maven的必要性，远远超过很多没用过的人的想象。
-很多人应该用过svn、cvs之类的代码版本管理工具，git也是其中之一。svn和git最大的几个区别要点，svn必须要有服务端，网络能连上服务端才能提交和更新，git不需要，每一台装了git的电脑都是服务端，各台电脑之间可以相互同步和推送，
+很多人应该用过svn、cvs之类的代码版本管理工具，git也是其中之一。svn和git最大的几个区别要点，svn必须要有服务端，网络能连上服务端才能提交和更新，git不需要，每一台装了git的电脑都是服务端，各台电脑之间可以相互同步和推送，而提交不需要网络就可以提交到本地的git库里。这样的好处就是，如果要分享代码，不需要打个压缩包传来传去，也不需要找个服务器搭个svn来共享，现在oschina，csdn等网站都提供了免费的git服务器
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/关于git、svn、maven/#далее" rel="contents">
+            <a class="btn" href="/关于git、svn、maven/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -964,18 +1004,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -989,6 +1026,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1001,13 +1042,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/什么是有为法，什么是无为法？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1019,9 +1064,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/什么是有为法，什么是无为法？/" itemprop="url">什么是有为法，什么是无为法？</a></h1>
+                <a class="post-title-link" href="/什么是有为法，什么是无为法？/" itemprop="url">什么是有为法，什么是无为法？</a></h2>
         
 
         <div class="post-meta">
@@ -1084,7 +1129,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1099,11 +1147,15 @@
 而所谓“一切法”就是一切现象。
 在一切的现象中，属于需要因缘才能产生的，名为“有为法”。
 属于不需要因缘就能存在的，就称为“无为法”。
-因此，有为法，中的“有”是指有因缘，
+因此，有为法，中的“有”是指有因缘，“为”是造作，“法”是现象。
+也就是有因缘造作的现象，名为有为法。
+无因缘造作的现象，名无为法。
+现举例说明，同一物中，实同时具有有为法及无为法的。
+以纸，为例。我们现在来观察“纸”，有哪些现象是有为
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/什么是有为法，什么是无为法？/#далее" rel="contents">
+            <a class="btn" href="/什么是有为法，什么是无为法？/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1111,18 +1163,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1136,6 +1185,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1148,13 +1201,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/mac-os-如何内外（网）兼具/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1166,9 +1223,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/mac-os-如何内外（网）兼具/" itemprop="url">mac os 如何内外（网）兼具</a></h1>
+                <a class="post-title-link" href="/mac-os-如何内外（网）兼具/" itemprop="url">mac os 如何内外（网）兼具</a></h2>
         
 
         <div class="post-meta">
@@ -1231,7 +1288,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1240,11 +1300,14 @@
         
           
           工作中会有各种各样的内网存在，比如公安内网，银行内网等等，互联网我们则称为外网。由于经常碰到即需要内网环境又需要通过外网查询资料的情形，如果不加配置，只能繁琐地手动切换。本篇通过添加路由的方法来解决这个问题，与大家共享。
-内网环境示例假定所有的内网ip以36开头，内网网关假设为36.45.98.25
+内网环境示例假定所有的内网ip以36开头，内网网关假设为36.45.98.254。无线连接为外网，有线连接为内网。
+windows下的简单操作打开cmd，输入命令即可。
+route add -p 36.0.0.0 mask 255.0.0.0 36.45.98.254
+在路由中
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/mac-os-如何内外（网）兼具/#далее" rel="contents">
+            <a class="btn" href="/mac-os-如何内外（网）兼具/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1252,18 +1315,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1277,6 +1337,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1289,13 +1353,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/mac下vim中文乱码及ssh远程中文乱码的解决方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1307,9 +1375,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/" itemprop="url">mac下vim中文乱码及ssh远程中文乱码的解决方法</a></h1>
+                <a class="post-title-link" href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/" itemprop="url">mac下vim中文乱码及ssh远程中文乱码的解决方法</a></h2>
         
 
         <div class="post-meta">
@@ -1372,7 +1440,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1385,11 +1456,14 @@
 vi ~/.vimrc
 在文件中添加
 let &amp;termencoding=&amp;encoding
-set fileencodings=utf-8,g
+set fileencodings=utf-8,gbk,utf-16,big5
+问题二：ssh远程乱码在/etc/ssh_config~orig 文件中有这么一句：
+SendEnv LANG LC_*
+也就是说ssh命令会发送本地语言环境到目标机器。
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/#далее" rel="contents">
+            <a class="btn" href="/mac下vim中文乱码及ssh远程中文乱码的解决方法/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1397,18 +1471,15 @@ set fileencodings=utf-8,g
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1422,6 +1493,10 @@ set fileencodings=utf-8,g
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1434,13 +1509,17 @@ set fileencodings=utf-8,g
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/vi命令学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1452,9 +1531,9 @@ set fileencodings=utf-8,g
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/vi命令学习笔记/" itemprop="url">vi命令学习笔记</a></h1>
+                <a class="post-title-link" href="/vi命令学习笔记/" itemprop="url">vi命令学习笔记</a></h2>
         
 
         <div class="post-meta">
@@ -1517,7 +1596,10 @@ set fileencodings=utf-8,g
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1533,11 +1615,24 @@ I （行首插入文本）
 o （当前行后插入一空行）
 O （当前行前插入一空行）
 a （当前字符后添加文本）
-A
+A （行末添加文本）
+＊保存当前文件所作修改后退出vi    
+ZZ  
+*向前文本查找
+?字符串
+＊向后文本查找
+/字符串
+＊粘贴文本于光标上方
+P
+＊粘贴文本于光标下方
+p
+*删除光标行内容
+D
+*
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/vi命令学习笔记/#далее" rel="contents">
+            <a class="btn" href="/vi命令学习笔记/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1545,18 +1640,15 @@ A
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1570,6 +1662,10 @@ A
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1582,13 +1678,17 @@ A
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/mac下svn使用笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1600,9 +1700,9 @@ A
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/mac下svn使用笔记/" itemprop="url">mac下svn使用笔记</a></h1>
+                <a class="post-title-link" href="/mac下svn使用笔记/" itemprop="url">mac下svn使用笔记</a></h2>
         
 
         <div class="post-meta">
@@ -1665,7 +1765,10 @@ A
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1675,11 +1778,14 @@ A
           
           checkoutsvn checkout svn://localhost/mycode --username=yhm --password=123 /Users/dong/Documents/code
 将服务器中mycode仓库的内容下载到/Users/dong/Documents/code目录中
-
+add向版本库中添加文件
+svn add test01.docx test02.txt test03.ppt
+svn add *.php
+commitcd /Users/dong/Documents/
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/mac下svn使用笔记/#далее" rel="contents">
+            <a class="btn" href="/mac下svn使用笔记/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1687,18 +1793,15 @@ A
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1712,6 +1815,10 @@ A
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1744,97 +1851,99 @@ A
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://vat58.qiniudn.com/avatar.jpg"
-               alt="观自在" />
-          <p class="site-author-name" itemprop="name">观自在</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="观自在" />
+            
+              <p class="site-author-name" itemprop="name">观自在</p>
               <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">100</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">38</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">90</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
-                </li>
-              
-            </ul>
           </div>
-        
 
-        
+          <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
       </section>
 
       
@@ -1851,27 +1960,27 @@ A
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">观自在</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
 
 
         
@@ -1896,6 +2005,12 @@ A
 </div>
 
 
+
+
+
+
+
+
         
       </div>
     </footer>
@@ -1904,6 +2019,14 @@ A
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
     
 
@@ -1939,53 +2062,61 @@ A
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
 
   
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -2015,14 +2146,8 @@ A
 
 
 
-  
 
 
-
-
-
-
-  
 
 
 
@@ -2030,11 +2155,94 @@ A
 
   
 
-  
+
+
+
 
   
 
   
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

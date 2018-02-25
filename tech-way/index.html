@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,11 +10,16 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -38,36 +43,11 @@
 
 
 
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -76,7 +56,22 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="科技," />
@@ -84,11 +79,6 @@
 
 
 
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -114,9 +104,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -158,12 +150,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -173,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -189,7 +175,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">应无所住而生其心</p>
+        <h1 class="site-subtitle" itemprop="description">应无所住而生其心</h1>
       
   </div>
 
@@ -219,6 +205,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -229,12 +225,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -296,13 +292,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/tech-way/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -314,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">凯文凯利：科技生活指南</h1>
+          <h2 class="post-title" itemprop="name headline">凯文凯利：科技生活指南</h2>
         
 
         <div class="post-meta">
@@ -382,7 +382,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -391,48 +394,39 @@
         <div>•无论买什么，都要学会维护。每个工具都需要你花费时间来学习如何使用、安装、升级或维修。购买只是开始。维护一项技术所耗费的精力、金钱、时间，可能和你获得它的花费一样多。</div><br><div></div><br><div><span style="color: #339966;">/<em> 摩托车是这样，任何的数码产品也是这样。</em>/</span></div><br><div></div><br><div>•科技进步非常快。因此，面对某种科技产品，等到需要到迫在眉睫时再去买吧。任何你买到手的东西都已经过时了，你要接受并习惯这个事实。因此，不到最后一刻不要买。</div><br><div><a id="more"></a></div><br><div><span style="color: #ff6600;">/<em> 不谋而合，到现在我还在使用碎屏的手机，理由有三：1. 还能使用，虽然有点不舒服 2. 不想轻易换手机，硬件更新太快，容易腻，手机的粘性是软件</em> 3. 3. 等待征服我的手机和一个契机。<em>/</em></span></div><br><div></div><br><div>•你永远都是菜鸟。学着适应初学者模式，学习新的程序，问些白痴问题，犯些愚蠢的错误，寻求帮助，并用自己学到的东西帮助他人（这是最好的自学方法）。</div><br><div></div><br><div><span style="color: #008000;">/这分明在告诉我，我目前的阶段会持续很长很长的时间….<em>/</em></span></div><br><div></div><br><div>•科技休假。每周抽一点时间，放下自己的工具。每年过一次没有任何工具的生活。一辈子要体验一次完全远离各种工具的生活。‌‌“休假‌‌”归来的你将拥有全新的热情和观点。</div><br><div></div><br><div><span style="color: #ff6600;">/科技存在负面作用，让规律的远离来中和一部分吧，将科技的效用最大化。<em>/</em></span></div><br><div><img src="http://vat58.qiniudn.com/s.jpg" alt="科技指南">•更换工具的成本有多高？不久的将来，你就会废弃自己现在使用的工具。抛弃旧工具谈何容易？如果弃用旧工具就意味着你的所有数据也一并离你而去，或者要学习新的打字方式，或者要连带放弃其他几种仍在使用的技术，那么这个新工具或许并非最好的选择。</div><br><div></div><br><div><span style="color: #008000;">/重新学习打字方式？想都不敢想<em>/</em></span></div><br><div></div><br><div>•在网上每找到一条专家意见，就应搜寻其他专家的相反意见。必须全面了解各种意见以后再进行购买决策。</div><br><div></div><br><div><span style="color: #ff6600;">/网上购物时反复权衡好评和差评，是不是就是这个道理？<em>/</em></span></div><br><div></div><br><div>•很好的运用一项技术并不一定要了解它如何运作。我们并不十分理解生物如何运作，但是我们仍然活得很好。</div><br><div></div><br><div><span style="color: #008000;">/允许我们知识的盲点，特别是处女座，不要纠结于黑盒子，先从大局上解决问题嘛。<em>/</em></span></div><br><div></div><br><div>•工具是隐喻，塑造你的思维方式。新的工具当中有哪些内在的预设？它是否预设使用者是右撇子或会读写，默认需设密码或使用者会在什么地方丢掉它？工具的默认设置能反映其偏向哪一方面。</div><br><div></div><br><div><span style="color: #ff6600;">/工具的内在还是人的心理，心即理。<em>/</em></span></div><br><div></div><br><div>•面对一项愚蠢的技术，合理的应对方法是自己创造一项更好的技术；正如面对一个愚蠢的观念，合理的应对方法并非取缔它，而是用更好的观念代替它。</div><br><div></div><br><div><span style="color: #008000;">/创新*/</span></div><br><div>•用最少的技术让自己拥有最多的选择。</div><br><div></div><br><div>来源: 蘸书 作者: 素履</div>
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Paypal:876670218@qq.com</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>随喜</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/path/to/wechat-reward-image" alt="观自在 WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/path/to/alipay-reward-image" alt="观自在 Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechat_reward.jpg" alt="观自在 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
   </div>
+</div>
 
+      </div>
+    
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -444,6 +438,21 @@
       
 
       
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
       
       
 
@@ -472,6 +481,10 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -487,9 +500,14 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDM0Ni8xMDg4Mw=="></div>
+    </div>
+
+  
+
 
 
         </div>
@@ -505,97 +523,99 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://vat58.qiniudn.com/avatar.jpg"
-               alt="观自在" />
-          <p class="site-author-name" itemprop="name">观自在</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="观自在" />
+            
+              <p class="site-author-name" itemprop="name">观自在</p>
               <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">100</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">38</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">90</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
-                </li>
-              
-            </ul>
           </div>
-        
 
-        
+          <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
       </section>
 
       
@@ -612,27 +632,27 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">观自在</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
 
 
         
@@ -657,6 +677,12 @@
 </div>
 
 
+
+
+
+
+
+
         
       </div>
     </footer>
@@ -665,6 +691,14 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
     
 
@@ -700,53 +734,65 @@
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
 
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -771,6 +817,24 @@
 
 
   
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
 
 
 
@@ -782,20 +846,90 @@
 
 
 
-
-  
-
-
-
-
-
   
 
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

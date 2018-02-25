@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,11 +10,16 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -38,36 +43,11 @@
 
 
 
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -76,7 +56,22 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="English + Computer Skills = Freedom" />
@@ -88,22 +83,17 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
-
-
-
-
-<meta name="description">
+<meta name="description" content="以无所得故，菩提萨埵">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VAT58">
 <meta property="og:url" content="http://www.vat58.com/page/3/index.html">
 <meta property="og:site_name" content="VAT58">
-<meta property="og:description">
+<meta property="og:description" content="以无所得故，菩提萨埵">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VAT58">
-<meta name="twitter:description">
+<meta name="twitter:description" content="以无所得故，菩提萨埵">
 
 
 
@@ -112,9 +102,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -156,12 +148,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,8 +158,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -189,7 +174,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">应无所住而生其心</p>
+        <h1 class="site-subtitle" itemprop="description">应无所住而生其心</h1>
       
   </div>
 
@@ -219,6 +204,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -229,12 +224,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -296,13 +291,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/mac-mail下连接QQ邮箱账户/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -314,9 +313,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/mac-mail下连接QQ邮箱账户/" itemprop="url">mac mail下连接QQ邮箱账户</a></h1>
+                <a class="post-title-link" href="/mac-mail下连接QQ邮箱账户/" itemprop="url">mac mail下连接QQ邮箱账户</a></h2>
         
 
         <div class="post-meta">
@@ -379,7 +378,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -388,11 +390,13 @@
         
           
           入手 mac air 几天，作为一个从未接触过 os x 的小白，现在还在不断试验这个新鲜的系统。在mac自带的邮件管理应用mail中绑定QQ邮箱账户就废了不少力气，以下为记录说明。
-在mail菜单栏选择添加账户选择添加账户会弹出常用的账户列表，经过尝试，直接用给出的“QQ邮箱”，其默认设置无法连接
+在mail菜单栏选择添加账户选择添加账户会弹出常用的账户列表，经过尝试，直接用给出的“QQ邮箱”，其默认设置无法连接到QQ邮箱。所以选择“添加其他邮箱账户”。
+
+填写基本账户信息输入QQ邮箱的地址和密码创建后，如果还是匹配QQ的默认设置，这样也是不行。更改一个错误的域名，比如8888888@mac.com,一定要进
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/mac-mail下连接QQ邮箱账户/#далее" rel="contents">
+            <a class="btn" href="/mac-mail下连接QQ邮箱账户/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -400,18 +404,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -425,6 +426,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -437,13 +442,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/无处不在的赌徒心理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -455,9 +464,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/无处不在的赌徒心理/" itemprop="url">无处不在的赌徒心理</a></h1>
+                <a class="post-title-link" href="/无处不在的赌徒心理/" itemprop="url">无处不在的赌徒心理</a></h2>
         
 
         <div class="post-meta">
@@ -520,7 +529,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -530,11 +542,13 @@
           
           市场中，最大的敌人之一，就是赌徒心理、赌徒思维。赌，最终的结局就只有一个，如果你以赌徒心理参与市场，那么你的结局就已经注定，你就算还没再锅里，那也只是养肥了再煮而已，没什么区别。
 赌徒心理无处不在，除了上一课说的不断加码，还有一些，甚至自己都没注意到。
-例如，有人亏钱了，然后就想，等反弹到多少多少一
+例如，有人亏钱了，然后就想，等反弹到多少多少一定出来，以后不玩了。这看起来很不赌徒，但其实也是赌徒心理。
+赌徒心理一个最大的特点，就是预设一个虚拟的目标，一个想象中的目标，完全无视市场本身。
+还有一个特点，就是怕失去机会，怕失去了赚大钱的机会。例
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/无处不在的赌徒心理/#далее" rel="contents">
+            <a class="btn" href="/无处不在的赌徒心理/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -542,18 +556,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -567,6 +578,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -579,13 +594,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/你的人生随时可能终结于下一部电梯/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -597,9 +616,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/你的人生随时可能终结于下一部电梯/" itemprop="url">你的人生随时可能终结于下一部电梯</a></h1>
+                <a class="post-title-link" href="/你的人生随时可能终结于下一部电梯/" itemprop="url">你的人生随时可能终结于下一部电梯</a></h2>
         
 
         <div class="post-meta">
@@ -662,7 +681,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -672,11 +694,12 @@
           
           ##电梯吃了一个人。
 明明是《焦点访谈》，有人却看成了《感动中国》，甚至还帮忙拟好了‌‌“颁奖词‌‌”：‌‌“她，31岁，全职妈妈，在人生最后的8秒，她以一种高高托举的姿态，将生留给了孩子，将死留给了自己，她向世人证明了母爱的伟大，她就是向柳娟，一位伟大的母亲。‌‌”
-湖北荆州安良百货的电梯布下陷阱
+湖北荆州安良百货的电梯布下陷阱准备吃人时，三名女迎宾员诡异地站在陷阱前，据说，她们只在母子乘电梯上行到一半时才提醒：‌‌“前面踏板松了‌‌”，有传闻称维修师傅去配螺栓了，迎宾踏板就那样虚掩着，电梯就那样继续运行着。
+电梯坏了，没有
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/你的人生随时可能终结于下一部电梯/#далее" rel="contents">
+            <a class="btn" href="/你的人生随时可能终结于下一部电梯/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -684,18 +707,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -709,6 +729,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -721,13 +745,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/金融的逻辑/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -739,9 +767,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/金融的逻辑/" itemprop="url">金融的逻辑之买房</a></h1>
+                <a class="post-title-link" href="/金融的逻辑/" itemprop="url">金融的逻辑之买房</a></h2>
         
 
         <div class="post-meta">
@@ -804,7 +832,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -818,7 +849,7 @@
 <p>不过，小王和妻子不愿按揭打款，他们跟父母说，一结婚就被上了月供的包袱。父母觉得也是，不能让年轻夫妻被上这么重的担子。正好父母60出头，已退休，手头有60万养老用的积蓄。就这样，父母凑了60万，刘教授夫妇凑了仅有的20万，另一位亲戚出10万，150平的房子到手。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/金融的逻辑/#далее" rel="contents">
+            <a class="btn" href="/金融的逻辑/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -826,18 +857,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -851,6 +879,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -863,13 +895,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/财商起步：富爸爸穷爸爸/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -881,9 +917,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/财商起步：富爸爸穷爸爸/" itemprop="url">财商起步：富爸爸穷爸爸</a></h1>
+                <a class="post-title-link" href="/财商起步：富爸爸穷爸爸/" itemprop="url">财商起步：富爸爸穷爸爸</a></h2>
         
 
         <div class="post-meta">
@@ -946,7 +982,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -956,7 +995,7 @@
           <p>前段时间掀起一股炒股的浪潮，听说是继08年之后的又一波大牛市。有人借着这股浪潮赚得盆满钵满，有的人跟着诱惑走入股市踉踉跄跄，有的人不管行情好坏一直在稳定盈利，也有的人不断学习反复总结企图找到股市的提款密码。这一切与我无关。我认为自己不适合做这种投机的行当，一直以来躲得远远的。很早就知道你不理财，财不理你的道理，但是直到最近跟别人聊天和阅读，才慢慢地改变了观念拧紧了理财的弦：投资并非绝对的赌博，可以通过不断的学习来提高自己这方面的能力。我的初步目标是，学会会计和投资方面的基本知识，慢慢培养财商。至于是否进入股市和外汇等市场, 就看造化了。最近从别人的博客里看到一句话：在交易中了解自己，才是最有趣的事情。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/财商起步：富爸爸穷爸爸/#далее" rel="contents">
+            <a class="btn" href="/财商起步：富爸爸穷爸爸/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -964,18 +1003,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -989,6 +1025,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1001,13 +1041,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/给windows10浇了一盘冷水/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1019,9 +1063,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/给windows10浇了一盘冷水/" itemprop="url">给windows10浇了一盘冷水</a></h1>
+                <a class="post-title-link" href="/给windows10浇了一盘冷水/" itemprop="url">给windows10浇了一盘冷水</a></h2>
         
 
         <div class="post-meta">
@@ -1084,7 +1128,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1095,7 +1142,7 @@
 <p>关键性错误 shell infrastructure host。只有一个注销的选项，表现为开始菜单、任务栏和小娜卡死，桌面的操作没有影响。经过google,了解到10130之前的版本就已经存在了这个bug，并且是一个大规模普遍的bug。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/给windows10浇了一盘冷水/#далее" rel="contents">
+            <a class="btn" href="/给windows10浇了一盘冷水/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1103,18 +1150,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1128,6 +1172,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1140,13 +1188,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/发声练习技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1158,9 +1210,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/发声练习技巧/" itemprop="url">发声练习技巧</a></h1>
+                <a class="post-title-link" href="/发声练习技巧/" itemprop="url">发声练习技巧</a></h2>
         
 
         <div class="post-meta">
@@ -1223,7 +1275,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1234,7 +1289,7 @@
 <p>一个不能唱出美妙歌声的人，其实是很可悲的。人生苦短，如果有人的嗓子这最美妙的乐器陪伴你走过这人生之黑暗与光明，是多么美好。一个歌声恶劣、五音不全的人不可能具有全面修养（在儒家教育的角度，音乐是最基本的素质之一），而歌唱的秘密，又因所谓的专业性而与大众隔绝，这完全背离了本ID知识是全人类共有的理想，所以，虽然明知道很难，但还是试图把这个秘密用最简单的方式揭开，让更多人能真正沐浴到音乐的光辉中。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/发声练习技巧/#далее" rel="contents">
+            <a class="btn" href="/发声练习技巧/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1242,18 +1297,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1267,6 +1319,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1279,13 +1335,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/打造绿色的hexo博客环境/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1297,9 +1357,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/打造绿色的hexo博客环境/" itemprop="url">打造绿色的hexo博客环境</a></h1>
+                <a class="post-title-link" href="/打造绿色的hexo博客环境/" itemprop="url">打造绿色的hexo博客环境</a></h2>
         
 
         <div class="post-meta">
@@ -1362,7 +1422,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1373,7 +1436,7 @@
 <h2 id="##博客根目录_：_X:/vat58">##博客根目录 ： X:/vat58</h2><p>这个目录就是我们今后写作的大本营，绿色便携，包含了一切配置，只要同步它就可以了。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/打造绿色的hexo博客环境/#далее" rel="contents">
+            <a class="btn" href="/打造绿色的hexo博客环境/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1381,18 +1444,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1406,6 +1466,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1418,13 +1482,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/手机变身无线鼠标/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1436,9 +1504,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/手机变身无线鼠标/" itemprop="url">手机变身无线鼠标</a></h1>
+                <a class="post-title-link" href="/手机变身无线鼠标/" itemprop="url">手机变身无线鼠标</a></h2>
         
 
         <div class="post-meta">
@@ -1501,7 +1569,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1513,7 +1584,7 @@
 <p>play商店搜索“mouse”会找到几款类似功能的应用，经过比较，感觉 “mouse kit” 体验略好，当然另外两款“无线鼠标”也各有千秋。除了单击、双击、右击、滚动、拖拽等鼠标基本操作，还有多媒体控制、演示器、键盘输入、手势等功能点。不同的apps侧重点不同。虽然都存在应用内购买的功能点，但是付费的不见得实用。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/手机变身无线鼠标/#далее" rel="contents">
+            <a class="btn" href="/手机变身无线鼠标/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1521,18 +1592,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1546,6 +1614,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1558,13 +1630,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/贴心的新版GOOGLE相册/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1576,9 +1652,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/贴心的新版GOOGLE相册/" itemprop="url">贴心的新版GOOGLE相册</a></h1>
+                <a class="post-title-link" href="/贴心的新版GOOGLE相册/" itemprop="url">贴心的新版GOOGLE相册</a></h2>
         
 
         <div class="post-meta">
@@ -1641,7 +1717,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1651,7 +1730,7 @@
           <p>刚刚结束的GOOGLE I/O 2015 Keynote让G粉们春心荡漾，如果让我选择是熬夜看世界杯还是GOOGLE I/O ,我会毫不犹豫地选择后者。作为脑残G粉，一直认为：GOOGLE大法，千秋万载，一统江湖。^_^<br>I/O 2015有着各个领域的看点：Android M, Android wear , Brillo , Now on tap , VR 等等。但是现在我想着重来介绍“不起眼”却贴心的新版Google photos 。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/贴心的新版GOOGLE相册/#далее" rel="contents">
+            <a class="btn" href="/贴心的新版GOOGLE相册/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1659,18 +1738,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1684,6 +1760,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1716,97 +1796,99 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://vat58.qiniudn.com/avatar.jpg"
-               alt="观自在" />
-          <p class="site-author-name" itemprop="name">观自在</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="观自在" />
+            
+              <p class="site-author-name" itemprop="name">观自在</p>
               <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">100</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">38</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">90</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
-                </li>
-              
-            </ul>
           </div>
-        
 
-        
+          <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
       </section>
 
       
@@ -1823,27 +1905,27 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">观自在</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
 
 
         
@@ -1868,6 +1950,12 @@
 </div>
 
 
+
+
+
+
+
+
         
       </div>
     </footer>
@@ -1876,6 +1964,14 @@
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
     
 
@@ -1911,53 +2007,61 @@
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
 
   
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -1987,14 +2091,8 @@
 
 
 
-  
 
 
-
-
-
-
-  
 
 
 
@@ -2002,11 +2100,94 @@
 
   
 
-  
+
+
+
 
   
 
   
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

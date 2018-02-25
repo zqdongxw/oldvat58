@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
@@ -10,11 +10,16 @@
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
 
 
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -38,36 +43,11 @@
 
 
 
+
   
   
   <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -76,7 +56,22 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
 
 
   <meta name="keywords" content="English + Computer Skills = Freedom" />
@@ -88,22 +83,17 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
-
-
-
-
-<meta name="description">
+<meta name="description" content="以无所得故，菩提萨埵">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VAT58">
 <meta property="og:url" content="http://www.vat58.com/page/2/index.html">
 <meta property="og:site_name" content="VAT58">
-<meta property="og:description">
+<meta property="og:description" content="以无所得故，菩提萨埵">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VAT58">
-<meta name="twitter:description">
+<meta name="twitter:description" content="以无所得故，菩提萨埵">
 
 
 
@@ -112,9 +102,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -156,12 +148,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,8 +158,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -189,7 +174,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">应无所住而生其心</p>
+        <h1 class="site-subtitle" itemprop="description">应无所住而生其心</h1>
       
   </div>
 
@@ -219,6 +204,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -229,12 +224,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            标签
+            公益404
           </a>
         </li>
       
@@ -296,13 +291,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/“一旦日久生情便无可替代”/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -314,9 +313,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/“一旦日久生情便无可替代”/" itemprop="url">一旦日久生情便无可替代</a></h1>
+                <a class="post-title-link" href="/“一旦日久生情便无可替代”/" itemprop="url">一旦日久生情便无可替代</a></h2>
         
 
         <div class="post-meta">
@@ -379,7 +378,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -388,11 +390,12 @@
         
           
           我们的父母是世界上最棒的父母，我们的伴侣是世界上最合适的伴侣，我们的孩子是世界上最优秀的孩子…这一辈子接受他们和她们全部的优点和缺点，是的，一旦日久生情便无可替代，认真的人都这样。
-我学会了快速地宁静，这种宁静是全身心的。躺在床上，只关注呼吸，没有任何的杂念，让躯体沉淀，让灵魂灵动自由。随机播放可以
+我学会了快速地宁静，这种宁静是全身心的。躺在床上，只关注呼吸，没有任何的杂念，让躯体沉淀，让灵魂灵动自由。随机播放可以包容任何一种莽撞的音符和旋律，就这样，让这些可爱的小精灵们律动着流进我的身体，嗯，还不错，我在听它们，它们也在感受着我。
+接着，进来的是一段录音，是我跟妈妈的家常对话，嘈杂的音乐，屋子里桌椅的声响，还
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/“一旦日久生情便无可替代”/#далее" rel="contents">
+            <a class="btn" href="/“一旦日久生情便无可替代”/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -400,18 +403,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -425,6 +425,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -437,13 +441,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/说文学－读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -455,9 +463,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/说文学－读书笔记/" itemprop="url">说文学</a></h1>
+                <a class="post-title-link" href="/说文学－读书笔记/" itemprop="url">说文学</a></h2>
         
 
         <div class="post-meta">
@@ -520,7 +528,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -530,11 +541,12 @@
           
           蒋勋说文学，从《诗经》到陶渊明。书摘。
 最好的文学并不是拿来做教科书的，也不是拿来来做考试范本的，而是使人觉得活着有意义，让人感觉活着是幸福的。《诗经》直到现在都是人们最喜欢的文学，就因为它产生于民间，而且从来都没有中断过。
-诗是非常通达的，在诗中可以体会生命的各个面向，你可以忽然苍老，忽然年轻，忽
+诗是非常通达的，在诗中可以体会生命的各个面向，你可以忽然苍老，忽然年轻，忽然喜悦，忽然忧伤，忽然是男性，忽然是女性，忽然主动，忽然被动，所有的角色都可以转化。
+随着工商业社会的来临，人在土地里那种深厚的经验，那种悠远、朴素的情感，正在慢慢丧失，但农业社会的文明却已经变成了一
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/说文学－读书笔记/#далее" rel="contents">
+            <a class="btn" href="/说文学－读书笔记/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -542,18 +554,15 @@
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -567,6 +576,10 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -579,13 +592,17 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/尼采的心灵咒语/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -597,9 +614,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/尼采的心灵咒语/" itemprop="url">尼采的心灵咒语</a></h1>
+                <a class="post-title-link" href="/尼采的心灵咒语/" itemprop="url">尼采的心灵咒语</a></h2>
         
 
         <div class="post-meta">
@@ -662,7 +679,10 @@
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -672,11 +692,12 @@
           
           早年，我读过《查拉图斯特拉如是说》，想近距离了解下尼采哲学，但是文章艰深晦涩，看得似懂非懂。本书白话文章简短精炼，却发人深省。不同于其他的“鸡汤”，味淡而不乏新鲜元素，总有一篇让你耳目一新。
 
-a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什么？是什么填满自己的心灵，让心中充满愉悦？自己究竟
+a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什么？是什么填满自己的心灵，让心中充满愉悦？自己究竟为什么东西入迷过？只要回答这些问题，便能探明自己的本质。
+b 大家都想办法让自己引人注目，打错了如意算盘。因为他们觉得只有自己是舞台上的演员，而其他人只是看客。每个人的想法都是如此，于是便演成了一幕无
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/尼采的心灵咒语/#далее" rel="contents">
+            <a class="btn" href="/尼采的心灵咒语/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -684,18 +705,15 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -709,6 +727,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -721,13 +743,17 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/决定成败的，绝对不是细节/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -739,9 +765,9 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/决定成败的，绝对不是细节/" itemprop="url">决定成败的，绝对不是细节——收起你的小聪明</a></h1>
+                <a class="post-title-link" href="/决定成败的，绝对不是细节/" itemprop="url">决定成败的，绝对不是细节——收起你的小聪明</a></h2>
         
 
         <div class="post-meta">
@@ -804,7 +830,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -813,10 +842,11 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
           
           编者记：如果中华民族走向没落，一定是因为中国人太聪明的缘故。细想一下，我们上学，我们求职，我们步入社会，读到过多少小聪明秀情商的小段子。有人喜欢写段子，有人喜欢读段子并且吸收作为自己的处事技巧，期望有一天可以有四两拨千斤的效果。殊不知，这些所谓的段子害人不浅，已经是南辕北辙，舍本求末。看下面的故事：
+单位招聘，我是主考官之一。面试当天一大早赶去，休息区已经有几个应聘者先到了。刚巧办公室没水了，我去休息区的饮水机接热水，过去后，发现饮水机关着，我前前后后按了好几个键，居然打不开。这时，一个来应聘的
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/决定成败的，绝对不是细节/#далее" rel="contents">
+            <a class="btn" href="/决定成败的，绝对不是细节/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -824,18 +854,15 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -849,6 +876,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -861,13 +892,17 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/乌合之众/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -879,9 +914,9 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/乌合之众/" itemprop="url">乌合之众</a></h1>
+                <a class="post-title-link" href="/乌合之众/" itemprop="url">乌合之众</a></h2>
         
 
         <div class="post-meta">
@@ -944,7 +979,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -953,11 +991,11 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
           
           《乌合之众》是一本心理学著作，几年前我就将其列入我的书单。研究的对象是群体，本书教我们认识群体，如何驯服群体这头庞大的猛兽。适合领袖、不同规模的领导者、政治家、演讲者、营销人员等一些需要群体基础的人士阅读。它揭示了心理操纵的真相，是开启民智的经典之作。李嘉诚不是最近刚刚说过吗，愚昧是人类之敌。😄
-
+古老的人类的心智模式如果说，我们的意识是浮在海面上可见的冰山的话，那么潜意识才是沉陷于暗黑海洋之中的巨大冰体，或许永远也不会有人能够在有生之年一窥潜意识的暗黑世界的真相。积淤于这个深层次结构之中的是生
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/乌合之众/#далее" rel="contents">
+            <a class="btn" href="/乌合之众/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -965,18 +1003,15 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -990,6 +1025,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1002,13 +1041,17 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/基于xcode事件的思考/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1020,9 +1063,9 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/基于xcode事件的思考/" itemprop="url">基于xcode事件的思考</a></h1>
+                <a class="post-title-link" href="/基于xcode事件的思考/" itemprop="url">基于xcode事件的思考</a></h2>
         
 
         <div class="post-meta">
@@ -1085,7 +1128,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1094,11 +1140,12 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
           
           墙、感染、信任和欺骗
-最近XcodeGhost导致的严重安全问题，相信大家已经从各个渠道知道了。简单概括一下，有人在中国网盘和论坛上传播了一个修改过的Xcode，这个版本的Xcode会在编译出来的App上面加一些可以被远程控制的代码，并且发送数据到某个服务器上。这是iOS出现以来，未越狱系统遭遇的最
+最近XcodeGhost导致的严重安全问题，相信大家已经从各个渠道知道了。简单概括一下，有人在中国网盘和论坛上传播了一个修改过的Xcode，这个版本的Xcode会在编译出来的App上面加一些可以被远程控制的代码，并且发送数据到某个服务器上。这是iOS出现以来，未越狱系统遭遇的最大安全威胁，在此之前苹果的Sandbox模式几乎没遇到过挑战，iPhone用户甚至大量iOS开发者都认为系统固若金汤，不可能遇到问题。
+在XcodeGhost开始被媒体报道的时，很多人大大低估了它的风
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/基于xcode事件的思考/#далее" rel="contents">
+            <a class="btn" href="/基于xcode事件的思考/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1106,18 +1153,15 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1131,6 +1175,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1143,13 +1191,17 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/金融的逻辑之家国政治/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1161,9 +1213,9 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/金融的逻辑之家国政治/" itemprop="url">金融的逻辑是什么</a></h1>
+                <a class="post-title-link" href="/金融的逻辑之家国政治/" itemprop="url">金融的逻辑是什么</a></h2>
         
 
         <div class="post-meta">
@@ -1226,7 +1278,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1234,11 +1289,11 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       
         
           
-          一、金融对国家对比我国历代的发展和美国的兴起，你会发现：国库钱越多、朝廷银库越满，国王皇帝肯定能专制，而且会更专制；越是朝廷欠债累累的国家，其国王、政府就必然要依赖老百姓交税、有求于百姓，这最终能制约国王的权利，促进民主与规则的发展。金融不只是能不帮助一个国家平摊一时的压力，还能促进制度的良性发展。
+          一、金融对国家对比我国历代的发展和美国的兴起，你会发现：国库钱越多、朝廷银库越满，国王皇帝肯定能专制，而且会更专制；越是朝廷欠债累累的国家，其国王、政府就必然要依赖老百姓交税、有求于百姓，这最终能制约国王的权利，促进民主与规则的发展。金融不只是能不帮助一个国家平摊一时的压力，还能促进制度的良性发展。民间富有是自由、民主、法治的基础。但政府太富有，会挑战民间的空间，挑战民主宪政和法治。政府穷民间富催生民主和法治。公民投票是民主制度的重要形式，但投票无法天天进行，而证券市场对国家的监督、评估、定价却
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/金融的逻辑之家国政治/#далее" rel="contents">
+            <a class="btn" href="/金融的逻辑之家国政治/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1246,18 +1301,15 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1271,6 +1323,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1283,13 +1339,17 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/晚晴集/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1301,9 +1361,9 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/晚晴集/" itemprop="url">晚晴集</a></h1>
+                <a class="post-title-link" href="/晚晴集/" itemprop="url">晚晴集</a></h2>
         
 
         <div class="post-meta">
@@ -1366,7 +1426,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1377,11 +1440,14 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
           1.若失本心，即当忏悔，忏悔之法，是为清凉。 （金刚三昧经）
 2.菩萨若能随顺众生，则为随顺供养诸佛。若于众生尊重承事，则为尊重承事如来。若令众生欢喜者，则令一切如来欢喜。（华严经普贤行愿品）
 3.应代一切众生受加毁辱，恶事向自己，好事与他人。（梵网经）
-4.离贪嫉者能净心中贪欲云翳，犹如夜月，众星
+4.离贪嫉者能净心中贪欲云翳，犹如夜月，众星围绕。（理趣六波罗蜜多经）
+5.世间色声香味触，常能诳惑一切凡夫，令生爱着。（智者大师）
+6.嗔是失佛法之根本，坠恶道之因缘，法乐之冤家，善心之大贼，种种恶口之府藏。（智者大师）
+7.处众处独，宜韬宜
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/晚晴集/#далее" rel="contents">
+            <a class="btn" href="/晚晴集/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1389,18 +1455,15 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1414,6 +1477,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1426,13 +1493,17 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/金刚经/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1444,9 +1515,9 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/金刚经/" itemprop="url">金刚经</a></h1>
+                <a class="post-title-link" href="/金刚经/" itemprop="url">金刚经</a></h2>
         
 
         <div class="post-meta">
@@ -1509,7 +1580,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1526,7 +1600,7 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/金刚经/#далее" rel="contents">
+            <a class="btn" href="/金刚经/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1534,18 +1608,15 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1559,6 +1630,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1571,13 +1646,17 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.vat58.com/mac使用笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="观自在">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://vat58.qiniudn.com/avatar.jpg">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1589,9 +1668,9 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/mac使用笔记/" itemprop="url">mac使用笔记</a></h1>
+                <a class="post-title-link" href="/mac使用笔记/" itemprop="url">mac使用笔记</a></h2>
         
 
         <div class="post-meta">
@@ -1654,7 +1733,10 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
       </header>
     
 
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1666,11 +1748,12 @@ a 自己真正爱过的究竟是什么？让自己的灵魂升华的到底是什
 复制： command+c黏贴： command+v剪切： 复制之后，option+command+v (command+x 只能剪切文本)home和end: command+方向键关闭最前面的窗口和标签页：command+w
 2.pagedown和pageup
 fn+方向键
-3
+3.space
+在osx中，几乎所有的文件都可以通过space键快速查看预览，比如视频、图片、音乐、页面、文档等。拿图片举例，在文件夹选择某个图片，按space即可预览，方向键切换预览其他图片，而不用每
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/mac使用笔记/#далее" rel="contents">
+            <a class="btn" href="/mac使用笔记/#thêm" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1678,18 +1761,15 @@ fn+方向键
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1703,6 +1783,10 @@ fn+方向键
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1735,97 +1819,99 @@ fn+方向键
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://vat58.qiniudn.com/avatar.jpg"
-               alt="观自在" />
-          <p class="site-author-name" itemprop="name">观自在</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.jpg"
+                alt="观自在" />
+            
+              <p class="site-author-name" itemprop="name">观自在</p>
               <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">100</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">38</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">90</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  twitter
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              友情链接
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
-                </li>
-              
-            </ul>
           </div>
-        
 
-        
+          <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">100</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">90</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yrmdmy" target="_blank" title="twitter">
+                      
+                        <i class="fa fa-fw fa-globe"></i>twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.yaoblog.info/" title="YAO大博客" target="_blank">YAO大博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
       </section>
 
       
@@ -1842,27 +1928,27 @@ fn+方向键
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2012 - 
-  <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">观自在</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
 
 
         
@@ -1887,6 +1973,12 @@ fn+方向键
 </div>
 
 
+
+
+
+
+
+
         
       </div>
     </footer>
@@ -1895,6 +1987,14 @@ fn+方向键
       <div class="back-to-top">
         <i class="fa fa-arrow-up"></i>
         
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
       </div>
     
 
@@ -1930,53 +2030,61 @@ fn+方向键
 
 
   
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
   
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
-
-
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
 
   
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -2006,14 +2114,8 @@ fn+方向键
 
 
 
-  
 
 
-
-
-
-
-  
 
 
 
@@ -2021,11 +2123,94 @@ fn+方向键
 
   
 
-  
+
+
+
 
   
 
   
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
