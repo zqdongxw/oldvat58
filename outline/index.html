@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/68da5473ly1fpmrmwq5gsj20go0k8aax.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/68da5473ly1fpmrrv65fzj20z0150n22.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/68da5473ly1fpms462wouj20z0150q7n.jpg">
-<meta property="og:updated_time" content="2018-03-23T07:50:36.226Z">
+<meta property="og:updated_time" content="2018-04-11T08:08:53.816Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="全面体验outline">
 <meta name="twitter:description" content="outline简介Journalists need safe access to information to research issues, communicate with sources, and report the news. Outline lets news organizations easily provide their network safer access to the">
@@ -408,10 +408,16 @@
 <p><img src="http://ww1.sinaimg.cn/large/68da5473ly1fpmrmwq5gsj20go0k8aax.jpg" alt=""></p>
 <p>1）登录vps执行命令</p>
 <pre><code>wget -qO- http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.<span class="keyword">sh</span> | sudo bash
-</code></pre><p>2）将上一步执行的结果（大括号内apiUrl、certSha256包含大括号）粘贴到管理端对应的输入框中。DONE。不出意外的话，成功完成配置。</p>
+</code></pre><p>执行上述命令时如果报错：</p>
+<p>docker: Error response from daemon: Conflict. The container name “/watchtower” is already in use by container “75aec57acd0567cdcb44e691b33729c76cf40591ee6ca47a8b6cea7304c41f43”. You have to remove (or rename) that container to be able to reuse that name.</p>
+<p>则需要手动删除已经存在的container。执行如下：</p>
+<pre><code>docker <span class="keyword">container</span> kill <span class="number">75</span>
+docker <span class="keyword">container</span> rm <span class="number">75</span>
+</code></pre><p>注：75是container名称的前两个字符。有可能需要删除不止一个。</p>
+<p>2）将上一步执行的结果（大括号内apiUrl、certSha256包含大括号）粘贴到管理端对应的输入框中。DONE。不出意外的话，成功完成配置。</p>
 <p><img src="http://ww1.sinaimg.cn/large/68da5473ly1fpmrrv65fzj20z0150n22.jpg" alt=""></p>
 <p>点击key右侧的connect，选择connect this device ,即可生成 access key：ss://xxxxxx 。</p>
-<h2 id="下载客户端">下载客户端</h2><p>客户端支持 android 、windows、chrome os 、ios（coming soon）、macos(coming soon). 在客户端上填入access key，就可以进行“新闻”工作了。不用填写ip地址、端口、加密方式等内容，这种方式更容易操作。</p>
+<h2 id="下载客户端">下载客户端</h2><p>客户端支持 android 、windows、chrome os 、ios（coming soon）、macos(<del>coming soon</del> 可在app store下载 2018.04.11更新). 在客户端上填入access key，就可以进行“新闻”工作了。不用填写ip地址、端口、加密方式等内容，这种方式更容易操作。</p>
 <p><img src="http://ww1.sinaimg.cn/large/68da5473ly1fpms462wouj20z0150q7n.jpg" alt=""></p>
 <p>打开浏览器试一下，outline默认配置了全局代理。如果之前使用chrome与swithy切换工具，选择系统代理即可访问互联网。暂时放下SSR、V2RAY、brook等工具，全平台体验一下outline吧。</p>
 
