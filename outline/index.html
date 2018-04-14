@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/68da5473ly1fpmrmwq5gsj20go0k8aax.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/68da5473ly1fpmrrv65fzj20z0150n22.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/68da5473ly1fpms462wouj20z0150q7n.jpg">
-<meta property="og:updated_time" content="2018-04-11T08:08:53.816Z">
+<meta property="og:updated_time" content="2018-04-11T08:12:09.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="全面体验outline">
 <meta name="twitter:description" content="outline简介Journalists need safe access to information to research issues, communicate with sources, and report the news. Outline lets news organizations easily provide their network safer access to the">
@@ -409,8 +409,10 @@
 <p>1）登录vps执行命令</p>
 <pre><code>wget -qO- http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.<span class="keyword">sh</span> | sudo bash
 </code></pre><p>执行上述命令时如果报错：</p>
-<p>docker: Error response from daemon: Conflict. The container name “/watchtower” is already in use by container “75aec57acd0567cdcb44e691b33729c76cf40591ee6ca47a8b6cea7304c41f43”. You have to remove (or rename) that container to be able to reuse that name.</p>
-<p>则需要手动删除已经存在的container。执行如下：</p>
+<pre><code>docker: Error response <span class="keyword">from</span> daemon: Conflict. 
+The container <span class="property">name</span> <span class="string">"/watchtower"</span> <span class="keyword">is</span> already <span class="keyword">in</span> use <span class="keyword">by</span> container <span class="string">"75aec57acd0567cdcb44e691b33729c76cf40591ee6ca47a8b6cea7304c41f43"</span>. 
+You have <span class="keyword">to</span> remove (<span class="keyword">or</span> rename) <span class="keyword">that</span> container <span class="keyword">to</span> be able <span class="keyword">to</span> reuse <span class="keyword">that</span> <span class="property">name</span>.
+</code></pre><p>则需要手动删除已经存在的container。执行如下：</p>
 <pre><code>docker <span class="keyword">container</span> kill <span class="number">75</span>
 docker <span class="keyword">container</span> rm <span class="number">75</span>
 </code></pre><p>注：75是container名称的前两个字符。有可能需要删除不止一个。</p>
@@ -587,7 +589,7 @@ docker <span class="keyword">container</span> rm <span class="number">75</span>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">115</span>
+                  <span class="site-state-item-count">116</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -609,7 +611,7 @@ docker <span class="keyword">container</span> rm <span class="number">75</span>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">97</span>
+                  <span class="site-state-item-count">98</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
