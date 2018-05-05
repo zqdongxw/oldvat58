@@ -93,8 +93,8 @@
 网络：公司内网系统：windows10
 机器D
 网络：家庭内网系统：ubuntu16.04
-机器A（moon）配置步骤：生成及修改jsoncd /var/lib/zerotier-one
-zerotier-idtool initmoon ide">
+机器A（moon）配置步骤生成及修改jsoncd /var/lib/zerotier-one
+zerotier-idtool initmoon iden">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的zerotier之moon搭建实践">
 <meta property="og:url" content="http://www.vat58.com/zerotier-moon/index.html">
@@ -107,9 +107,9 @@ zerotier-idtool initmoon ide">
 网络：公司内网系统：windows10
 机器D
 网络：家庭内网系统：ubuntu16.04
-机器A（moon）配置步骤：生成及修改jsoncd /var/lib/zerotier-one
-zerotier-idtool initmoon ide">
-<meta property="og:updated_time" content="2018-05-05T13:27:06.066Z">
+机器A（moon）配置步骤生成及修改jsoncd /var/lib/zerotier-one
+zerotier-idtool initmoon iden">
+<meta property="og:updated_time" content="2018-05-05T13:32:39.754Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的zerotier之moon搭建实践">
 <meta name="twitter:description" content="设备环境机器A(moon)
@@ -120,8 +120,8 @@ zerotier-idtool initmoon ide">
 网络：公司内网系统：windows10
 机器D
 网络：家庭内网系统：ubuntu16.04
-机器A（moon）配置步骤：生成及修改jsoncd /var/lib/zerotier-one
-zerotier-idtool initmoon ide">
+机器A（moon）配置步骤生成及修改jsoncd /var/lib/zerotier-one
+zerotier-idtool initmoon iden">
 
 
 
@@ -427,9 +427,9 @@ zerotier-idtool initmoon ide">
 <p>网络：公司内网<br>系统：windows10</p>
 <p>机器D</p>
 <p>网络：家庭内网<br>系统：ubuntu16.04</p>
-<h1 id="机器A（moon）配置步骤：">机器A（moon）配置步骤：</h1><h2 id="生成及修改json">生成及修改json</h2><pre><code><span class="keyword">cd</span> /<span class="keyword">var</span>/lib/zerotier-<span class="keyword">one</span>
+<h1 id="机器A（moon）配置步骤">机器A（moon）配置步骤</h1><h2 id="生成及修改json">生成及修改json</h2><pre><code><span class="keyword">cd</span> /<span class="keyword">var</span>/lib/zerotier-<span class="keyword">one</span>
 zerotier-idtool initmoon identity.public &gt;&gt;moon.json
-</code></pre><p>经过此部，生成moon.json文件。vi编辑moon.json，修改 “stableEndpoints” 为机器 A 的公网的ip，以ipv4为例：</p>
+</code></pre><p>经过此步，生成moon.json文件。vi编辑moon.json，修改 “stableEndpoints” 为机器 A 的公网的ip，以ipv4为例：</p>
 <pre><code><span class="string">"stableEndpoints"</span>: [ <span class="string">"1.2.3.4/9993"</span> ]
 </code></pre><p>1.2.3.4为公网ip，9993为默认端口。</p>
 <p>另外，记录下json中的id值，以 deadbeef00 为例。</p>
@@ -438,7 +438,7 @@ zerotier-idtool initmoon identity.public &gt;&gt;moon.json
 </code></pre><p>执行之后生成000000xxxx.moon文件，备用。</p>
 <h2 id="将moon节点加入网络">将moon节点加入网络</h2><p>在机器A的安装目录下（/var/lib/zerotier-one）建立文件夹moons.d，将上一步生成的.moon文件拷贝进去。</p>
 <p>重启zerotier，重启电脑。至此，机器A（moon服务器）配置完成。</p>
-<h1 id="内网机器（B,C,D,…）连接上moon节点">内网机器（B,C,D,…）连接上moon节点</h1><h2 id="连接moon节点">连接moon节点</h2><p>前面步骤里记录了moon.json中的id值：deadbeef00</p>
+<h1 id="内网机器（B,C,D）连接上moon节点">内网机器（B,C,D）连接上moon节点</h1><h2 id="连接moon节点">连接moon节点</h2><p>前面步骤里记录了moon.json中的id值：deadbeef00</p>
 <p>分别在B C D 等内网机器里执行：</p>
 <pre><code>zerotier-<span class="keyword">cli</span> orbit deadbeef00 deadbeef00
 </code></pre><p>完成。</p>
@@ -446,9 +446,7 @@ zerotier-idtool initmoon identity.public &gt;&gt;moon.json
 </code></pre><p>如果有moon服务器ip地址的那一行后面有moon字样，证明 moon 已被本机标识。</p>
 <h1 id="存疑：">存疑：</h1><ol>
 <li>moon服务器需不需要加入zerotier network ？</li>
-<li><p>个别内网设备报错信息：</p>
-<p> zerotier-cli: missing authentication token and authtoken.secret not found (or readable) in /var/lib/zerotier-one</p>
-</li>
+<li>个别内网设备报错信息：<br> zerotier-cli: missing authentication token and authtoken.secret not found (or readable) in /var/lib/zerotier-one</li>
 </ol>
 <p>参考文章：<br><a href="http://www.xuxiaobo.com/?p=4202" target="_blank" rel="external">http://www.xuxiaobo.com/?p=4202</a><br><a href="https://zczc.cz/2018/03/14/ZeroTier-moon-%E8%AE%BE%E7%BD%AE%E6%95%99%E7%A8%8B/" target="_blank" rel="external">https://zczc.cz/2018/03/14/ZeroTier-moon-%E8%AE%BE%E7%BD%AE%E6%95%99%E7%A8%8B/</a></p>
 
@@ -687,7 +685,7 @@ zerotier-idtool initmoon identity.public &gt;&gt;moon.json
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设备环境"><span class="nav-number">1.</span> <span class="nav-text">设备环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#机器A（moon）配置步骤："><span class="nav-number">2.</span> <span class="nav-text">机器A（moon）配置步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成及修改json"><span class="nav-number">2.1.</span> <span class="nav-text">生成及修改json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成签名文件"><span class="nav-number">2.2.</span> <span class="nav-text">生成签名文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将moon节点加入网络"><span class="nav-number">2.3.</span> <span class="nav-text">将moon节点加入网络</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内网机器（B,C,D,…）连接上moon节点"><span class="nav-number">3.</span> <span class="nav-text">内网机器（B,C,D,…）连接上moon节点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接moon节点"><span class="nav-number">3.1.</span> <span class="nav-text">连接moon节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">3.2.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存疑："><span class="nav-number">4.</span> <span class="nav-text">存疑：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设备环境"><span class="nav-number">1.</span> <span class="nav-text">设备环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#机器A（moon）配置步骤"><span class="nav-number">2.</span> <span class="nav-text">机器A（moon）配置步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生成及修改json"><span class="nav-number">2.1.</span> <span class="nav-text">生成及修改json</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成签名文件"><span class="nav-number">2.2.</span> <span class="nav-text">生成签名文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将moon节点加入网络"><span class="nav-number">2.3.</span> <span class="nav-text">将moon节点加入网络</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内网机器（B,C,D）连接上moon节点"><span class="nav-number">3.</span> <span class="nav-text">内网机器（B,C,D）连接上moon节点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接moon节点"><span class="nav-number">3.1.</span> <span class="nav-text">连接moon节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">3.2.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存疑："><span class="nav-number">4.</span> <span class="nav-text">存疑：</span></a></li></ol></div>
             
 
           </div>
